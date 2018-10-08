@@ -146,7 +146,7 @@
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                5
+                6
                 <span>posts</span>
             </div>
             <div class="article-info-block">
@@ -199,6 +199,158 @@
 
             
             <section id="main">
+    <article id="post-scala-tuples" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2018/10/08/scala-tuples/">Scala – Tuples</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fas fa-calendar-alt"></i>
+        <a href="/2018/10/08/scala-tuples/">
+            <time datetime="2018-10-08T10:37:14.000Z" itemprop="datePublished">2018-10-08</time>
+        </a>
+    </div>
+
+
+                        
+                        
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <p>&nbsp;&nbsp;&nbsp;&nbsp; Scala tuple gộp một số lượng phần tử cố định cùng nhau để chúng có thể được truyền xung quanh như toàn bộ. Không như array (mảng) và list (danh sách) ,  một tuple có  thể chứa object (đối tượng) với các kiểu dữ liệu khác nhau và chúng không thay đổi được giá trị.</p>
+<p>Sau đây là ví dụ về tuple lưu kiểu nguyên , kiểu chuỗi.</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> t = (<span class="number">1</span>, <span class="string">"hello"</span>)</span><br></pre></td></tr></table></figure>
+<p>Đây là cách viết ngắn gọn cho đoạn mã sau -</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> t = <span class="keyword">new</span> <span class="type">Tuple2</span>(<span class="number">1</span>, <span class="string">"hello"</span>)</span><br></pre></td></tr></table></figure>
+<p>Kiểu thực sự của tuple phụ thuộc vào số lượng và các phần tử và kiểu của các phần tử đó.<br>Do đó kiểu của (99, “Luftballons”) là Tuple2[Int, String].  Kiểu của (‘u’, ‘r’, “the”, 1, 4, “me”) là Tuple6[Char, Char, String, Int, Int, String]. </p>
+<p>Tuples có kiểu Tuple1 ,Tuple2, Tuple3 và v.v  .Hiện tại tuples có thể chứa  tối đa 22 phần tử ,nếu muốn nhiều hơn ,bạn có thể sử dụng Collection  khác ngoài tuple. Đối với mỗi kiểu TupleN , trong đó  1&lt;= N &lt;= 22  Scala định nghĩa một số phương thức truy cập phần tử với đinh nghĩa sau-</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> t = (<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<p>Để truy cập các phần tử của tuple t, bạn có thể dùng phương thức  t._1 để truy cập phần tử đầu tiên , t._2 để truy cập phần tử thứ hai, và tương tự . Ví dụ, biểu thức sau đây tính tổng các phần tử của tuple t.</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> sum = t._1 + t._2 + t._3 + t._4</span><br></pre></td></tr></table></figure>
+<p>Bạn có thể dùng Tuple để viết một phương thức lấy kiểu List[Double] làm tham số và trả về biến biến count , biến tổng sum , và tổng bình phương ,được trả về dưới kiểu Tuple 3 phần tử , kiểu Tuple3[Int, Double, Double] .Chúng cũng hữu ích khi truyền danh sách các giá trị dữ liệu dưới dạng thông điệp giữa các tác nhân trong lập trình đồng thời.</p>
+<p>Thử chương trình ví dụ sau ,cho thấy cách dùng tuple.</p>
+<h3 id="Vi-du"><a href="#Vi-du" class="headerlink" title="Ví dụ:"></a>Ví dụ:</h3><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">def</span> <span class="title">main</span></span>(args: <span class="type">Array</span>[<span class="type">String</span>]) &#123;</span><br><span class="line">      <span class="keyword">val</span> t = (<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>)</span><br><span class="line">      <span class="keyword">val</span> sum = t._1 + t._2 + t._3 + t._4</span><br><span class="line">      println( <span class="string">"Sum of elements: "</span>  + sum )</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Lưu chương trình trên vào file <strong>Demo.scala.</strong> Lệnh sau đây được dùng để biên dịch và thực thi chương trình Demo.</p>
+<h2 id="Cai-dat"><a href="#Cai-dat" class="headerlink" title="Cài đặt:"></a>Cài đặt:</h2><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\&gt;scalac <span class="type">Demo</span>.scala</span><br><span class="line">\&gt;scala <span class="type">Demo</span></span><br></pre></td></tr></table></figure>
+<h2 id="Ket-qua"><a href="#Ket-qua" class="headerlink" title="Kết quả:"></a>Kết quả:</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Sum of elements: 10</span><br></pre></td></tr></table></figure>
+<h1 id="Phep-lap-tren-Tuple"><a href="#Phep-lap-tren-Tuple" class="headerlink" title=" Phép lặp trên Tuple "></a><p style="color:red"> Phép lặp trên Tuple </p></h1><p>Bạn có thể dùng  phương thức <strong>Tuple.productIterator()</strong> để lặp qua hết tất cả các phần tử của Tuple.<br>Thử ví dụ sau để  thực hiện phép lặp trên tuples.</p>
+<h3 id="Vi-du-1"><a href="#Vi-du-1" class="headerlink" title="Ví dụ:"></a>Ví dụ:</h3><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">def</span> <span class="title">main</span></span>(args: <span class="type">Array</span>[<span class="type">String</span>]) &#123;</span><br><span class="line">      <span class="keyword">val</span> t = (<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>)</span><br><span class="line">      t.productIterator.foreach&#123; i =&gt;println(<span class="string">"Value = "</span> + i )&#125;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Lưu chương trình trên vào file <strong>Demo.scala.</strong> Lệnh sau đây được dùng để biên dịch và thực thi chương trình Demo.</p>
+<h2 id="Cai-dat-1"><a href="#Cai-dat-1" class="headerlink" title="Cài đặt"></a>Cài đặt</h2><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\&gt;scalac <span class="type">Demo</span>.scala</span><br><span class="line">\&gt;scala <span class="type">Demo</span></span><br></pre></td></tr></table></figure>
+<h2 id="Ket-qua-1"><a href="#Ket-qua-1" class="headerlink" title="Kết quả"></a>Kết quả</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Value = 4</span><br><span class="line">Value = 3</span><br><span class="line">Value = 2</span><br><span class="line">Value = 1</span><br></pre></td></tr></table></figure>
+<h1 id="Chuyen-doi-thanh-chuoi"><a href="#Chuyen-doi-thanh-chuoi" class="headerlink" title=" Chuyển đổi thành chuỗi "></a><p style="color:red"> Chuyển đổi thành chuỗi </p></h1><p>Bạn có thể sử dụng phương thức <strong>Tuple.toString ()</strong> để nối tất cả các phần tử của tuple sang kiểu chuỗi. Hãy thử chương trình ví dụ sau để chuyển đổi thành Chuỗi.</p>
+<h3 id="Vi-du-2"><a href="#Vi-du-2" class="headerlink" title="Ví dụ"></a>Ví dụ</h3><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">def</span> <span class="title">main</span></span>(args: <span class="type">Array</span>[<span class="type">String</span>]) &#123;</span><br><span class="line">      <span class="keyword">val</span> t = <span class="keyword">new</span> <span class="type">Tuple3</span>(<span class="number">1</span>, <span class="string">"hello"</span>, <span class="type">Console</span>)</span><br><span class="line">      println(<span class="string">"Concatenated String: "</span> + t.toString() )</span><br><span class="line">&#125;&#125;</span><br></pre></td></tr></table></figure>
+<p>Lưu chương trình trên vào file <strong>Demo.scala.</strong> Lệnh sau đây được dùng để biên dịch và thực thi chương trình Demo.</p>
+<h2 id="Cai-dat-2"><a href="#Cai-dat-2" class="headerlink" title="Cài đặt"></a>Cài đặt</h2><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\&gt;scalac <span class="type">Demo</span>.scala</span><br><span class="line">\&gt;scala <span class="type">Demo</span></span><br></pre></td></tr></table></figure>
+<h2 id="Ket-qua-2"><a href="#Ket-qua-2" class="headerlink" title="Kết quả"></a>Kết quả</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Concatenated String: (1,hello,scala.Console$@281acd47)</span><br></pre></td></tr></table></figure>
+<h1 id="Dao-cac-phan-tu"><a href="#Dao-cac-phan-tu" class="headerlink" title=" Đảo các phần tử "></a><p style="color:red"> Đảo các phần tử </p></h1><p>Bạn có thể sử dụng phương thức <strong>Tuple.swap</strong> để hoán đổi các phần tử của Tuple2.<br>Hãy thử chương trình ví dụ sau để hoán đổi các phần tử.</p>
+<h3 id="Vi-du-3"><a href="#Vi-du-3" class="headerlink" title="Ví dụ"></a>Ví dụ</h3><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">def</span> <span class="title">main</span></span>(args: <span class="type">Array</span>[<span class="type">String</span>]) &#123;</span><br><span class="line">      <span class="keyword">val</span> t = <span class="keyword">new</span> <span class="type">Tuple2</span>(<span class="string">"Scala"</span>, <span class="string">"hello"</span>)</span><br><span class="line">      println(<span class="string">"Swapped Tuple: "</span> + t.swap )</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Lưu chương trình trên vào file <strong>Demo.scala.</strong> Lệnh sau đây được dùng để biên dịch và thực thi chương trình Demo.</p>
+<h2 id="Cai-dat-3"><a href="#Cai-dat-3" class="headerlink" title="Cài đặt"></a>Cài đặt</h2><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\&gt;scalac <span class="type">Demo</span>.scala</span><br><span class="line">\&gt;scala <span class="type">Demo</span></span><br></pre></td></tr></table></figure>
+<h2 id="Ket-qua-3"><a href="#Ket-qua-3" class="headerlink" title="Kết quả"></a>Kết quả</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Swapped tuple: (hello,Scala)</span><br></pre></td></tr></table></figure>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://scala-play.com/2018/10/08/scala-tuples/" data-id="cjn067hs2000azcxpkmbz6xvf" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://scala-play.com/2018/10/08/scala-tuples/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://scala-play.com/2018/10/08/scala-tuples/">Comments</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
     <article id="post-scala-options" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -337,7 +489,7 @@
 
 </div>
 
-    <a data-url="https://scala-play.com/2018/10/08/scala-options/" data-id="cjn05nupc0006xgxpylq449nu" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://scala-play.com/2018/10/08/scala-options/" data-id="cjn067hry0006zcxpcqi9qjmb" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -693,7 +845,7 @@
 
 </div>
 
-    <a data-url="https://scala-play.com/2018/10/08/scala-list/" data-id="cjn05nupa0005xgxpv65nczwe" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://scala-play.com/2018/10/08/scala-list/" data-id="cjn067hrw0005zcxpacoa0vmi" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -850,7 +1002,7 @@
 
 </div>
 
-    <a data-url="https://scala-play.com/2018/10/06/git-lab/" data-id="cjn05nup00001xgxp3qdmp2kv" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://scala-play.com/2018/10/06/git-lab/" data-id="cjn067hrj0001zcxpw8wkxvnc" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -990,7 +1142,7 @@
 
 </div>
 
-    <a data-url="https://scala-play.com/2018/10/05/hello-world/" data-id="cjn05nup60004xgxp0cc2l6dv" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://scala-play.com/2018/10/05/hello-world/" data-id="cjn067hrq0004zcxpqg91kukt" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1159,7 +1311,7 @@
 
 </div>
 
-    <a data-url="https://scala-play.com/2018/10/02/HOF-in-scala/" data-id="cjn05nuor0000xgxpxwnb6n15" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://scala-play.com/2018/10/02/HOF-in-scala/" data-id="cjn067hrb0000zcxp86fbyj62" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1250,6 +1402,25 @@
                     <li>
                         
                         <div class="item-thumbnail">
+                            <a href="/2018/10/08/scala-tuples/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2018/10/08/scala-tuples/" class="title">Scala – Tuples</a></p>
+                            <p class="item-date"><time datetime="2018-10-08T10:37:14.000Z" itemprop="datePublished">2018-10-08</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
                             <a href="/2018/10/08/scala-options/" class="thumbnail">
     
     
@@ -1323,25 +1494,6 @@
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2018/10/02/HOF-in-scala/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/scala/">scala</a></p>
-                            <p class="item-title"><a href="/2018/10/02/HOF-in-scala/" class="title">Higher Order Functions trong Scala</a></p>
-                            <p class="item-date"><time datetime="2018-10-02T13:08:24.000Z" itemprop="datePublished">2018-10-02</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -1360,7 +1512,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">5</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">6</span></li></ul>
         </div>
     </div>
 
