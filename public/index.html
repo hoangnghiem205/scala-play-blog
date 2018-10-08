@@ -1,0 +1,1607 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <meta charset="utf-8">
+    
+    <title>Scala-Play</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="keywords" content="scala, play, web, develop">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Scala-Play">
+<meta property="og:url" content="https://scala-play.com/index.html">
+<meta property="og:site_name" content="Scala-Play">
+<meta property="og:locale" content="en">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Scala-Play">
+<meta property="fb:app_id" content="228990624423914">
+    
+
+    
+        <link rel="alternate" href="/" title="Scala-Play" type="application/atom+xml" />
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome5/css/fontawesome.min.css">
+    <link rel="stylesheet" href="/libs/font-awesome5/css/fa-brands.min.css">
+    <link rel="stylesheet" href="/libs/font-awesome5/css/fa-solid.min.css">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+    
+
+
+</head>
+
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">Scala-Play</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/.">Home</a>
+                
+                    <a class="main-nav-link" href="/archives">Archives</a>
+                
+            </nav>
+            
+                
+                <nav id="sub-nav">
+                    <div class="profile" id="profile-nav">
+                        <a id="profile-anchor" href="javascript:;">
+                            <img class="avatar" src="/css/images/play-logo.png" />
+                            <i class="fas fa-caret-down"></i>
+                        </a>
+                    </div>
+                </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fas fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/.">Home</a></td>
+                
+                    <td><a class="main-nav-link" href="/archives">Archives</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+                
+
+<aside id="profile" class="profile-fixed">
+    <div class="inner profile-inner">
+        <div class="base-info profile-block">
+            <img id="avatar" src="/css/images/play-logo.png" />
+            <h2 id="name">Lập trình Scala Play</h2>
+            <h3 id="title">Web Developer</h3>
+            <span id="location"><i class="fas fa-map-marker-alt" style="padding-right: 5px"></i>Hanoi, Vietnam</span>
+            <a id="follow" target="_blank" href="https://github.com/">FOLLOW</a>
+        </div>
+        <div class="article-info profile-block">
+            <div class="article-info-block">
+                6
+                <span>posts</span>
+            </div>
+            <div class="article-info-block">
+                2
+                <span>tags</span>
+            </div>
+        </div>
+        
+        <div class="profile-block social-links">
+            <table>
+                <tr>
+                    
+                    
+                    <td>
+                        <a href="/" target="_blank" title="github" class=tooltip>
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="/" target="_blank" title="twitter" class=tooltip>
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="https://www.facebook.com/groups/208501353149345/?ref=bookmarks" target="_blank" title="facebook" class=tooltip>
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="/" target="_blank" title="dribbble" class=tooltip>
+                            <i class="fab fa-dribbble"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="/" target="_blank" title="rss" class=tooltip>
+                            <i class="fab fa-rss"></i>
+                        </a>
+                    </td>
+                    
+                </tr>
+            </table>
+        </div>
+        
+    </div>
+</aside>
+
+            
+            <section id="main">
+    <article id="post-scala-tuples" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2018/10/08/scala-tuples/">Scala – Tuples</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fas fa-calendar-alt"></i>
+        <a href="/2018/10/08/scala-tuples/">
+            <time datetime="2018-10-08T10:37:14.000Z" itemprop="datePublished">2018-10-08</time>
+        </a>
+    </div>
+
+
+                        
+                        
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <p>&nbsp;&nbsp;&nbsp;&nbsp; Scala tuple gộp một số lượng phần tử cố định cùng nhau để chúng có thể được truyền xung quanh như toàn bộ. Không như array (mảng) và list (danh sách) ,  một tuple có  thể chứa object (đối tượng) với các kiểu dữ liệu khác nhau và chúng không thay đổi được giá trị.</p>
+<p>Sau đây là ví dụ về tuple lưu kiểu nguyên , kiểu chuỗi.</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> t = (<span class="number">1</span>, <span class="string">"hello"</span>)</span><br></pre></td></tr></table></figure>
+<p>Đây là cách viết ngắn gọn cho đoạn mã sau -</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> t = <span class="keyword">new</span> <span class="type">Tuple2</span>(<span class="number">1</span>, <span class="string">"hello"</span>)</span><br></pre></td></tr></table></figure>
+<p>Kiểu thực sự của tuple phụ thuộc vào số lượng và các phần tử và kiểu của các phần tử đó.<br>Do đó kiểu của (99, “Luftballons”) là Tuple2[Int, String].  Kiểu của (‘u’, ‘r’, “the”, 1, 4, “me”) là Tuple6[Char, Char, String, Int, Int, String]. </p>
+<p>Tuples có kiểu Tuple1 ,Tuple2, Tuple3 và v.v  .Hiện tại tuples có thể chứa  tối đa 22 phần tử ,nếu muốn nhiều hơn ,bạn có thể sử dụng Collection  khác ngoài tuple. Đối với mỗi kiểu TupleN , trong đó  1&lt;= N &lt;= 22  Scala định nghĩa một số phương thức truy cập phần tử với đinh nghĩa sau-</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> t = (<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<p>Để truy cập các phần tử của tuple t, bạn có thể dùng phương thức  t._1 để truy cập phần tử đầu tiên , t._2 để truy cập phần tử thứ hai, và tương tự . Ví dụ, biểu thức sau đây tính tổng các phần tử của tuple t.</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> sum = t._1 + t._2 + t._3 + t._4</span><br></pre></td></tr></table></figure>
+<p>Bạn có thể dùng Tuple để viết một phương thức lấy kiểu List[Double] làm tham số và trả về biến biến count , biến tổng sum , và tổng bình phương ,được trả về dưới kiểu Tuple 3 phần tử , kiểu Tuple3[Int, Double, Double] .Chúng cũng hữu ích khi truyền danh sách các giá trị dữ liệu dưới dạng thông điệp giữa các tác nhân trong lập trình đồng thời.</p>
+<p>Thử chương trình ví dụ sau ,cho thấy cách dùng tuple.</p>
+<h3 id="Vi-du"><a href="#Vi-du" class="headerlink" title="Ví dụ:"></a>Ví dụ:</h3><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">def</span> <span class="title">main</span></span>(args: <span class="type">Array</span>[<span class="type">String</span>]) &#123;</span><br><span class="line">      <span class="keyword">val</span> t = (<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>)</span><br><span class="line">      <span class="keyword">val</span> sum = t._1 + t._2 + t._3 + t._4</span><br><span class="line">      println( <span class="string">"Sum of elements: "</span>  + sum )</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Lưu chương trình trên vào file <strong>Demo.scala.</strong> Lệnh sau đây được dùng để biên dịch và thực thi chương trình Demo.</p>
+<h2 id="Cai-dat"><a href="#Cai-dat" class="headerlink" title="Cài đặt:"></a>Cài đặt:</h2><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\&gt;scalac <span class="type">Demo</span>.scala</span><br><span class="line">\&gt;scala <span class="type">Demo</span></span><br></pre></td></tr></table></figure>
+<h2 id="Ket-qua"><a href="#Ket-qua" class="headerlink" title="Kết quả:"></a>Kết quả:</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Sum of elements: 10</span><br></pre></td></tr></table></figure>
+<h1 id="Phep-lap-tren-Tuple"><a href="#Phep-lap-tren-Tuple" class="headerlink" title=" Phép lặp trên Tuple "></a><p style="color:red"> Phép lặp trên Tuple </p></h1><p>Bạn có thể dùng  phương thức <strong>Tuple.productIterator()</strong> để lặp qua hết tất cả các phần tử của Tuple.<br>Thử ví dụ sau để  thực hiện phép lặp trên tuples.</p>
+<h3 id="Vi-du-1"><a href="#Vi-du-1" class="headerlink" title="Ví dụ:"></a>Ví dụ:</h3><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">def</span> <span class="title">main</span></span>(args: <span class="type">Array</span>[<span class="type">String</span>]) &#123;</span><br><span class="line">      <span class="keyword">val</span> t = (<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>)</span><br><span class="line">      t.productIterator.foreach&#123; i =&gt;println(<span class="string">"Value = "</span> + i )&#125;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Lưu chương trình trên vào file <strong>Demo.scala.</strong> Lệnh sau đây được dùng để biên dịch và thực thi chương trình Demo.</p>
+<h2 id="Cai-dat-1"><a href="#Cai-dat-1" class="headerlink" title="Cài đặt"></a>Cài đặt</h2><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\&gt;scalac <span class="type">Demo</span>.scala</span><br><span class="line">\&gt;scala <span class="type">Demo</span></span><br></pre></td></tr></table></figure>
+<h2 id="Ket-qua-1"><a href="#Ket-qua-1" class="headerlink" title="Kết quả"></a>Kết quả</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Value = 4</span><br><span class="line">Value = 3</span><br><span class="line">Value = 2</span><br><span class="line">Value = 1</span><br></pre></td></tr></table></figure>
+<h1 id="Chuyen-doi-thanh-chuoi"><a href="#Chuyen-doi-thanh-chuoi" class="headerlink" title=" Chuyển đổi thành chuỗi "></a><p style="color:red"> Chuyển đổi thành chuỗi </p></h1><p>Bạn có thể sử dụng phương thức <strong>Tuple.toString ()</strong> để nối tất cả các phần tử của tuple sang kiểu chuỗi. Hãy thử chương trình ví dụ sau để chuyển đổi thành Chuỗi.</p>
+<h3 id="Vi-du-2"><a href="#Vi-du-2" class="headerlink" title="Ví dụ"></a>Ví dụ</h3><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">def</span> <span class="title">main</span></span>(args: <span class="type">Array</span>[<span class="type">String</span>]) &#123;</span><br><span class="line">      <span class="keyword">val</span> t = <span class="keyword">new</span> <span class="type">Tuple3</span>(<span class="number">1</span>, <span class="string">"hello"</span>, <span class="type">Console</span>)</span><br><span class="line">      println(<span class="string">"Concatenated String: "</span> + t.toString() )</span><br><span class="line">&#125;&#125;</span><br></pre></td></tr></table></figure>
+<p>Lưu chương trình trên vào file <strong>Demo.scala.</strong> Lệnh sau đây được dùng để biên dịch và thực thi chương trình Demo.</p>
+<h2 id="Cai-dat-2"><a href="#Cai-dat-2" class="headerlink" title="Cài đặt"></a>Cài đặt</h2><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\&gt;scalac <span class="type">Demo</span>.scala</span><br><span class="line">\&gt;scala <span class="type">Demo</span></span><br></pre></td></tr></table></figure>
+<h2 id="Ket-qua-2"><a href="#Ket-qua-2" class="headerlink" title="Kết quả"></a>Kết quả</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Concatenated String: (1,hello,scala.Console$@281acd47)</span><br></pre></td></tr></table></figure>
+<h1 id="Dao-cac-phan-tu"><a href="#Dao-cac-phan-tu" class="headerlink" title=" Đảo các phần tử "></a><p style="color:red"> Đảo các phần tử </p></h1><p>Bạn có thể sử dụng phương thức <strong>Tuple.swap</strong> để hoán đổi các phần tử của Tuple2.<br>Hãy thử chương trình ví dụ sau để hoán đổi các phần tử.</p>
+<h3 id="Vi-du-3"><a href="#Vi-du-3" class="headerlink" title="Ví dụ"></a>Ví dụ</h3><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">def</span> <span class="title">main</span></span>(args: <span class="type">Array</span>[<span class="type">String</span>]) &#123;</span><br><span class="line">      <span class="keyword">val</span> t = <span class="keyword">new</span> <span class="type">Tuple2</span>(<span class="string">"Scala"</span>, <span class="string">"hello"</span>)</span><br><span class="line">      println(<span class="string">"Swapped Tuple: "</span> + t.swap )</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Lưu chương trình trên vào file <strong>Demo.scala.</strong> Lệnh sau đây được dùng để biên dịch và thực thi chương trình Demo.</p>
+<h2 id="Cai-dat-3"><a href="#Cai-dat-3" class="headerlink" title="Cài đặt"></a>Cài đặt</h2><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\&gt;scalac <span class="type">Demo</span>.scala</span><br><span class="line">\&gt;scala <span class="type">Demo</span></span><br></pre></td></tr></table></figure>
+<h2 id="Ket-qua-3"><a href="#Ket-qua-3" class="headerlink" title="Kết quả"></a>Kết quả</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Swapped tuple: (hello,Scala)</span><br></pre></td></tr></table></figure>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://scala-play.com/2018/10/08/scala-tuples/" data-id="cjn067hs2000azcxpkmbz6xvf" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://scala-play.com/2018/10/08/scala-tuples/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://scala-play.com/2018/10/08/scala-tuples/">Comments</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-scala-options" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2018/10/08/scala-options/">Scala – Options</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fas fa-calendar-alt"></i>
+        <a href="/2018/10/08/scala-options/">
+            <time datetime="2018-10-08T10:07:20.000Z" itemprop="datePublished">2018-10-08</time>
+        </a>
+    </div>
+
+
+                        
+                        
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <p>&nbsp;&nbsp;&nbsp;&nbsp; Scala Option [ T ] là một vùng chứa cho 0 hoặc một phần tử của một kiểu đã cho. Một Option[ T ] có thể là đối tượng <strong>Some[ T ]</strong>  hoặc <strong>None</strong>, biểu thị giá trị bị thiếu. Ví dụ, phương thức get của Map trong Scala tạo ra Some (value) nếu một giá trị tương ứng với một khóa đã cho đã được tìm thấy, hoặc <strong>None</strong> nếu khóa đã cho không được định nghĩa trong Map.</p>
+<p>Kiểu Option được dùng thường xuyên trong chương trình scala và bạn có thể so sánh nó với giá trị <strong>null</strong> có sẵn trong Java để chỉ không có giá trị. Ví dụ , phương thức get trong java.util.HashMap  trả về  giá trị được lưu trong HashMap ,hoặc null nếu giá trị không được  tìm thấy.</p>
+<p>Giả sử chúng ta có một phương thức lấy một bản ghi từ cơ sở dữ liệu dựa trên khóa chính.</p>
+<p>def findPerson(key: Int): Option[Person]</p>
+<p>Phương thức này sẽ trả về Some[Person]  nếu bản ghi được tìm thấy hoặc None nếu bản ghi không được tìm thấy. Chúng ta cùng theo dõi chương trình sau đây.</p>
+<h3 id="Vi-du"><a href="#Vi-du" class="headerlink" title="Ví dụ"></a>Ví dụ</h3><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">main</span></span>(args: <span class="type">Array</span>[<span class="type">String</span>]) &#123;</span><br><span class="line">        <span class="keyword">val</span> capitals = <span class="type">Map</span>(<span class="string">"France"</span> -&gt; <span class="string">"Paris"</span>, <span class="string">"Japan"</span> -&gt; <span class="string">"Tokyo"</span>)</span><br><span class="line">        println(<span class="string">"capitals.get( \"France\" ) : "</span> +  capitals.get( <span class="string">"France"</span> ))</span><br><span class="line">        println(<span class="string">"capitals.get( \"India\" ) : "</span> +  capitals.get( <span class="string">"India"</span> ))</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Lưu chương trình trên vào file <strong>Demo.scala.</strong> Lệnh sau đây được dùng để biên dịch và thực thi chương trình Demo.</p>
+<h2 id="Cai-dat"><a href="#Cai-dat" class="headerlink" title="Cài đặt"></a>Cài đặt</h2><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\&gt;scalac <span class="type">Demo</span>.scala</span><br><span class="line">\&gt;scala <span class="type">Demo</span></span><br></pre></td></tr></table></figure>
+<h2 id="Ket-qua"><a href="#Ket-qua" class="headerlink" title="Kết quả"></a>Kết quả</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">capitals.get( &quot;France&quot; ) : Some(Paris)</span><br><span class="line">capitals.get( &quot;India&quot; ) : None</span><br></pre></td></tr></table></figure>
+<p>Cách phổ biến nhất để lấy các giá trị tùy ý sang một bên là thông qua a pattern match. Ví dụ, hãy thử chương trình sau.</p>
+<h3 id="Vi-du-1"><a href="#Vi-du-1" class="headerlink" title="Ví dụ"></a>Ví dụ</h3><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">def</span> <span class="title">main</span></span>(args: <span class="type">Array</span>[<span class="type">String</span>]) &#123;</span><br><span class="line">      <span class="keyword">val</span> capitals = <span class="type">Map</span>(<span class="string">"France"</span> -&gt; <span class="string">"Paris"</span>, <span class="string">"Japan"</span> -&gt; <span class="string">"Tokyo"</span>)</span><br><span class="line">      println(<span class="string">"show(capitals.get( \"Japan\")) : "</span> + show(capitals.get( <span class="string">"Japan"</span>)) )</span><br><span class="line">      println(<span class="string">"show(capitals.get( \"India\")) : "</span> + show(capitals.get( <span class="string">"India"</span>)) )</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="function"><span class="keyword">def</span> <span class="title">show</span></span>(x: <span class="type">Option</span>[<span class="type">String</span>]) = x <span class="keyword">match</span> &#123;</span><br><span class="line">      <span class="keyword">case</span> <span class="type">Some</span>(s) =&gt; s</span><br><span class="line">      <span class="keyword">case</span> <span class="type">None</span> =&gt; <span class="string">"?"</span></span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Lưu chương trình trên vào file <strong>Demo.scala.</strong> Lệnh sau đây được dùng để biên dịch và thực thi chương trình Demo.</p>
+<h2 id="Cai-dat-1"><a href="#Cai-dat-1" class="headerlink" title="Cài đặt"></a>Cài đặt</h2><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\&gt;scalac <span class="type">Demo</span>.scala</span><br><span class="line">\&gt;scala <span class="type">Demo</span></span><br></pre></td></tr></table></figure>
+<h2 id="Ket-qua-1"><a href="#Ket-qua-1" class="headerlink" title="Kết quả"></a>Kết quả</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">show(capitals.get( &quot;Japan&quot;)) : Tokyo</span><br><span class="line">show(capitals.get( &quot;India&quot;)) : ?</span><br></pre></td></tr></table></figure>
+<h1 id="Dung-phuong-thuc-getOrElse"><a href="#Dung-phuong-thuc-getOrElse" class="headerlink" title=" Dùng phương thức getOrElse() "></a><p style="color:red"> Dùng phương thức getOrElse() </p></h1><p>&nbsp;&nbsp;&nbsp;&nbsp; Sau đây là chương trình ví dụ để chỉ cách sử dụng phương thức getOrElse () để truy cập một giá trị hoặc một giá trị mặc định khi không có giá trị nào.</p>
+<h3 id="Vi-du-2"><a href="#Vi-du-2" class="headerlink" title="Ví dụ"></a>Ví dụ</h3><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">def</span> <span class="title">main</span></span>(args: <span class="type">Array</span>[<span class="type">String</span>]) &#123;</span><br><span class="line">      <span class="keyword">val</span> a:<span class="type">Option</span>[<span class="type">Int</span>] = <span class="type">Some</span>(<span class="number">5</span>)</span><br><span class="line">      <span class="keyword">val</span> b:<span class="type">Option</span>[<span class="type">Int</span>] = <span class="type">None</span> </span><br><span class="line">      println(<span class="string">"a.getOrElse(0): "</span> + a.getOrElse(<span class="number">0</span>) )</span><br><span class="line">      println(<span class="string">"b.getOrElse(10): "</span> + b.getOrElse(<span class="number">10</span>) )</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Lưu chương trình trên vào file <strong>Demo.scala.</strong> Lệnh sau đây được dùng để biên dịch và thực thi chương trình Demo.</p>
+<h2 id="Cai-dat-2"><a href="#Cai-dat-2" class="headerlink" title="Cài đặt"></a>Cài đặt</h2><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\&gt;scalac <span class="type">Demo</span>.scala</span><br><span class="line">\&gt;scala <span class="type">Demo</span></span><br></pre></td></tr></table></figure>
+<h2 id="Ket-qua-2"><a href="#Ket-qua-2" class="headerlink" title="Kết quả"></a>Kết quả</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a.getOrElse(0): 5</span><br><span class="line">b.getOrElse(10): 10</span><br></pre></td></tr></table></figure>
+<h1 id="Dung-phuong-thuc-isEmpty"><a href="#Dung-phuong-thuc-isEmpty" class="headerlink" title=" Dùng phương thức isEmpty() "></a><p style="color:red"> Dùng phương thức isEmpty() </p></h1><p>&nbsp;&nbsp;&nbsp;&nbsp; Sau dây là chương trình ví dụ để chỉ cách dùng phương thức isEmpty() để kiểm tra Option  là None hay không</p>
+<h3 id="Vi-du-3"><a href="#Vi-du-3" class="headerlink" title="Ví dụ"></a>Ví dụ</h3><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">def</span> <span class="title">main</span></span>(args: <span class="type">Array</span>[<span class="type">String</span>]) &#123;</span><br><span class="line">      <span class="keyword">val</span> a:<span class="type">Option</span>[<span class="type">Int</span>] = <span class="type">Some</span>(<span class="number">5</span>)</span><br><span class="line">      <span class="keyword">val</span> b:<span class="type">Option</span>[<span class="type">Int</span>] = <span class="type">None</span> </span><br><span class="line">      println(<span class="string">"a.isEmpty: "</span> + a.isEmpty )</span><br><span class="line">      println(<span class="string">"b.isEmpty: "</span> + b.isEmpty )</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Lưu chương trình trên vào file <strong>Demo.scala.</strong> Lệnh sau đây được dùng để biên dịch và thực thi chương trình Demo.</p>
+<h2 id="Cai-dat-3"><a href="#Cai-dat-3" class="headerlink" title="Cài đặt"></a>Cài đặt</h2><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\&gt;scalac <span class="type">Demo</span>.scala</span><br><span class="line">\&gt;scala <span class="type">Demo</span></span><br></pre></td></tr></table></figure>
+<h2 id="Ket-qua-3"><a href="#Ket-qua-3" class="headerlink" title="Kết quả"></a>Kết quả</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a.isEmpty: false</span><br><span class="line">b.isEmpty: true</span><br></pre></td></tr></table></figure>
+<h1 id="Nhung-phuong-thuc-Option-trong-Scala"><a href="#Nhung-phuong-thuc-Option-trong-Scala" class="headerlink" title=" Những phương thức Option trong Scala "></a><p style="color:red"> Những phương thức Option trong Scala </p></h1><p>&nbsp;&nbsp;&nbsp;&nbsp; Sau đây là các phương thức quan trọng mà bạn có thể sử dụng khi lựa chọn Options. Để biết danh sách đầy đủ các phương pháp có sẵn, vui lòng kiểm tra tài liệu chính thức của Scala.</p>
+<table>
+<thead>
+<tr>
+<th>Sr.No</th>
+<th><p style="text-align:center"> Phương thức với mô tả </p></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><p> <strong>def get: A</strong></p> Trả về giá trị của option</td>
+</tr>
+<tr>
+<td>2</td>
+<td><p> <strong>def isEmpty: Boolean</strong></p> Trả về true nếu option là None, ngược lại thì false</td>
+</tr>
+<tr>
+<td>3</td>
+<td><p> <strong>def productArity: Int</strong></p> Kích thước của kết quả này. Đối với một kết quả A(x_1, …, x_k) trả về k.</td>
+</tr>
+<tr>
+<td>4</td>
+<td><p> <strong>def productElement(n: Int): Any</strong></p> Phần tử thứ n             của kết quả này , dựa trên 0. Nói cách khác, đối với             một kết quả   A(x_1, …, x_k), trả về x_(n + 1) trong đó 0 &lt; n &lt; k.</td>
+</tr>
+<tr>
+<td>5</td>
+<td><p> <strong>def exists(p: (A) =&gt; Boolean): Boolean</strong></p> Trả về true nếu option này khác rỗng và hàm p trả về true khi áp dụng cho giá trị của Option này. Nếu không, trả về false.</td>
+</tr>
+<tr>
+<td>6</td>
+<td><p> <strong>def filter(p: (A) =&gt; Boolean): Option[A]</strong></p> Trả             về Option này nếu nó khác rỗng, và áp dụng hàm p cho giá trị của Option này trả về true. Nếu không, trả về None.</td>
+</tr>
+<tr>
+<td>7</td>
+<td><p> <strong>def filterNot(p: (A) =&gt; Boolean): Option[A]</strong></p> Trả về Option này nếu nó khác rỗng, và áp dụng hàm p cho giá trị của Option này trả về false. Nếu không, trả về None.</td>
+</tr>
+<tr>
+<td>8</td>
+<td><p> <strong>def flatMap<a href="f: (A" target="_blank" rel="noopener">B</a> =&gt; Option[B]): Option[B]</strong></p> Trả về kết quả của áp dụng hàm f cho giá trị của Option nếu Option này khác rỗng. Trả về None nếu Option này rỗng.</td>
+</tr>
+<tr>
+<td>9</td>
+<td><p> <strong>def foreach<a href="f: (A" target="_blank" rel="noopener">U</a> =&gt; U): Unit</strong></p> Áp dụng hàm f cho giá trị của option ,nếu nó khác rỗng. Ngược lại, không làm gì cả</td>
+</tr>
+<tr>
+<td>10</td>
+<td><p> <strong>def getOrElse<a href="default: =&gt; B" target="_blank" rel="noopener">B &gt;: A</a>: B</strong></p> Trả về giá trị của option nếu option này khác rỗng, ngược lại trả về kết quả của đánh giá default mặc định.</td>
+</tr>
+<tr>
+<td>11</td>
+<td><p> <strong>def isDefined: Boolean</strong></p> Trả về true nếu option này là một thể hiện của kiểu Some , ngược lại false.</td>
+</tr>
+<tr>
+<td>12</td>
+<td><p> <strong>def iterator: Iterator[A]</strong></p> Trả về một trình lặp singleton trả về giá trị của Option nếu nó khác rỗng, hoặc một trình lặp rỗng nếu option rỗng.</td>
+</tr>
+<tr>
+<td>13</td>
+<td><p> <strong>def map<a href="f: (A" target="_blank" rel="noopener">B</a> =&gt; B): Option[B]</strong></p> Trả về một Some chứa kết quả của áp dụng hàm f cho giá trị của Option này nếu Option này khác rỗng. Nếu không, trả về None.</td>
+</tr>
+<tr>
+<td>14</td>
+<td><p> <strong>def orElse<a href="alternative: =&gt; Option[B]" target="_blank" rel="noopener">B &gt;: A</a>: Option[B]</strong></p> Trả về Option này nếu nó khác rỗng , không thì trả về  kết quả của đánh giá  thay thế alternative.</td>
+</tr>
+<tr>
+<td>15</td>
+<td><p> <strong>def orNull</strong></p> Trả về giá trị của option nếu nó khác rỗng, hoặc trả về null nếu nó rỗng.</td>
+</tr>
+</tbody>
+</table>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://scala-play.com/2018/10/08/scala-options/" data-id="cjn067hry0006zcxpcqi9qjmb" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://scala-play.com/2018/10/08/scala-options/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://scala-play.com/2018/10/08/scala-options/">Comments</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-scala-list" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2018/10/08/scala-list/">Scala – Lists</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fas fa-calendar-alt"></i>
+        <a href="/2018/10/08/scala-list/">
+            <time datetime="2018-10-08T02:11:35.000Z" itemprop="datePublished">2018-10-08</time>
+        </a>
+    </div>
+
+
+                        
+                        
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;List trong scala gần tương tự như mảng, vì mọi phần tử đều cùng kiểu dữ liệu nhưng lại có hai sự khác biệt quan trọng:</p>
+<ul>
+<li>Đầu tiên, List không thể thay đổi, có nghĩa những phần tử trong một List không thể thay đổi được bằng phép gán.</li>
+<li>Thứ hai, List đại diện cho một danh sách liên kết các phần tử, trong khi đó các phần tử của array(mảng) đước xếp cạnh, liên tiếp với nhau.</li>
+</ul>
+<p>Kiểu của một List được viết duới dạng : List[T]. </p>
+<p>Bạn hãy xem thử ví dụ dưới đây, một vài List được định nghĩa cho các kiểu dữ liệu khác nhau.</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// List of Strings</span></span><br><span class="line"><span class="keyword">val</span> fruit: <span class="type">List</span>[<span class="type">String</span>] = <span class="type">List</span>(<span class="string">"apples"</span>, <span class="string">"oranges"</span>, <span class="string">"pears"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// List of Integers</span></span><br><span class="line"><span class="keyword">val</span> nums: <span class="type">List</span>[<span class="type">Int</span>] = <span class="type">List</span>(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// Empty List.</span></span><br><span class="line"><span class="keyword">val</span> empty: <span class="type">List</span>[<span class="type">Nothing</span>] = <span class="type">List</span>()</span><br><span class="line"></span><br><span class="line"><span class="comment">// Two dimensional list</span></span><br><span class="line"><span class="keyword">val</span> dim: <span class="type">List</span>[<span class="type">List</span>[<span class="type">Int</span>]] =</span><br><span class="line">   <span class="type">List</span>(</span><br><span class="line">      <span class="type">List</span>(<span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>),</span><br><span class="line">      <span class="type">List</span>(<span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>),</span><br><span class="line">      <span class="type">List</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>)</span><br><span class="line">   )</span><br></pre></td></tr></table></figure>
+<p>Tất cả List được định nghĩa với hai khối cơ bản là :: và Nil ở cuối. Nil cũng biểu thị một danh sách trống. Tất cả List trên được định nghĩa như sau:</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// List of Strings</span></span><br><span class="line"><span class="keyword">val</span> fruit = <span class="string">"apples"</span> :: (<span class="string">"oranges"</span> :: (<span class="string">"pears"</span> :: <span class="type">Nil</span>))</span><br><span class="line"><span class="comment">// List of Integers</span></span><br><span class="line"><span class="keyword">val</span> nums = <span class="number">1</span> :: (<span class="number">2</span> :: (<span class="number">3</span> :: (<span class="number">4</span> :: <span class="type">Nil</span>)))</span><br><span class="line"><span class="comment">// Empty List.</span></span><br><span class="line"><span class="keyword">val</span> empty = <span class="type">Nil</span></span><br><span class="line"><span class="comment">// Two dimensional list</span></span><br><span class="line"><span class="keyword">val</span> dim =   (<span class="number">1</span> :: (<span class="number">0</span> :: (<span class="number">0</span> :: <span class="type">Nil</span>))) ::</span><br><span class="line">            (<span class="number">0</span> :: (<span class="number">1</span> :: (<span class="number">0</span> :: <span class="type">Nil</span>))) ::</span><br><span class="line">            (<span class="number">0</span> :: (<span class="number">0</span> :: (<span class="number">1</span> :: <span class="type">Nil</span>))) :: <span class="type">Nil</span></span><br></pre></td></tr></table></figure>
+<h1 id="Thao-tac-co-ban-tren-Lists"><a href="#Thao-tac-co-ban-tren-Lists" class="headerlink" title=" Thao tác cơ bản trên Lists "></a><p style="color:red"> Thao tác cơ bản trên Lists </p></h1><p>Tất cả thao tác trên List được thể hiện theo ba phương thức sau đây:</p>
+<table>
+<thead>
+<tr>
+<th><p style="width:50px"> No </p></th>
+<th><p style="text-align:center;height:50%"> Phương thức &amp; Mô tả </p></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>head:</strong> Phương thức này trả về phần tử đầu tiên của list.</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>tail:</strong> Phương thức này trả về 1 danh sách gồm tất cả phần tử ngoại trừ phần tử đầu tiên.</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>isEmpty:</strong> Phương thức này trả về  true nếu list rỗng, và ngược lại trả về false.</td>
+</tr>
+</tbody>
+</table>
+<p>Ví dụ sau cho ta thấy cách dùng các phương thức trên.</p>
+<p><em>Ví dụ:</em></p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"> <span class="class"><span class="keyword">object</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">main</span></span>(args: <span class="type">Array</span>[<span class="type">String</span>]) &#123;</span><br><span class="line">     <span class="keyword">val</span> fruit = <span class="string">"apples"</span> :: (<span class="string">"oranges"</span> :: (<span class="string">"pears"</span> :: <span class="type">Nil</span>))</span><br><span class="line">     <span class="keyword">val</span> nums = <span class="type">Nil</span></span><br><span class="line">     println( <span class="string">"Head of fruit : "</span> + fruit.head )</span><br><span class="line">     println( <span class="string">"Tail of fruit : "</span> + fruit.tail )</span><br><span class="line">     println( <span class="string">"Check if fruit is empty : "</span> + fruit.isEmpty )</span><br><span class="line">     println( <span class="string">"Check if nums is empty : "</span> + nums.isEmpty )</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Lưu chương trình trên trong tập tin <strong>Demo.scala.</strong>    Lệnh sau được dùng để biên dịch và thực thi chương trình này.</p>
+<h2 id="Cai-dat"><a href="#Cai-dat" class="headerlink" title="Cài đặt"></a>Cài đặt</h2><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\&gt;scalac <span class="type">Demo</span>.scala</span><br><span class="line">\&gt;scala <span class="type">Demo</span></span><br></pre></td></tr></table></figure>
+<h2 id="Ket-qua"><a href="#Ket-qua" class="headerlink" title="Kết quả"></a>Kết quả</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Head of fruit : apples</span><br><span class="line">Tail of fruit : List(oranges, pears)</span><br><span class="line">Check if fruit is empty : false</span><br><span class="line">Check if nums is empty : true</span><br></pre></td></tr></table></figure>
+<h1 id="Ghep-noi-cac-List"><a href="#Ghep-noi-cac-List" class="headerlink" title=" Ghép nối các List "></a><p style="color:red"> Ghép nối các List </p></h1><p>Bạn có thể dùng hoặc phép toán ::: hoặc phương thức <strong>List.:::()</strong> hoặc <strong>List.concat()</strong> để thêm hai hoặc nhiều List trở lên. Vui lòng khám phá ví dụ dưới đây</p>
+<h3 id="Vi-du"><a href="#Vi-du" class="headerlink" title="Ví dụ"></a>Ví dụ</h3><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">main</span></span>(args: <span class="type">Array</span>[<span class="type">String</span>]) &#123;</span><br><span class="line">         <span class="keyword">val</span> fruit1 = <span class="string">"apples"</span> :: (<span class="string">"oranges"</span> :: (<span class="string">"pears"</span> :: <span class="type">Nil</span>))</span><br><span class="line">         <span class="keyword">val</span> fruit2 = <span class="string">"mangoes"</span> :: (<span class="string">"banana"</span> :: <span class="type">Nil</span>)</span><br><span class="line">        <span class="comment">// dùng 2 hay nhiều list với toán tử :::</span></span><br><span class="line">         <span class="keyword">var</span> fruit = fruit1 ::: fruit2</span><br><span class="line">         println( <span class="string">"fruit1 ::: fruit2 : "</span> + fruit )</span><br><span class="line">          <span class="comment">// dùng 2 list với phương thức Set.:::()</span></span><br><span class="line">         fruit = fruit1.:::(fruit2)</span><br><span class="line">         println( <span class="string">"fruit1.:::(fruit2) : "</span> + fruit )</span><br><span class="line">         <span class="comment">// truyền hai hay nhiều list làm tham số</span></span><br><span class="line">         fruit = <span class="type">List</span>.concat(fruit1, fruit2)</span><br><span class="line">         println( <span class="string">"List.concat(fruit1, fruit2) : "</span> + fruit  )</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Lưu chương trình trên trong tập tin <strong>Demo.scala.</strong> Những lệnh sau được dùng để biên dịch và thực thi chương trình này.</p>
+<h2 id="Cai-dat-1"><a href="#Cai-dat-1" class="headerlink" title="Cài đặt"></a>Cài đặt</h2><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\&gt;scalac <span class="type">Demo</span>.scala</span><br><span class="line">\&gt;scala <span class="type">Demo</span></span><br></pre></td></tr></table></figure>
+<h2 id="Ket-qua-1"><a href="#Ket-qua-1" class="headerlink" title="Kết quả"></a>Kết quả</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fruit1 ::: fruit2 : List(apples, oranges, pears, mangoes, banana)</span><br><span class="line">fruit1.:::(fruit2) : List(mangoes, banana, apples, oranges, pears)</span><br><span class="line">List.concat(fruit1, fruit2) : List(apples, oranges, pears, mangoes, banana)</span><br></pre></td></tr></table></figure>
+<h1 id="Tao-List-dong-nhat"><a href="#Tao-List-dong-nhat" class="headerlink" title=" Tạo List đồng nhất "></a><p style="color:red"> Tạo List đồng nhất </p></h1><p>Bạn có thể dùng phương thức List.fill() để tạo một 0 hoặc nhiều bản sao của các phần tử . Hãy thử chương trình ví dụ sau đây.</p>
+<h3 id="Vi-du-1"><a href="#Vi-du-1" class="headerlink" title="Ví dụ:"></a>Ví dụ:</h3><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">def</span> <span class="title">main</span></span>(args: <span class="type">Array</span>[<span class="type">String</span>]) &#123;</span><br><span class="line">      <span class="keyword">val</span> fruit = <span class="type">List</span>.fill(<span class="number">3</span>)(<span class="string">"apples"</span>) <span class="comment">// Repeats apples three times.</span></span><br><span class="line">      println( <span class="string">"fruit : "</span> + fruit  )</span><br><span class="line"></span><br><span class="line">      <span class="keyword">val</span> num = <span class="type">List</span>.fill(<span class="number">10</span>)(<span class="number">2</span>)         <span class="comment">// Repeats 2, 10 times.</span></span><br><span class="line">      println( <span class="string">"num : "</span> + num  )</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Lưu chương trình trên trong tập tin <strong>Demo.scala.</strong> Các Lệnh sau được dùng để biên dịch và thực thi chương trình này.</p>
+<h2 id="Cai-dat-2"><a href="#Cai-dat-2" class="headerlink" title="Cài đặt:"></a>Cài đặt:</h2><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\&gt;scalac <span class="type">Demo</span>.scala</span><br><span class="line">\&gt;scala <span class="type">Demo</span></span><br></pre></td></tr></table></figure>
+<h2 id="Ket-qua-2"><a href="#Ket-qua-2" class="headerlink" title="Kết quả:"></a>Kết quả:</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fruit : List(apples, apples, apples)</span><br><span class="line">num : List(2, 2, 2, 2, 2, 2, 2, 2, 2, 2)</span><br></pre></td></tr></table></figure>
+<h1 id="Tao-bang-mot-ham"><a href="#Tao-bang-mot-ham" class="headerlink" title=" Tạo bảng một hàm "></a><p style="color:red"> Tạo bảng một hàm </p></h1><p>Bạn có  thể dùng một hàm cùng với phương thức  <strong>List.tabulate()</strong>  để tác dụng lên tất cả phần tử của List trước khi tạo bảng List. Tham số của hàm này giống như phương thức List.fill:  Tham số thứ nhất cho biết kích thước List cần tạo, và tham số thứ hai mô tả các phần tử của List. Sự khác biệt duy nhất là thay vì phần tử  cố định , chúng được tính từ một hàm.</p>
+<p>Thử chương trình ví dụ sau đây</p>
+<h3 id="Vi-du-2"><a href="#Vi-du-2" class="headerlink" title="Ví dụ:"></a>Ví dụ:</h3><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">main</span></span>(args: <span class="type">Array</span>[<span class="type">String</span>]) &#123;</span><br><span class="line">         <span class="comment">// Creates 5 elements using the given function.</span></span><br><span class="line">         <span class="keyword">val</span> squares = <span class="type">List</span>.tabulate(<span class="number">6</span>)(n =&gt; n * n)</span><br><span class="line">         println( <span class="string">"squares : "</span> + squares  )</span><br><span class="line">         <span class="keyword">val</span> mul = <span class="type">List</span>.tabulate( <span class="number">4</span>,<span class="number">5</span> )( _ * _ )      </span><br><span class="line">         println( <span class="string">"mul : "</span> + mul  )</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Lưu chương trình trên trong tập tin <strong>Demo.scala.</strong> Các Lệnh sau được dùng để biên dịch và thực thi chương trình này.</p>
+<h2 id="Cai-dat-3"><a href="#Cai-dat-3" class="headerlink" title="Cài đặt:"></a>Cài đặt:</h2><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\&gt;scalac <span class="type">Demo</span>.scala</span><br><span class="line">\&gt;scala <span class="type">Demo</span></span><br></pre></td></tr></table></figure>
+<h2 id="Ket-qua-3"><a href="#Ket-qua-3" class="headerlink" title="Kết quả"></a>Kết quả</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">squares : List(0, 1, 4, 9, 16, 25)</span><br><span class="line">mul : List(List(0, 0, 0, 0, 0), List(0, 1, 2, 3, 4), </span><br><span class="line">  List(0, 2, 4, 6, 8), List(0, 3, 6, 9, 12))</span><br></pre></td></tr></table></figure>
+<h1 id="Dao-nguoc-thu-tu-List"><a href="#Dao-nguoc-thu-tu-List" class="headerlink" title=" Đảo ngược thứ tự List "></a><p style="color:red"> Đảo ngược thứ tự List </p></h1><p>Bạn có thể dùng phương thức <strong>List.reverse</strong> để đảo ngược tất cả phần tử trong danh sách. Ví dụ sau đây cho thấy cách dùng nó.</p>
+<h3 id="Vi-du-3"><a href="#Vi-du-3" class="headerlink" title="Ví dụ:"></a>Ví dụ:</h3><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">     <span class="function"><span class="keyword">def</span> <span class="title">main</span></span>(args: <span class="type">Array</span>[<span class="type">String</span>]) &#123;</span><br><span class="line">     <span class="keyword">val</span> fruit = <span class="string">"apples"</span> :: (<span class="string">"oranges"</span> :: (<span class="string">"pears"</span> :: <span class="type">Nil</span>))</span><br><span class="line">     println( <span class="string">"Before reverse fruit : "</span> + fruit )</span><br><span class="line">     println( <span class="string">"After reverse fruit : "</span> + fruit.reverse )</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Lưu chương trình trên trong tập tin <strong>Demo.scala.</strong> Các Lệnh sau được dùng để biên dịch và thực thi chương trình này.</p>
+<h2 id="Cai-dat-4"><a href="#Cai-dat-4" class="headerlink" title="Cài đặt:"></a>Cài đặt:</h2><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\&gt;scalac <span class="type">Demo</span>.scala</span><br><span class="line">\&gt;scala <span class="type">Demo</span></span><br></pre></td></tr></table></figure>
+<h2 id="Ket-qua-4"><a href="#Ket-qua-4" class="headerlink" title="Kết quả:"></a>Kết quả:</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Before reverse fruit : List(apples, oranges, pears)</span><br><span class="line">After reverse fruit : List(pears, oranges, apples)</span><br></pre></td></tr></table></figure>
+<h1 id="Cac-phuong-thuc-cua-List-trong-scala"><a href="#Cac-phuong-thuc-cua-List-trong-scala" class="headerlink" title=" Các phương thức của List trong scala "></a><p style="color:red"> Các phương thức của List trong scala </p></h1><p>Sau đây là những phương thức quan trọng khi bạn dùng khi thao tác với các List. Đối với một danh sách hoàn chỉnh các phương thức có sẵn, hãy kiểm tra tài liệu chính thức của Scala.</p>
+<table>
+<thead>
+<tr>
+<th>Sr.No</th>
+<th><p style="text-align:center">Phương thức với mô tả của nó</p></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><p><strong>scala def +(elem: A): List[A]</strong></p> Thêm một phần tử vào đầu list</td>
+</tr>
+<tr>
+<td>2</td>
+<td><p><strong>def :::(prefix: List[A]): List[A]</strong></p> Thêm những phần tử của list được truyền, vào trước list ban đầu</td>
+</tr>
+<tr>
+<td>3</td>
+<td><p><strong>def ::(x: A): List[A]</strong></p> Thêm một phần tử x vào đầu của list</td>
+</tr>
+<tr>
+<td>4</td>
+<td><p><strong>def addString(b: StringBuilder): StringBuilder</strong></p> Gán tất cả phần tử của list vào chuỗi StringBuilder</td>
+</tr>
+<tr>
+<td>5</td>
+<td><p><strong>def addString(b: StringBuilder, sep: String): StringBuilder</strong></p> Gán tất cả phần tử của list vào chuỗi StringBuilder b và ngăn cách lần lượt bởi chuỗi sep</td>
+</tr>
+<tr>
+<td>6</td>
+<td><p><strong>def apply(n: Int): A</strong></p> Chỉ định và trả về một phần tử bởi chỉ số của nó trong list</td>
+</tr>
+<tr>
+<td>7</td>
+<td><p><strong>def contains(elem: Any): Boolean</strong></p> Kiểm tra  giá trị được truyền có là một phần tử  trong list không.</td>
+</tr>
+<tr>
+<td>8</td>
+<td><p><strong>def copyToArray(xs: Array[A], start: Int, len: Int): Unit</strong></p>    Sao             chép tất cả phần tử của list sang 1 mảng. Tham số  cần truyền thêm là vị trí bắt đầu được sao chép sang trong mảng, và độ dài của list.</td>
+</tr>
+<tr>
+<td>9</td>
+<td><p><strong>def distinct: List[A]</strong></p> Trả về một list mới từ list đã cho mà không chứa bất kỳ phần tử trùng nào.</td>
+</tr>
+<tr>
+<td>10</td>
+<td><p><strong>def drop(n: Int): List[A]</strong></p> Trả về list  chứa tất cả phần tử ngoại trừ  n phần tử đầu tiên.</td>
+</tr>
+<tr>
+<td>11</td>
+<td><p><strong>def dropRight(n: Int): List[A]</strong></p> Trả về list chứa tất cả phần tử ngoại trừ  n phần tử cuối cùng.</td>
+</tr>
+<tr>
+<td>12</td>
+<td><p><strong>def endsWith[B](that: Seq[B]): Boolean</strong></p> Kiểm tra list có kết thúc với danh sách Seq[] truyền vào hay không.</td>
+</tr>
+<tr>
+<td>13</td>
+<td><p><strong>def equals(that: Any): Boolean</strong></p> Phương thức tương tự với các danh sách tùy ý. So sánh danh sách này với một số đối tượng khác.</td>
+</tr>
+<tr>
+<td>14</td>
+<td><p><strong>def filter(p: (A) =&gt; Boolean): List[A]</strong></p> Trả về tất cả phần tử trong list thỏa mãn vị từ.</td>
+</tr>
+<tr>
+<td>15</td>
+<td><p><strong>def foreach(f: (A) =&gt; Unit): Unit</strong></p> Áp dụng hàm f cho tất cả các phần tử của list.</td>
+</tr>
+<tr>
+<td>16</td>
+<td><p><strong>def head: A</strong></p> Chỉ định phần tử đầu tử đầu tiên của list.</td>
+</tr>
+<tr>
+<td>17</td>
+<td><p><strong>def indexOf(elem: A, from: Int): Int</strong></p> Tìm vị trí xuất hiện đầu tiên của giá trị A trong list ,kể từ vị trí from trở đi.</td>
+</tr>
+<tr>
+<td>18</td>
+<td><p><strong>def init: List[A]</strong></p> Trả về list chứa tất cả phần tử ngoại trừ phần tử  cuối cùng.</td>
+</tr>
+<tr>
+<td>19</td>
+<td><p><strong>def isEmpty: Boolean</strong></p> Kiểm tra xem list có rỗng không</td>
+</tr>
+<tr>
+<td>20</td>
+<td><p><strong>def iterator: Iterator[A]</strong></p> Tạo một trình lặp mới trên tất cả phần tử có trong đối tượng iterable có thể lặp</td>
+</tr>
+<tr>
+<td>21</td>
+<td><p><strong>def last: A</strong></p> Trả về phần tử cuối cùng</td>
+</tr>
+<tr>
+<td>22</td>
+<td><p><strong>def lastIndexOf(elem: A, end: Int): Int</strong></p> Tìm vị trí xuất hiện cuối cùng của một số giá trị trong list ,trước hoặc tại vị trí end .</td>
+</tr>
+<tr>
+<td>23</td>
+<td><p><strong>def length: Int</strong></p> Trả về độ dài của list.</td>
+</tr>
+<tr>
+<td>24</td>
+<td><p><strong>def map[B](f: (A) =&gt; B): List[B]</strong></p> Trả về một list mới bằng việc áp dụng hàm f cho tất cả phần tử của list.</td>
+</tr>
+<tr>
+<td>25</td>
+<td><p><strong>def max: A</strong></p> Tìm phần tử lớn nhất.</td>
+</tr>
+<tr>
+<td>26</td>
+<td><p><strong>def min: A</strong></p> Tìm phần tử nhỏ nhất.</td>
+</tr>
+<tr>
+<td>27</td>
+<td><p><strong>def mkString: String</strong></p> Hiển thị ra tất cả phần tử của list dưới dạng một chuỗi.</td>
+</tr>
+<tr>
+<td>28</td>
+<td><p><strong>def mkString(sep: String): String</strong></p> Hiển thị ra tất cả phần tử của list trong một chuỗi dùng 1 chuỗi ngăn cách sep</td>
+</tr>
+<tr>
+<td>29</td>
+<td><p><strong>def reverse: List[A]</strong></p> Trả về một list mới với các phần tử được đảo ngược.</td>
+</tr>
+<tr>
+<td>30</td>
+<td><p><strong>def sorted[B &gt;: A]: List[A</strong></p> Sắp xếp list theo một thứ tự.</td>
+</tr>
+<tr>
+<td>31</td>
+<td><p><strong>def startsWith[B](that: Seq[B], offset: Int): Boolean</strong></p> Kiểm tra xem list có chứa danh sách truyền vào tại một vị trí offset không.</td>
+</tr>
+<tr>
+<td>32</td>
+<td><p><strong>def sum: A</strong></p> Tính tổng tất cả phần tử của tập hợp.</td>
+</tr>
+<tr>
+<td>33</td>
+<td><p><strong>def tail: List[A]</strong></p> Trả về tất cả phần tử ngoại trừ phần tử đầu tiên.</td>
+</tr>
+<tr>
+<td>34</td>
+<td><p><strong>def take(n: Int): List[A]</strong></p> Trả về  n phần tử đầu tiên.</td>
+</tr>
+<tr>
+<td>35</td>
+<td><p><strong>def takeRight(n: Int): List[A]</strong></p> Trả về  n phần tử cuối cùng.</td>
+</tr>
+<tr>
+<td>36</td>
+<td><p><strong>def toArray: Array[A]</strong></p> Ép kiểu list sang kiểu mảng array.</td>
+</tr>
+<tr>
+<td>37</td>
+<td><p><strong>def toBuffer[B &gt;: A]: Buffer[B]</strong></p> Ép kiểu list sang một bộ đệm có thể thay đổi.</td>
+</tr>
+<tr>
+<td>38</td>
+<td><p><strong>def toMap[T, U]: Map[T, U]</strong></p> Chuyển đổi list sang một map</td>
+</tr>
+<tr>
+<td>39</td>
+<td><p><strong>def toSeq: Seq[A]</strong></p> Chuyển đổi list sang một danh sách sequence.</td>
+</tr>
+<tr>
+<td>40</td>
+<td><p><strong>def toSet[B &gt;: A]: Set[B]</strong></p> Chuyển đổi list sang một Set.</td>
+</tr>
+<tr>
+<td>41</td>
+<td><p><strong>def toString(): String</strong></p> Chuyển đổi list sang một chuỗi.</td>
+</tr>
+</tbody>
+</table>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://scala-play.com/2018/10/08/scala-list/" data-id="cjn067hrw0005zcxpacoa0vmi" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://scala-play.com/2018/10/08/scala-list/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://scala-play.com/2018/10/08/scala-list/">Comments</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-git-lab" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2018/10/06/git-lab/">Hướng dẫn sử dụng Gitlab-CI/CD</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fas fa-calendar-alt"></i>
+        <a href="/2018/10/06/git-lab/">
+            <time datetime="2018-10-06T03:48:07.000Z" itemprop="datePublished">2018-10-06</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fas fa-folder"></i>
+        <a class="article-category-link" href="/categories/scala/">scala</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/basic/">basic</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <h2 id="1-Cac-chuc-nang-chinh"><a href="#1-Cac-chuc-nang-chinh" class="headerlink" title="1. Các chức năng chính"></a>1. Các chức năng chính</h2><ul>
+<li>Tự động Build và Deploy lên Staging <strong><em>(đã sử dụng được)</em></strong></li>
+<li>Tự động Build và Deploy lên Production <strong><em>(đang phát triển)</em></strong></li>
+</ul>
+<p>- Chức năng tự động Build và Deploy lên Staging sẽ được kích hoạt khi merge code vào<br>branch “dev” hoặc push code lên branch “dev”.</p>
+<p>- Chức năng tự động Build và Deploy lên Production sẽ được kích hoạt khi merge code vào<br>branch “master” hoặc push code lên branch “master”.</p>
+<h2 id="2-Cach-su-dung"><a href="#2-Cach-su-dung" class="headerlink" title="2. Cách sử dụng"></a>2. Cách sử dụng</h2><p><strong><em>Bước 1:</em></strong> merge code vào branch “dev” hoặc push code lên branch “dev”</p>
+<p><strong><em>Bước 2:</em></strong> chờ quá trình Build - Deploy diễn ra<br><strong><em>Bước 2.1:</em></strong> Đầu tiên, chúng ta vào mục “Pipelines” để kiểm tra trạng thái của quá trình. </p>
+<img src="/2018/10/06/git-lab/image.69CEQZ.png">
+<p><strong><em>Bước 2.2:</em></strong> Nhấn vào “running” để đi tới màn hình chi tiết của quá trình.</p>
+<img src="/2018/10/06/git-lab/image.FNDBQZ.png">
+<p><strong><em>Bước 2.3:</em></strong> ​ Nhấn vào “staging” để đi tới màn hình console - nơi hiển thị chi tiết quá trình build và deploy dự án lên Staging.</p>
+<img src="/2018/10/06/git-lab/image.MPJ6PZ.png">
+<p>- Sau bước này, chúng ta sẽ có kết quả của quá trình Build -&gt; Deploy. Sẽ có hai trường hợp xảy ra:</p>
+<ul>
+<li>Quá trình xảy ra lỗi: Gitlab-CI/CD sẽ báo trạng thái của quá trình sẽ hiển thị giống như <img src="/2018/10/06/git-lab/image.GDDMQZ.png" class="center" title="image">. Hoặc hiển thị “ERROR: Job failed: exit code 1” trên màn hình console ở dòng cuối cùng. </li>
+<li>Quá trình diễn ra thành công: trạng thái sẽ là <img src="/2018/10/06/git-lab/image.U7CBQZ.png" class="center">.</li>
+</ul>
+<p><strong>Bước 3: xử lý kết quả của quá trình Build - Deploy</strong></p>
+<p><strong><em>Bước 3.1:</em></strong> N​ ếu kết quả trả về là thành công . Chúng ta sẽ lên Staging server để xem<br>kết quả, công việc triển khai coi như xong. Ngoài ra, chúng ta có thể xem chi tiết hơn bằng<br>cách:</p>
+<p>- Vào mục “Builds” để xem tất cả các quá trình Build - Deploy đã thực hiện (bao gồm cả quá<br>trình thực thi lại một lần Build - Deploy nào đó)</p>
+<img src="/2018/10/06/git-lab/image.VKRQQZ.png">
+<p>- Vào mục “Environments” để xem các môi trường đã triển khai. Ở đây, chúng ta mới triển<br>khai lên môi trường Staging. Môi trường Production sẽ được triển khai sau…</p>
+<img src="/2018/10/06/git-lab/image.P6KJQZ.png">
+<p><strong><em>Bước 3.2:</em></strong> Nếu kết quả trả lỗi, chúng ta nên đọc lại phần thông tin hiển thi ở màn hình console trước để tìm ra nguyên nhân. Sau đó đi tới mục “related-code” để xem chi tiết đoạn code nào đã gây lỗi cho hệ thống. </p>
+<img src="/2018/10/06/git-lab/image.BQBNQZ.png">
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://scala-play.com/2018/10/06/git-lab/" data-id="cjn067hrj0001zcxpw8wkxvnc" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://scala-play.com/2018/10/06/git-lab/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://scala-play.com/2018/10/06/git-lab/">Comments</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2018/10/05/hello-world/">Hello World</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fas fa-calendar-alt"></i>
+        <a href="/2018/10/05/hello-world/">
+            <time datetime="2018-10-05T11:03:34.970Z" itemprop="datePublished">2018-10-05</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fas fa-folder"></i>
+        <a class="article-category-link" href="/categories/scala/">scala</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/hello/">hello</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://scala-play.com/2018/10/05/hello-world/" data-id="cjn067hrq0004zcxpqg91kukt" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://scala-play.com/2018/10/05/hello-world/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://scala-play.com/2018/10/05/hello-world/">Comments</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-HOF-in-scala" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2018/10/02/HOF-in-scala/">Higher Order Functions trong Scala</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fas fa-calendar-alt"></i>
+        <a href="/2018/10/02/HOF-in-scala/">
+            <time datetime="2018-10-02T13:08:24.000Z" itemprop="datePublished">2018-10-02</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fas fa-folder"></i>
+        <a class="article-category-link" href="/categories/scala/">scala</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/basic/">basic</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <h2 id="Dinh-nghia-Higher-Order-Function"><a href="#Dinh-nghia-Higher-Order-Function" class="headerlink" title="Định nghĩa Higher Order Function"></a>Định nghĩa Higher Order Function</h2><p><code>Higher Order Function</code> là function thỏa mãn ít nhất một trong hai điều kiện :</p>
+<ul>
+<li>Có ít nhất một tham số truyền vào là một function khác</li>
+<li>Kết quả trả về của <code>HOF</code> đó là một function khác.</li>
+</ul>
+<p>Với Higher Order Function, tính trừu tượng hóa, tái sử dụng chính là điểm mạnh.</p>
+<h2 id="Tinh-truu-tuong-hoa-Abstraction"><a href="#Tinh-truu-tuong-hoa-Abstraction" class="headerlink" title="Tính trừu tượng hóa (Abstraction)"></a>Tính trừu tượng hóa (Abstraction)</h2><p>Hãy nghĩ đến dây chuyền lắp ráp một chiếc xe. Dây chuyền gồm bốn bộ phận:</p>
+<ul>
+<li>Bộ phận tạo bánh xe</li>
+<li>Bộ phận tạo khung xe</li>
+<li>Bộ phận tạo động cơ</li>
+<li>Bộ phận lắp ráp</li>
+</ul>
+<p>Bộ phận tạo bánh xe sẽ tạo ra bánh xe và chuyển qua bộ phận lắp. Tương tự như vậy, bộ phận tạo khung xe và bộ phân tạo động cợ sẽ tạo ra khung và động cơ, sau đó chuyển sang cho bộ phân lắp ráp. Bộ phận lắp ráp không cần phải biết bánh xe, khung xe hay động cơ xe được tạo ra như thế nào. Chức năng của bộ phận lắp ráp chỉ là ghép các thành phần để tạo ra chiếc xe mà thôi. Bộ phận lắp ráp chính là một HOF, nó nhận output của ba bộ phận còn lại để tạo ra output cho riêng nó. Có thể diễn giải như thế này:</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">BanhXe</span></span>&#123;&#125; </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">KhungXe</span></span>&#123;&#125; </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DongCoXe</span></span>&#123;&#125; </span><br><span class="line"></span><br><span class="line"><span class="comment">// ham tao banh xe </span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">taoBanhXe</span></span>() = &#123; </span><br><span class="line">  <span class="keyword">val</span> banhXe = <span class="keyword">new</span> <span class="type">BanhXe</span> </span><br><span class="line">  banhXe </span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line"><span class="comment">// ham tao khung xe </span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">taoKhungXe</span></span>() = &#123; </span><br><span class="line">  <span class="keyword">val</span> khungXe = <span class="keyword">new</span> <span class="type">KhungXe</span> </span><br><span class="line">  khungXe </span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line"><span class="comment">// ham tao dong co xe </span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">taoDongCoXe</span></span>() = &#123; </span><br><span class="line">  <span class="keyword">val</span> dongCoXe = <span class="keyword">new</span> <span class="type">DongCoXe</span> </span><br><span class="line">  dongCoXe </span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line"><span class="comment">// HOF function </span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">lapRapXe</span></span>(taoBanhXe(), taoKhungXe(), taoDongCoXe())</span><br></pre></td></tr></table></figure>
+<p>Từ ví dụ trên, chúng ta có thể hiểu tính trừu tượng hóa của HOF giúp che giấu chi tiết bên trong một function, làm giảm sự phức tạp. Vấn đề sẽ được xử lý ở một tầng cao hơn, trừu tượng hơn.</p>
+<h2 id="Tinh-tai-su-dung-Reusable"><a href="#Tinh-tai-su-dung-Reusable" class="headerlink" title="Tính tái sử dụng (Reusable)"></a>Tính tái sử dụng (Reusable)</h2><p>Cũng sử dụng ví dụ về dây chuyền tạo ra một chiếc xe. Chúng ta xây dựng một dây chuyền sản xuất xe máy. Tuy nhiên, nếu phải tạo ra thêm một dây chuyền sản xuất xe hơi thêm vào thì sẽ như thế nào ? Tạo ra một dây chuyền mới là giải pháp đơn giản nhất nhưng lại tốn kém về chi phí. Chúng ta có thể bổ sung thêm cho bộ phận tạo bánh xe máy khả năng tạo ra bánh xe hơi. Tương tự như vậy, bộ phận tao khung xe và động cơ đều trang bị thiết bị tạo ra đồng thời linh kiện cho xe máy lẫn xe hơi. Như vậy, ba bộ phân trên đều được sử dụng tùy theo yêu cầu tạo ra sản phẩm. Đó chính là tính tái sử dụng.</p>
+<h2 id="Cach-su-dung-HOF-trong-Scala"><a href="#Cach-su-dung-HOF-trong-Scala" class="headerlink" title="Cách sử dụng HOF trong Scala"></a>Cách sử dụng HOF trong Scala</h2><p>Một bài toán đơn giản được đặt ra, hãy hình dung bạn đang là một ông chủ và muốn tăng lương cho nhân viên của mình. Tăng lương là việc bạn nhân số lương hiện tại của nhân viên với một hệ số nhất định. Bạn nghĩ rằng, việc tăng lương cần linh động do đó phải tạo ra nhiều cách tăng lương khác nhau. Với bài toán trên, chúng ta sẽ đi giải quyết như sau:</p>
+<ul>
+<li>Để tiện cho việc quản lý vấn đề tăng lương, bạn sử dụng một <strong>Object</strong> có tên là <strong>SalaryRaiser</strong>. </li>
+<li><p>Bạn có 3 mức tăng lương khác nhau, theo thứ tự tăng dần là: <strong>smallPromotion()</strong>, <strong>greatPromotion()</strong> và <strong>hugePromotion()</strong>.</p>
+</li>
+<li><p>Ở mức smallPromotion, hệ số là 1.1</p>
+</li>
+<li>Ở mức smallPromotion, hệ số là logarit cơ số 10 của số lương hiện tại ứng với nhân viên đó.</li>
+<li>Ở mức smallPromotion, hệ số là số lương hiện tại của nhân viên đó.</li>
+</ul>
+<p>Theo cách thông thường, chúng ta sẽ dùng một vòng for để cập nhật giá trị lương của từng nhân viên. Sau đó, trả về danh sách lương của nhân viên sau khi đã cập nhật. Các bạn xem code phía dưới.</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">SalaryRaiser</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">smallPromotion</span></span>(salaries: <span class="type">Array</span>[<span class="type">Double</span>]): <span class="type">Array</span>[<span class="type">Double</span>] = &#123;</span><br><span class="line">    <span class="keyword">for</span> (i &lt;- salaries.indices) &#123;</span><br><span class="line">      salaries(i) = salaries(i) * <span class="number">1.1</span></span><br><span class="line">    &#125;</span><br><span class="line">    salaries</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">greatPromotion</span></span>(salaries: <span class="type">Array</span>[<span class="type">Double</span>]): <span class="type">Array</span>[<span class="type">Double</span>] = &#123;</span><br><span class="line">    <span class="keyword">for</span> (i &lt;- salaries.indices) &#123;</span><br><span class="line">      salaries(i) = salaries(i) * math.log(salaries(i))</span><br><span class="line">    &#125;</span><br><span class="line">    salaries</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">hugePromotion</span></span>(salaries: <span class="type">Array</span>[<span class="type">Double</span>]): <span class="type">Array</span>[<span class="type">Double</span>] = &#123;</span><br><span class="line">    <span class="keyword">for</span> (i &lt;- salaries.indices) &#123;</span><br><span class="line">      salaries(i) = salaries(i) * salaries(i)</span><br><span class="line">    &#125;</span><br><span class="line">    salaries</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Với <code>HOF</code>, việc viết code trở nên dễ dàng và ngắn gọn hơn khá nhiều. Ở đây, chúng ta sẽ sử dụng một HOF đó là <code>map()</code>. Chúng ta truyền vào map() một function, chính function này sẽ giúp chúng ta thay đổi lương của mỗi nhân viên theo hệ số  mong muốn.  Hàm map() đã thể hiện tính linh hoạt thông qua việc định nghĩa cách xử lý từng phần tử trong Array.</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">SalaryRaiser</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">smallPromotion</span></span>(salaries: <span class="type">Array</span>[<span class="type">Double</span>]): <span class="type">Array</span>[<span class="type">Double</span>] = &#123;</span><br><span class="line">    salaries.map(salary =&gt; salary * <span class="number">1.1</span>)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">greatPromotion</span></span>(salaries: <span class="type">Array</span>[<span class="type">Double</span>]): <span class="type">Array</span>[<span class="type">Double</span>] = &#123;</span><br><span class="line">    salaries.map(salary =&gt; salary * math.log(salary))</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">hugePromotion</span></span>(salaries: <span class="type">Array</span>[<span class="type">Double</span>]): <span class="type">Array</span>[<span class="type">Double</span>] = &#123;</span><br><span class="line">    salaries.map(salary =&gt; salary * salary)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Hiện nay đối với <strong>Scala</strong>, <code>map()</code> là một trong những <code>HOF</code> được dùng nhiều nhất. Ngoài ra, các bạn có thể tìm hiểu thêm về các HOF khác như <code>filter()</code>, <code>flatMap()</code> …</p>
+<h2 id="Nguon-tham-khao"><a href="#Nguon-tham-khao" class="headerlink" title="Nguồn tham khảo"></a>Nguồn tham khảo</h2><ol>
+<li><p><a href="https://discuss.grokking.org/t/higher-order-functions-la-gi-va-d-c-s-d-ng-nh-th-nao/309" target="_blank" rel="noopener">https://discuss.grokking.org/t/higher-order-functions-la-gi-va-d-c-s-d-ng-nh-th-nao/309</a></p>
+</li>
+<li><p><a href="https://docs.scala-lang.org/tour/higher-order-functions.html" target="_blank" rel="noopener">https://docs.scala-lang.org/tour/higher-order-functions.html</a></p>
+</li>
+</ol>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://scala-play.com/2018/10/02/HOF-in-scala/" data-id="cjn067hrb0000zcxp86fbyj62" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://scala-play.com/2018/10/02/HOF-in-scala/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://scala-play.com/2018/10/02/HOF-in-scala/">Comments</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+</section>
+            
+                
+<aside id="sidebar">
+   
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">recent</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/10/08/scala-tuples/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2018/10/08/scala-tuples/" class="title">Scala – Tuples</a></p>
+                            <p class="item-date"><time datetime="2018-10-08T10:37:14.000Z" itemprop="datePublished">2018-10-08</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/10/08/scala-options/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2018/10/08/scala-options/" class="title">Scala – Options</a></p>
+                            <p class="item-date"><time datetime="2018-10-08T10:07:20.000Z" itemprop="datePublished">2018-10-08</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/10/08/scala-list/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2018/10/08/scala-list/" class="title">Scala – Lists</a></p>
+                            <p class="item-date"><time datetime="2018-10-08T02:11:35.000Z" itemprop="datePublished">2018-10-08</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/10/06/git-lab/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/scala/">scala</a></p>
+                            <p class="item-title"><a href="/2018/10/06/git-lab/" class="title">Hướng dẫn sử dụng Gitlab-CI/CD</a></p>
+                            <p class="item-date"><time datetime="2018-10-06T03:48:07.000Z" itemprop="datePublished">2018-10-06</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/10/05/hello-world/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/scala/">scala</a></p>
+                            <p class="item-title"><a href="/2018/10/05/hello-world/" class="title">Hello World</a></p>
+                            <p class="item-date"><time datetime="2018-10-05T11:03:34.970Z" itemprop="datePublished">2018-10-05</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/scala/">scala</a><span class="category-list-count">3</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">6</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">tags</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/basic/">basic</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hello/">hello</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/basic/" style="font-size: 20px;">basic</a> <a href="/tags/hello/" style="font-size: 10px;">hello</a>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+    
+    <div id="toTop" class="fas fa-angle-up"></div>
+</aside>
+
+            
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            &copy; 2018 scala-play.com<br>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_config = function () {
+        
+        this.page.identifier = '';
+    };
+    (function() { 
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'scala-play-com' + '.disqus.com/count.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <meta charset="utf-8">
+    
+    <title>Higher Order Functions trong Scala | Scala-Play</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Định nghĩa Higher Order FunctionHigher Order Function là function thỏa mãn ít nhất một trong hai điều kiện :  Có ít nhất một tham số truyền vào là một function khác Kết quả trả về của HOF đó là một fu">
+<meta name="keywords" content="basic">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Higher Order Functions trong Scala">
+<meta property="og:url" content="https://scala-play.com/2018/10/02/HOF-in-scala/index.html">
+<meta property="og:site_name" content="Scala-Play">
+<meta property="og:description" content="Định nghĩa Higher Order FunctionHigher Order Function là function thỏa mãn ít nhất một trong hai điều kiện :  Có ít nhất một tham số truyền vào là một function khác Kết quả trả về của HOF đó là một fu">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-10-06T04:02:00.858Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Higher Order Functions trong Scala">
+<meta name="twitter:description" content="Định nghĩa Higher Order FunctionHigher Order Function là function thỏa mãn ít nhất một trong hai điều kiện :  Có ít nhất một tham số truyền vào là một function khác Kết quả trả về của HOF đó là một fu">
+<meta property="fb:app_id" content="228990624423914">
+    
+
+    
+        <link rel="alternate" href="/" title="Scala-Play" type="application/atom+xml" />
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome5/css/fontawesome.min.css">
+    <link rel="stylesheet" href="/libs/font-awesome5/css/fa-brands.min.css">
+    <link rel="stylesheet" href="/libs/font-awesome5/css/fa-solid.min.css">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+    
+
+
+</head>
+
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">Scala-Play</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/.">Home</a>
+                
+                    <a class="main-nav-link" href="/archives">Archives</a>
+                
+            </nav>
+            
+                
+                <nav id="sub-nav">
+                    <div class="profile" id="profile-nav">
+                        <a id="profile-anchor" href="javascript:;">
+                            <img class="avatar" src="/css/images/play-logo.png" />
+                            <i class="fas fa-caret-down"></i>
+                        </a>
+                    </div>
+                </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fas fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/.">Home</a></td>
+                
+                    <td><a class="main-nav-link" href="/archives">Archives</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+                
+
+<aside id="profile" class="profile-fixed">
+    <div class="inner profile-inner">
+        <div class="base-info profile-block">
+            <img id="avatar" src="/css/images/play-logo.png" />
+            <h2 id="name">Lập trình Scala Play</h2>
+            <h3 id="title">Web Developer</h3>
+            <span id="location"><i class="fas fa-map-marker-alt" style="padding-right: 5px"></i>Hanoi, Vietnam</span>
+            <a id="follow" target="_blank" href="https://github.com/">FOLLOW</a>
+        </div>
+        <div class="article-info profile-block">
+            <div class="article-info-block">
+                6
+                <span>posts</span>
+            </div>
+            <div class="article-info-block">
+                2
+                <span>tags</span>
+            </div>
+        </div>
+        
+        <div class="profile-block social-links">
+            <table>
+                <tr>
+                    
+                    
+                    <td>
+                        <a href="/" target="_blank" title="github" class=tooltip>
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="/" target="_blank" title="twitter" class=tooltip>
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="https://www.facebook.com/groups/208501353149345/?ref=bookmarks" target="_blank" title="facebook" class=tooltip>
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="/" target="_blank" title="dribbble" class=tooltip>
+                            <i class="fab fa-dribbble"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="/" target="_blank" title="rss" class=tooltip>
+                            <i class="fab fa-rss"></i>
+                        </a>
+                    </td>
+                    
+                </tr>
+            </table>
+        </div>
+        
+    </div>
+</aside>
+
+            
+            <section id="main"><article id="post-HOF-in-scala" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+            Higher Order Functions trong Scala
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fas fa-calendar-alt"></i>
+        <a href="/2018/10/02/HOF-in-scala/">
+            <time datetime="2018-10-02T13:08:24.000Z" itemprop="datePublished">2018-10-02</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fas fa-folder"></i>
+        <a class="article-category-link" href="/categories/scala/">scala</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/basic/">basic</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <h2 id="Dinh-nghia-Higher-Order-Function"><a href="#Dinh-nghia-Higher-Order-Function" class="headerlink" title="Định nghĩa Higher Order Function"></a>Định nghĩa Higher Order Function</h2><p><code>Higher Order Function</code> là function thỏa mãn ít nhất một trong hai điều kiện :</p>
+<ul>
+<li>Có ít nhất một tham số truyền vào là một function khác</li>
+<li>Kết quả trả về của <code>HOF</code> đó là một function khác.</li>
+</ul>
+<p>Với Higher Order Function, tính trừu tượng hóa, tái sử dụng chính là điểm mạnh.</p>
+<h2 id="Tinh-truu-tuong-hoa-Abstraction"><a href="#Tinh-truu-tuong-hoa-Abstraction" class="headerlink" title="Tính trừu tượng hóa (Abstraction)"></a>Tính trừu tượng hóa (Abstraction)</h2><p>Hãy nghĩ đến dây chuyền lắp ráp một chiếc xe. Dây chuyền gồm bốn bộ phận:</p>
+<ul>
+<li>Bộ phận tạo bánh xe</li>
+<li>Bộ phận tạo khung xe</li>
+<li>Bộ phận tạo động cơ</li>
+<li>Bộ phận lắp ráp</li>
+</ul>
+<p>Bộ phận tạo bánh xe sẽ tạo ra bánh xe và chuyển qua bộ phận lắp. Tương tự như vậy, bộ phận tạo khung xe và bộ phân tạo động cợ sẽ tạo ra khung và động cơ, sau đó chuyển sang cho bộ phân lắp ráp. Bộ phận lắp ráp không cần phải biết bánh xe, khung xe hay động cơ xe được tạo ra như thế nào. Chức năng của bộ phận lắp ráp chỉ là ghép các thành phần để tạo ra chiếc xe mà thôi. Bộ phận lắp ráp chính là một HOF, nó nhận output của ba bộ phận còn lại để tạo ra output cho riêng nó. Có thể diễn giải như thế này:</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">BanhXe</span></span>&#123;&#125; </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">KhungXe</span></span>&#123;&#125; </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DongCoXe</span></span>&#123;&#125; </span><br><span class="line"></span><br><span class="line"><span class="comment">// ham tao banh xe </span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">taoBanhXe</span></span>() = &#123; </span><br><span class="line">  <span class="keyword">val</span> banhXe = <span class="keyword">new</span> <span class="type">BanhXe</span> </span><br><span class="line">  banhXe </span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line"><span class="comment">// ham tao khung xe </span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">taoKhungXe</span></span>() = &#123; </span><br><span class="line">  <span class="keyword">val</span> khungXe = <span class="keyword">new</span> <span class="type">KhungXe</span> </span><br><span class="line">  khungXe </span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line"><span class="comment">// ham tao dong co xe </span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">taoDongCoXe</span></span>() = &#123; </span><br><span class="line">  <span class="keyword">val</span> dongCoXe = <span class="keyword">new</span> <span class="type">DongCoXe</span> </span><br><span class="line">  dongCoXe </span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line"><span class="comment">// HOF function </span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">lapRapXe</span></span>(taoBanhXe(), taoKhungXe(), taoDongCoXe())</span><br></pre></td></tr></table></figure>
+<p>Từ ví dụ trên, chúng ta có thể hiểu tính trừu tượng hóa của HOF giúp che giấu chi tiết bên trong một function, làm giảm sự phức tạp. Vấn đề sẽ được xử lý ở một tầng cao hơn, trừu tượng hơn.</p>
+<h2 id="Tinh-tai-su-dung-Reusable"><a href="#Tinh-tai-su-dung-Reusable" class="headerlink" title="Tính tái sử dụng (Reusable)"></a>Tính tái sử dụng (Reusable)</h2><p>Cũng sử dụng ví dụ về dây chuyền tạo ra một chiếc xe. Chúng ta xây dựng một dây chuyền sản xuất xe máy. Tuy nhiên, nếu phải tạo ra thêm một dây chuyền sản xuất xe hơi thêm vào thì sẽ như thế nào ? Tạo ra một dây chuyền mới là giải pháp đơn giản nhất nhưng lại tốn kém về chi phí. Chúng ta có thể bổ sung thêm cho bộ phận tạo bánh xe máy khả năng tạo ra bánh xe hơi. Tương tự như vậy, bộ phận tao khung xe và động cơ đều trang bị thiết bị tạo ra đồng thời linh kiện cho xe máy lẫn xe hơi. Như vậy, ba bộ phân trên đều được sử dụng tùy theo yêu cầu tạo ra sản phẩm. Đó chính là tính tái sử dụng.</p>
+<h2 id="Cach-su-dung-HOF-trong-Scala"><a href="#Cach-su-dung-HOF-trong-Scala" class="headerlink" title="Cách sử dụng HOF trong Scala"></a>Cách sử dụng HOF trong Scala</h2><p>Một bài toán đơn giản được đặt ra, hãy hình dung bạn đang là một ông chủ và muốn tăng lương cho nhân viên của mình. Tăng lương là việc bạn nhân số lương hiện tại của nhân viên với một hệ số nhất định. Bạn nghĩ rằng, việc tăng lương cần linh động do đó phải tạo ra nhiều cách tăng lương khác nhau. Với bài toán trên, chúng ta sẽ đi giải quyết như sau:</p>
+<ul>
+<li>Để tiện cho việc quản lý vấn đề tăng lương, bạn sử dụng một <strong>Object</strong> có tên là <strong>SalaryRaiser</strong>. </li>
+<li><p>Bạn có 3 mức tăng lương khác nhau, theo thứ tự tăng dần là: <strong>smallPromotion()</strong>, <strong>greatPromotion()</strong> và <strong>hugePromotion()</strong>.</p>
+</li>
+<li><p>Ở mức smallPromotion, hệ số là 1.1</p>
+</li>
+<li>Ở mức smallPromotion, hệ số là logarit cơ số 10 của số lương hiện tại ứng với nhân viên đó.</li>
+<li>Ở mức smallPromotion, hệ số là số lương hiện tại của nhân viên đó.</li>
+</ul>
+<p>Theo cách thông thường, chúng ta sẽ dùng một vòng for để cập nhật giá trị lương của từng nhân viên. Sau đó, trả về danh sách lương của nhân viên sau khi đã cập nhật. Các bạn xem code phía dưới.</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">SalaryRaiser</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">smallPromotion</span></span>(salaries: <span class="type">Array</span>[<span class="type">Double</span>]): <span class="type">Array</span>[<span class="type">Double</span>] = &#123;</span><br><span class="line">    <span class="keyword">for</span> (i &lt;- salaries.indices) &#123;</span><br><span class="line">      salaries(i) = salaries(i) * <span class="number">1.1</span></span><br><span class="line">    &#125;</span><br><span class="line">    salaries</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">greatPromotion</span></span>(salaries: <span class="type">Array</span>[<span class="type">Double</span>]): <span class="type">Array</span>[<span class="type">Double</span>] = &#123;</span><br><span class="line">    <span class="keyword">for</span> (i &lt;- salaries.indices) &#123;</span><br><span class="line">      salaries(i) = salaries(i) * math.log(salaries(i))</span><br><span class="line">    &#125;</span><br><span class="line">    salaries</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">hugePromotion</span></span>(salaries: <span class="type">Array</span>[<span class="type">Double</span>]): <span class="type">Array</span>[<span class="type">Double</span>] = &#123;</span><br><span class="line">    <span class="keyword">for</span> (i &lt;- salaries.indices) &#123;</span><br><span class="line">      salaries(i) = salaries(i) * salaries(i)</span><br><span class="line">    &#125;</span><br><span class="line">    salaries</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Với <code>HOF</code>, việc viết code trở nên dễ dàng và ngắn gọn hơn khá nhiều. Ở đây, chúng ta sẽ sử dụng một HOF đó là <code>map()</code>. Chúng ta truyền vào map() một function, chính function này sẽ giúp chúng ta thay đổi lương của mỗi nhân viên theo hệ số  mong muốn.  Hàm map() đã thể hiện tính linh hoạt thông qua việc định nghĩa cách xử lý từng phần tử trong Array.</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">SalaryRaiser</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">smallPromotion</span></span>(salaries: <span class="type">Array</span>[<span class="type">Double</span>]): <span class="type">Array</span>[<span class="type">Double</span>] = &#123;</span><br><span class="line">    salaries.map(salary =&gt; salary * <span class="number">1.1</span>)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">greatPromotion</span></span>(salaries: <span class="type">Array</span>[<span class="type">Double</span>]): <span class="type">Array</span>[<span class="type">Double</span>] = &#123;</span><br><span class="line">    salaries.map(salary =&gt; salary * math.log(salary))</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">hugePromotion</span></span>(salaries: <span class="type">Array</span>[<span class="type">Double</span>]): <span class="type">Array</span>[<span class="type">Double</span>] = &#123;</span><br><span class="line">    salaries.map(salary =&gt; salary * salary)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Hiện nay đối với <strong>Scala</strong>, <code>map()</code> là một trong những <code>HOF</code> được dùng nhiều nhất. Ngoài ra, các bạn có thể tìm hiểu thêm về các HOF khác như <code>filter()</code>, <code>flatMap()</code> …</p>
+<h2 id="Nguon-tham-khao"><a href="#Nguon-tham-khao" class="headerlink" title="Nguồn tham khảo"></a>Nguồn tham khảo</h2><ol>
+<li><p><a href="https://discuss.grokking.org/t/higher-order-functions-la-gi-va-d-c-s-d-ng-nh-th-nao/309" target="_blank" rel="noopener">https://discuss.grokking.org/t/higher-order-functions-la-gi-va-d-c-s-d-ng-nh-th-nao/309</a></p>
+</li>
+<li><p><a href="https://docs.scala-lang.org/tour/higher-order-functions.html" target="_blank" rel="noopener">https://docs.scala-lang.org/tour/higher-order-functions.html</a></p>
+</li>
+</ol>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://scala-play.com/2018/10/02/HOF-in-scala/" data-id="cjn067hrb0000zcxp86fbyj62" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://scala-play.com/2018/10/02/HOF-in-scala/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://scala-play.com/2018/10/02/HOF-in-scala/">Comments</a>
+    
+
+        </footer>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2018/10/05/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Newer</strong>
+            <div class="article-nav-title">
+                
+                    Hello World
+                
+            </div>
+        </a>
+    
+    
+</nav>
+
+
+    
+</article>
+
+
+    
+    
+        <section id="comments">
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+</section>
+    
+
+</section>
+            
+                
+<aside id="sidebar">
+   
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">recent</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/10/08/scala-tuples/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2018/10/08/scala-tuples/" class="title">Scala – Tuples</a></p>
+                            <p class="item-date"><time datetime="2018-10-08T10:37:14.000Z" itemprop="datePublished">2018-10-08</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/10/08/scala-options/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2018/10/08/scala-options/" class="title">Scala – Options</a></p>
+                            <p class="item-date"><time datetime="2018-10-08T10:07:20.000Z" itemprop="datePublished">2018-10-08</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/10/08/scala-list/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2018/10/08/scala-list/" class="title">Scala – Lists</a></p>
+                            <p class="item-date"><time datetime="2018-10-08T02:11:35.000Z" itemprop="datePublished">2018-10-08</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/10/06/git-lab/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/scala/">scala</a></p>
+                            <p class="item-title"><a href="/2018/10/06/git-lab/" class="title">Hướng dẫn sử dụng Gitlab-CI/CD</a></p>
+                            <p class="item-date"><time datetime="2018-10-06T03:48:07.000Z" itemprop="datePublished">2018-10-06</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/10/05/hello-world/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/scala/">scala</a></p>
+                            <p class="item-title"><a href="/2018/10/05/hello-world/" class="title">Hello World</a></p>
+                            <p class="item-date"><time datetime="2018-10-05T11:03:34.970Z" itemprop="datePublished">2018-10-05</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/scala/">scala</a><span class="category-list-count">3</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">6</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">tags</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/basic/">basic</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hello/">hello</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/basic/" style="font-size: 20px;">basic</a> <a href="/tags/hello/" style="font-size: 10px;">hello</a>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+    
+    <div id="toTop" class="fas fa-angle-up"></div>
+</aside>
+
+            
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            &copy; 2018 scala-play.com<br>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_config = function () {
+        
+            this.page.url = 'https://scala-play.com/2018/10/02/HOF-in-scala/';
+        
+        this.page.identifier = 'HOF-in-scala';
+    };
+    (function() { 
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'scala-play-com' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
