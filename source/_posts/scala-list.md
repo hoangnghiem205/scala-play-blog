@@ -228,7 +228,7 @@ After reverse fruit : List(pears, oranges, apples)
 
 Sau đây là những phương thức quan trọng khi bạn dùng khi thao tác với các List. Đối với một danh sách hoàn chỉnh các phương thức có sẵn, hãy kiểm tra tài liệu chính thức của Scala.
 
-|Sr.No 		 |Phương 			thức với mô tả của nó |
+|Sr.No 		 |<p style="text-align:center">Phương thức với mô tả của nó</p>|
 |----------|-----------------------------------------------------|
 |1|<p>__scala def +(elem: A): List[A]__</p> Thêm một phần tử vào đầu list |
 |2|<p>__def :::(prefix: List[A]): List[A]__</p> Thêm những phần tử của list được truyền, vào trước list ban đầu |
