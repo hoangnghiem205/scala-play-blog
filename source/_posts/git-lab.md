@@ -1,10 +1,10 @@
 ---
-title: Hướng dẫn sử dụng Gitlab-CI/CD
+title: Hướng dẫn sử dụng Gitlab-CI/CD cơ bản
 date: 2018-10-06 10:48:07
 categories: 
-    - scala
+    - ci/cd
 tags: 
-    - basic
+    - tutorial
 ---
 ## 1. Các chức năng chính
 * Tự động Build và Deploy lên Staging ___(đã sử dụng được)___
@@ -18,9 +18,9 @@ branch "master" hoặc push code lên branch "master".
 
 
 ## 2. Cách sử dụng
-___Bước 1:___ merge code vào branch "dev" hoặc push code lên branch "dev"
+**Bước 1: merge code vào branch "dev" hoặc push code lên branch "dev"**
 
-___Bước 2:___ chờ quá trình Build - Deploy diễn ra
+**Bước 2: chờ quá trình Build - Deploy diễn ra**
 ___Bước 2.1:___ Đầu tiên, chúng ta vào mục "Pipelines" để kiểm tra trạng thái của quá trình. 
 
 {% asset_img image.69CEQZ.png %}
@@ -39,9 +39,9 @@ ___Bước 2.3:___ ​ Nhấn vào "staging" để đi tới màn hình console 
 * Quá trình xảy ra lỗi: Gitlab-CI/CD sẽ báo trạng thái của quá trình sẽ hiển thị giống như {% asset_img center image.GDDMQZ.png "image" %}. Hoặc hiển thị "ERROR: Job failed: exit code 1" trên màn hình console ở dòng cuối cùng. 
 * Quá trình diễn ra thành công: trạng thái sẽ là {% asset_img center image.U7CBQZ.png %}.
 
-__Bước 3: xử lý kết quả của quá trình Build - Deploy__
+**Bước 3: xử lý kết quả của quá trình Build - Deploy**
 
-___Bước 3.1:___ N​ ếu kết quả trả về là thành công . Chúng ta sẽ lên Staging server để xem
+___Bước 3.1:___ N​ếu kết quả trả về là thành công . Chúng ta sẽ lên Staging server để xem
 kết quả, công việc triển khai coi như xong. Ngoài ra, chúng ta có thể xem chi tiết hơn bằng
 cách:
 
