@@ -3,12 +3,12 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Hướng dẫn sử dụng Gitlab-CI/CD | Scala-Play</title>
+    <title>Hướng dẫn sử dụng Gitlab-CI/CD cơ bản | Scala-Play</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="description" content="1. Các chức năng chính Tự động Build và Deploy lên Staging (đã sử dụng được) Tự động Build và Deploy lên Production (đang phát triển)  - Chức năng tự động Build và Deploy lên Staging sẽ được kích hoạt">
-<meta name="keywords" content="basic">
+<meta name="keywords" content="tutorial">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hướng dẫn sử dụng Gitlab-CI&#x2F;CD">
+<meta property="og:title" content="Hướng dẫn sử dụng Gitlab-CI&#x2F;CD cơ bản">
 <meta property="og:url" content="https://scala-play.com/2018/10/06/git-lab/index.html">
 <meta property="og:site_name" content="Scala-Play">
 <meta property="og:description" content="1. Các chức năng chính Tự động Build và Deploy lên Staging (đã sử dụng được) Tự động Build và Deploy lên Production (đang phát triển)  - Chức năng tự động Build và Deploy lên Staging sẽ được kích hoạt">
@@ -21,9 +21,9 @@
 <meta property="og:image" content="https://scala-play.com/2018/10/06/git-lab/image.VKRQQZ.png">
 <meta property="og:image" content="https://scala-play.com/2018/10/06/git-lab/image.P6KJQZ.png">
 <meta property="og:image" content="https://scala-play.com/2018/10/06/git-lab/image.BQBNQZ.png">
-<meta property="og:updated_time" content="2018-10-08T10:06:42.611Z">
+<meta property="og:updated_time" content="2018-10-08T15:54:22.547Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hướng dẫn sử dụng Gitlab-CI&#x2F;CD">
+<meta name="twitter:title" content="Hướng dẫn sử dụng Gitlab-CI&#x2F;CD cơ bản">
 <meta name="twitter:description" content="1. Các chức năng chính Tự động Build và Deploy lên Staging (đã sử dụng được) Tự động Build và Deploy lên Production (đang phát triển)  - Chức năng tự động Build và Deploy lên Staging sẽ được kích hoạt">
 <meta name="twitter:image" content="https://scala-play.com/2018/10/06/git-lab/image.69CEQZ.png">
 <meta property="fb:app_id" content="228990624423914">
@@ -163,7 +163,7 @@
                 <span>posts</span>
             </div>
             <div class="article-info-block">
-                2
+                3
                 <span>tags</span>
             </div>
         </div>
@@ -219,7 +219,7 @@
                 
     
         <h1 class="article-title" itemprop="name">
-            Hướng dẫn sử dụng Gitlab-CI/CD
+            Hướng dẫn sử dụng Gitlab-CI/CD cơ bản
         </h1>
     
 
@@ -237,13 +237,13 @@
                         
     <div class="article-category">
     	<i class="fas fa-folder"></i>
-        <a class="article-category-link" href="/categories/scala/">scala</a>
+        <a class="article-category-link" href="/categories/ci-cd/">ci/cd</a>
     </div>
 
                         
     <div class="article-tag">
         <i class="fas fa-tag"></i>
-        <a class="tag-link" href="/tags/basic/">basic</a>
+        <a class="tag-link" href="/tags/tutorial/">tutorial</a>
     </div>
 
                     </div>
@@ -260,8 +260,8 @@
 </ul>
 <p>- Chức năng tự động Build và Deploy lên Staging sẽ được kích hoạt khi merge code vào<br>branch “dev” hoặc push code lên branch “dev”.</p>
 <p>- Chức năng tự động Build và Deploy lên Production sẽ được kích hoạt khi merge code vào<br>branch “master” hoặc push code lên branch “master”.</p>
-<h2 id="2-Cach-su-dung"><a href="#2-Cach-su-dung" class="headerlink" title="2. Cách sử dụng"></a>2. Cách sử dụng</h2><p><strong><em>Bước 1:</em></strong> merge code vào branch “dev” hoặc push code lên branch “dev”</p>
-<p><strong><em>Bước 2:</em></strong> chờ quá trình Build - Deploy diễn ra<br><strong><em>Bước 2.1:</em></strong> Đầu tiên, chúng ta vào mục “Pipelines” để kiểm tra trạng thái của quá trình. </p>
+<h2 id="2-Cach-su-dung"><a href="#2-Cach-su-dung" class="headerlink" title="2. Cách sử dụng"></a>2. Cách sử dụng</h2><p><strong>Bước 1: merge code vào branch “dev” hoặc push code lên branch “dev”</strong></p>
+<p><strong>Bước 2: chờ quá trình Build - Deploy diễn ra</strong><br><strong><em>Bước 2.1:</em></strong> Đầu tiên, chúng ta vào mục “Pipelines” để kiểm tra trạng thái của quá trình. </p>
 <img src="/2018/10/06/git-lab/image.69CEQZ.png">
 <p><strong><em>Bước 2.2:</em></strong> Nhấn vào “running” để đi tới màn hình chi tiết của quá trình.</p>
 <img src="/2018/10/06/git-lab/image.FNDBQZ.png">
@@ -273,7 +273,7 @@
 <li>Quá trình diễn ra thành công: trạng thái sẽ là <img src="/2018/10/06/git-lab/image.U7CBQZ.png" class="center">.</li>
 </ul>
 <p><strong>Bước 3: xử lý kết quả của quá trình Build - Deploy</strong></p>
-<p><strong><em>Bước 3.1:</em></strong> N​ ếu kết quả trả về là thành công . Chúng ta sẽ lên Staging server để xem<br>kết quả, công việc triển khai coi như xong. Ngoài ra, chúng ta có thể xem chi tiết hơn bằng<br>cách:</p>
+<p><strong><em>Bước 3.1:</em></strong> N​ếu kết quả trả về là thành công . Chúng ta sẽ lên Staging server để xem<br>kết quả, công việc triển khai coi như xong. Ngoài ra, chúng ta có thể xem chi tiết hơn bằng<br>cách:</p>
 <p>- Vào mục “Builds” để xem tất cả các quá trình Build - Deploy đã thực hiện (bao gồm cả quá<br>trình thực thi lại một lần Build - Deploy nào đó)</p>
 <img src="/2018/10/06/git-lab/image.VKRQQZ.png">
 <p>- Vào mục “Environments” để xem các môi trường đã triển khai. Ở đây, chúng ta mới triển<br>khai lên môi trường Staging. Môi trường Production sẽ được triển khai sau…</p>
@@ -290,7 +290,7 @@
 
 </div>
 
-    <a data-url="https://scala-play.com/2018/10/06/git-lab/" data-id="cjn067hrj0001zcxpw8wkxvnc" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://scala-play.com/2018/10/06/git-lab/" data-id="cjmxo38210000d2lqv36d0lua" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -377,9 +377,9 @@
         </a>
     
     
-        <a href="/2018/10/05/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2018/10/02/HOF-in-scala/" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">Older</strong>
-            <div class="article-nav-title">Hello World</div>
+            <div class="article-nav-title">Higher Order Functions trong Scala</div>
         </a>
     
 </nav>
@@ -412,6 +412,25 @@
                     <li>
                         
                         <div class="item-thumbnail">
+                            <a href="/2018/10/08/hello-world/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/scala/">scala</a></p>
+                            <p class="item-title"><a href="/2018/10/08/hello-world/" class="title">Hello World</a></p>
+                            <p class="item-date"><time datetime="2018-10-08T16:31:25.191Z" itemprop="datePublished">2018-10-08</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
                             <a href="/2018/10/08/scala-tuples/" class="thumbnail">
     
     
@@ -422,8 +441,8 @@
                         </div>
                         
                         <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/2018/10/08/scala-tuples/" class="title">Scala – Tuples</a></p>
+                            <p class="item-category"><a class="article-category-link" href="/categories/scala/">scala</a></p>
+                            <p class="item-title"><a href="/2018/10/08/scala-tuples/" class="title">Giới thiệu về Tuples trong Scala</a></p>
                             <p class="item-date"><time datetime="2018-10-08T10:37:14.000Z" itemprop="datePublished">2018-10-08</time></p>
                         </div>
                     </li>
@@ -479,28 +498,9 @@
                         </div>
                         
                         <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/scala/">scala</a></p>
-                            <p class="item-title"><a href="/2018/10/06/git-lab/" class="title">Hướng dẫn sử dụng Gitlab-CI/CD</a></p>
+                            <p class="item-category"><a class="article-category-link" href="/categories/ci-cd/">ci/cd</a></p>
+                            <p class="item-title"><a href="/2018/10/06/git-lab/" class="title">Hướng dẫn sử dụng Gitlab-CI/CD cơ bản</a></p>
                             <p class="item-date"><time datetime="2018-10-06T03:48:07.000Z" itemprop="datePublished">2018-10-06</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2018/10/05/hello-world/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/scala/">scala</a></p>
-                            <p class="item-title"><a href="/2018/10/05/hello-world/" class="title">Hello World</a></p>
-                            <p class="item-date"><time datetime="2018-10-05T11:03:34.970Z" itemprop="datePublished">2018-10-05</time></p>
                         </div>
                     </li>
                 
@@ -513,7 +513,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/scala/">scala</a><span class="category-list-count">3</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ci-cd/">ci/cd</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/scala/">scala</a><span class="category-list-count">3</span></li></ul>
         </div>
     </div>
 
@@ -531,7 +531,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/basic/">basic</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hello/">hello</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/basic/">basic</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hello/">hello</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tutorial/">tutorial</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -540,7 +540,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/basic/" style="font-size: 20px;">basic</a> <a href="/tags/hello/" style="font-size: 10px;">hello</a>
+            <a href="/tags/basic/" style="font-size: 20px;">basic</a> <a href="/tags/hello/" style="font-size: 10px;">hello</a> <a href="/tags/tutorial/" style="font-size: 10px;">tutorial</a>
         </div>
     </div>
 
