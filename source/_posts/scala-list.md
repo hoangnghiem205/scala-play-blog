@@ -1,5 +1,5 @@
 ---
-title: Scala – Lists
+title: List trong Scala
 date: 2018-10-08 09:11:35
 tags:
 ---
@@ -45,8 +45,9 @@ val dim =   (1 :: (0 :: (0 :: Nil))) ::
             (0 :: (1 :: (0 :: Nil))) ::
             (0 :: (0 :: (1 :: Nil))) :: Nil
 ```
+Vừa rồi là một số giới thiệu sơ lược của mình về List trong Scala. Tiếp sau đây chúng ta sẽ đi tìm hiểu sâu hơn về một số cách thao tác và phương thức sử dụng trong List
 
-# <p style="color:red"> Thao tác cơ bản trên Lists </p>
+## Thao tác cơ bản với List
 
 Tất cả thao tác trên List được thể hiện theo ba phương thức sau đây:
 
@@ -75,13 +76,13 @@ _Ví dụ:_
 
 Lưu chương trình trên trong tập tin __Demo.scala.__    Lệnh sau được dùng để biên dịch và thực thi chương trình này.
 
-## Cài đặt
+### Cài đặt
 ```scala
 \>scalac Demo.scala
 \>scala Demo
 ```
 
-## Kết quả
+### Kết quả
 
 ```
 Head of fruit : apples
@@ -90,7 +91,7 @@ Check if fruit is empty : false
 Check if nums is empty : true
 ```
 
-# <p style="color:red"> Ghép nối các List </p>
+## Ghép nối các List
 Bạn có thể dùng hoặc phép toán ::: hoặc phương thức __List.:::()__ hoặc __List.concat()__ để thêm hai hoặc nhiều List trở lên. Vui lòng khám phá ví dụ dưới đây
 
 ### Ví dụ
@@ -115,14 +116,14 @@ object Demo {
 
 Lưu chương trình trên trong tập tin __Demo.scala.__ Những lệnh sau được dùng để biên dịch và thực thi chương trình này.
 
-## Cài đặt
+### Cài đặt
 
 ```scala
 \>scalac Demo.scala
 \>scala Demo
 ```
 
-## Kết quả
+### Kết quả
 
 ```
 fruit1 ::: fruit2 : List(apples, oranges, pears, mangoes, banana)
@@ -130,7 +131,7 @@ fruit1.:::(fruit2) : List(mangoes, banana, apples, oranges, pears)
 List.concat(fruit1, fruit2) : List(apples, oranges, pears, mangoes, banana)
 ```
 
-# <p style="color:red"> Tạo List đồng nhất </p>
+## Tạo List đồng nhất
 
 Bạn có thể dùng phương thức List.fill() để tạo một 0 hoặc nhiều bản sao của các phần tử . Hãy thử chương trình ví dụ sau đây.
 
@@ -150,19 +151,19 @@ object Demo {
 
 Lưu chương trình trên trong tập tin __Demo.scala.__ Các Lệnh sau được dùng để biên dịch và thực thi chương trình này.
 
-## Cài đặt:
+### Cài đặt:
 ```scala
 \>scalac Demo.scala
 \>scala Demo
 ```
 
-## Kết quả:
+### Kết quả:
 ```
 fruit : List(apples, apples, apples)
 num : List(2, 2, 2, 2, 2, 2, 2, 2, 2, 2)
 ```
 
-# <p style="color:red"> Tạo bảng một hàm </p>
+## Tạo bảng một hàm
 
 Bạn có  thể dùng một hàm cùng với phương thức  __List.tabulate()__  để tác dụng lên tất cả phần tử của List trước khi tạo bảng List. Tham số của hàm này giống như phương thức List.fill:  Tham số thứ nhất cho biết kích thước List cần tạo, và tham số thứ hai mô tả các phần tử của List. Sự khác biệt duy nhất là thay vì phần tử  cố định , chúng được tính từ một hàm.
 
@@ -183,20 +184,20 @@ object Demo {
 
 Lưu chương trình trên trong tập tin __Demo.scala.__ Các Lệnh sau được dùng để biên dịch và thực thi chương trình này.
 
-## Cài đặt:
+### Cài đặt:
 ```scala
 \>scalac Demo.scala
 \>scala Demo
 ```
 
-## Kết quả
+### Kết quả
 ```
 squares : List(0, 1, 4, 9, 16, 25)
 mul : List(List(0, 0, 0, 0, 0), List(0, 1, 2, 3, 4), 
   List(0, 2, 4, 6, 8), List(0, 3, 6, 9, 12))
 ```
 
-# <p style="color:red"> Đảo ngược thứ tự List </p>
+## Đảo ngược thứ tự List
 
 Bạn có thể dùng phương thức __List.reverse__ để đảo ngược tất cả phần tử trong danh sách. Ví dụ sau đây cho thấy cách dùng nó.
 
@@ -213,18 +214,18 @@ object Demo {
 
 Lưu chương trình trên trong tập tin __Demo.scala.__ Các Lệnh sau được dùng để biên dịch và thực thi chương trình này.
 
-## Cài đặt:
+### Cài đặt:
 ```scala
 \>scalac Demo.scala
 \>scala Demo
 ```
 
-## Kết quả:
+### Kết quả:
 ```
 Before reverse fruit : List(apples, oranges, pears)
 After reverse fruit : List(pears, oranges, apples)
 ```
-# <p style="color:red"> Các phương thức của List trong scala </p>
+## Các phương thức của List trong scala
 
 Sau đây là những phương thức quan trọng khi bạn dùng khi thao tác với các List. Đối với một danh sách hoàn chỉnh các phương thức có sẵn, hãy kiểm tra tài liệu chính thức của Scala.
 
@@ -271,3 +272,6 @@ Sau đây là những phương thức quan trọng khi bạn dùng khi thao tác
 |39|<p>__def toSeq: Seq[A]__</p> Chuyển đổi list sang một danh sách sequence. |
 |40|<p>__def toSet[B >: A]: Set[B]__</p> Chuyển đổi list sang một Set. |
 |41|<p>__def toString(): String__</p> Chuyển đổi list sang một chuỗi. |
+
+## Nguồn tham khảo
+https://www.tutorialspoint.com/scala/scala_lists.htm

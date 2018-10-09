@@ -63,7 +63,7 @@ Lưu chương trình trên vào file __Demo.scala.__ Lệnh sau đây được d
 Sum of elements: 10
 ```
 Phần trên là những giới thiệu qua của mình về Tuple trong Scala. Bây giờ chúng ta sẽ đi tìm hiểu một vài phương thức thường xuyên được sử dụng trong Tuple.
-# <p style="color:red"> Phép lặp trên Tuple </p>
+## Phép lặp trên Tuple
 Bạn có thể dùng phương thức __Tuple.productIterator()__ để lặp qua hết tất cả các phần tử của Tuple.
 Thử ví dụ sau để thực hiện phép lặp trên tuples.
  ### Ví dụ:
@@ -90,7 +90,7 @@ Value = 3
 Value = 2
 Value = 1
 ```
-# <p style="color:red"> Chuyển đổi thành chuỗi </p>
+## Chuyển đổi thành chuỗi
 Bạn có thể sử dụng phương thức __Tuple.toString ()__ để nối tất cả các phần tử của tuple sang kiểu chuỗi. Hãy thử chương trình ví dụ sau để chuyển đổi thành Chuỗi.
 ### Ví dụ
 ```scala
@@ -110,7 +110,7 @@ Lưu chương trình trên vào file __Demo.scala.__ Lệnh sau đây được d
 ```
 Concatenated String: (1,hello,scala.Console$@281acd47)
 ```
-# <p style="color:red"> Đảo các phần tử  trong Tuple</p>
+## Đảo các phần tử  trong Tupl
 Bạn có thể sử dụng phương thức __Tuple.swap__ để hoán đổi các phần tử của Tuple2. 
 Hãy thử chương trình ví dụ sau để hoán đổi các phần tử.
 ### Ví dụ

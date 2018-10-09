@@ -1,5 +1,5 @@
 ---
-title: Scala – Options
+title: Option trong Scala
 date: 2018-10-08 17:07:20
 tags:
 ---
@@ -27,12 +27,12 @@ object Demo {
 
 Lưu chương trình trên vào file __Demo.scala.__ Lệnh sau đây được dùng để biên dịch và thực thi chương trình Demo.
 
-## Cài đặt
+### Cài đặt
 ```scala
 \>scalac Demo.scala
 \>scala Demo
 ```
-## Kết quả
+### Kết quả
 ```
 capitals.get( "France" ) : Some(Paris)
 capitals.get( "India" ) : None
@@ -57,18 +57,21 @@ object Demo {
 
 Lưu chương trình trên vào file __Demo.scala.__ Lệnh sau đây được dùng để biên dịch và thực thi chương trình Demo.
 
-## Cài đặt
+### Cài đặt
 ```scala
 \>scalac Demo.scala
 \>scala Demo
 ```
-## Kết quả
+### Kết quả
 ```
 show(capitals.get( "Japan")) : Tokyo
 show(capitals.get( "India")) : ?
 ```
 
-# <p style="color:red"> Dùng phương thức getOrElse() </p>
+Qua phần trên, mình đã giới thiệu qua và các bạn đã phần nào hiểu được sơ lược về cách sử dụng Option trong scala. Bây giờ chúng ta hãy cùng đi tìm hiểu sâu hơn về  các phương thức thường xuyên được sử dụng trong Option.
+
+
+## Dùng phương thức getOrElse() </p>
 &nbsp;&nbsp;&nbsp;&nbsp; Sau đây là chương trình ví dụ để chỉ cách sử dụng phương thức getOrElse () để truy cập một giá trị hoặc một giá trị mặc định khi không có giá trị nào.
 
 ### Ví dụ
@@ -86,18 +89,18 @@ object Demo {
 
 Lưu chương trình trên vào file __Demo.scala.__ Lệnh sau đây được dùng để biên dịch và thực thi chương trình Demo.
 
-## Cài đặt
+### Cài đặt
 ```scala
 \>scalac Demo.scala
 \>scala Demo
 ```
-## Kết quả
+### Kết quả
 ```
 a.getOrElse(0): 5
 b.getOrElse(10): 10
 ```
 
-# <p style="color:red"> Dùng phương thức isEmpty() </p>
+## Dùng phương thức isEmpty() </p>
 
 &nbsp;&nbsp;&nbsp;&nbsp; Sau dây là chương trình ví dụ để chỉ cách dùng phương thức isEmpty() để kiểm tra Option  là None hay không
 
@@ -116,18 +119,18 @@ object Demo {
 
 Lưu chương trình trên vào file __Demo.scala.__ Lệnh sau đây được dùng để biên dịch và thực thi chương trình Demo.
 
-## Cài đặt
+### Cài đặt
 ```scala
 \>scalac Demo.scala
 \>scala Demo
 ```
-## Kết quả
+### Kết quả
 ```
 a.isEmpty: false
 b.isEmpty: true
 ```
 
-# <p style="color:red"> Những phương thức Option trong Scala </p>
+## Những phương thức Option trong Scala </p>
 
 &nbsp;&nbsp;&nbsp;&nbsp; Sau đây là các phương thức quan trọng mà bạn có thể sử dụng khi lựa chọn Options. Để biết danh sách đầy đủ các phương pháp có sẵn, vui lòng kiểm tra tài liệu chính thức của Scala.
 
@@ -148,6 +151,9 @@ b.isEmpty: true
 | 13 |<p> __def map[B](f: (A) => B): Option[B]__</p> Trả về một Some chứa kết quả của áp dụng hàm f cho giá trị của Option này nếu Option này khác rỗng. Nếu không, trả về None. |
 | 14 |<p> __def orElse[B >: A](alternative: => Option[B]): Option[B]__</p> Trả về Option này nếu nó khác rỗng , không thì trả về  kết quả của đánh giá  thay thế alternative. |
 | 15 |<p> __def orNull__</p> Trả về giá trị của option nếu nó khác rỗng, hoặc trả về null nếu nó rỗng. |
+
+## Nguồn tham khảo
+https://www.tutorialspoint.com/scala/scala_options.htm
 
 
 
