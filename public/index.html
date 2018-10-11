@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <meta charset="utf-8">
+    
+    <title>Scala-Play</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="keywords" content="scala, play, web, develop">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Scala-Play">
+<meta property="og:url" content="https://scala-play.com/index.html">
+<meta property="og:site_name" content="Scala-Play">
+<meta property="og:locale" content="en">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Scala-Play">
+<meta property="fb:app_id" content="228990624423914">
+    
+
+    
+        <link rel="alternate" href="/" title="Scala-Play" type="application/atom+xml" />
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome5/css/fontawesome.min.css">
+    <link rel="stylesheet" href="/libs/font-awesome5/css/fa-brands.min.css">
+    <link rel="stylesheet" href="/libs/font-awesome5/css/fa-solid.min.css">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+    
+
+
+</head>
+
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">Scala-Play</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/.">Home</a>
+                
+                    <a class="main-nav-link" href="/archives">Archives</a>
+                
+            </nav>
+            
+                
+                <nav id="sub-nav">
+                    <div class="profile" id="profile-nav">
+                        <a id="profile-anchor" href="javascript:;">
+                            <img class="avatar" src="/css/images/play-logo.png" />
+                            <i class="fas fa-caret-down"></i>
+                        </a>
+                    </div>
+                </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fas fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/.">Home</a></td>
+                
+                    <td><a class="main-nav-link" href="/archives">Archives</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+                
+
+<aside id="profile" class="profile-fixed">
+    <div class="inner profile-inner">
+        <div class="base-info profile-block">
+            <img id="avatar" src="/css/images/play-logo.png" />
+            <h2 id="name">Lập trình Scala Play</h2>
+            <h3 id="title">Web Developer</h3>
+            <span id="location"><i class="fas fa-map-marker-alt" style="padding-right: 5px"></i>Hanoi, Vietnam</span>
+            <a id="follow" target="_blank" href="https://github.com/">FOLLOW</a>
+        </div>
+        <div class="article-info profile-block">
+            <div class="article-info-block">
+                2
+                <span>posts</span>
+            </div>
+            <div class="article-info-block">
+                2
+                <span>tags</span>
+            </div>
+        </div>
+        
+        <div class="profile-block social-links">
+            <table>
+                <tr>
+                    
+                    
+                    <td>
+                        <a href="/" target="_blank" title="github" class=tooltip>
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="/" target="_blank" title="twitter" class=tooltip>
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="https://www.facebook.com/groups/208501353149345/?ref=bookmarks" target="_blank" title="facebook" class=tooltip>
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="/" target="_blank" title="dribbble" class=tooltip>
+                            <i class="fab fa-dribbble"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="/" target="_blank" title="rss" class=tooltip>
+                            <i class="fab fa-rss"></i>
+                        </a>
+                    </td>
+                    
+                </tr>
+            </table>
+        </div>
+        
+    </div>
+</aside>
+
+            
+            <section id="main">
+    <article id="post-intergrated-cicd" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2018/10/11/intergrated-cicd/">Hướng dẫn tích hợp Gitlab-CICD vào dự án của team Best Solution</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fas fa-calendar-alt"></i>
+        <a href="/2018/10/11/intergrated-cicd/">
+            <time datetime="2018-10-11T07:27:20.000Z" itemprop="datePublished">2018-10-11</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fas fa-folder"></i>
+        <a class="article-category-link" href="/categories/ci-cd/">ci/cd</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/tutorial/">tutorial</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;Gần đây, team Best Solution đã tích hợp được Gitlab-CICD vào dự án <strong><em>Green-Blue</em></strong> để tự động hóa quá trình Build, Deploy ứng dụng lên Staging. Dưới đây là hướng dẫn về cách tích hợp Gitlab-CICD cho những dự án khác. Trong hướng dẫn này, mình sử dụng GitLab Community Edition 8.16.3 và Gitlab Runner 1.11.1</p>
+<h3 id="1-Tich-hop-Gitlab-Runner-va-them-bien-moi-truong-cho-du-an-tren-Gitlab"><a href="#1-Tich-hop-Gitlab-Runner-va-them-bien-moi-truong-cho-du-an-tren-Gitlab" class="headerlink" title="1. Tích hợp Gitlab Runner và thêm biến môi trường cho dự án trên Gitlab"></a><strong>1. Tích hợp Gitlab Runner và thêm biến môi trường cho dự án trên Gitlab</strong></h3><p>&nbsp;&nbsp;&nbsp;&nbsp;Để có thể tiến hành quá trình Build-Deploy, Gitlab sử dụng một server có tên là Runner. Tại đây, ứng dụng của chúng ta sẽ được Build,Test, sau đó được Deploy lên server. </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;Hiện tại, Gitlab cung cấp các Shared Runner miễn phí cho chúng ta. Nhưng vì yếu tố bảo mật và đảm bảo hiệu năng, chúng ta nên tự cài đặt một Runner Server riêng phục vụ cho các dự án của công ty.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;Trong team Best Solution, mình đã cài đặt một Runner Server có tên là <strong><em>the runner</em></strong>. Chúng ta chỉ cần tích hợp Runner vào dự án là có thể sử dụng được.</p>
+<h3 id="1-1-Tich-hop-Gitlab-Runner"><a href="#1-1-Tich-hop-Gitlab-Runner" class="headerlink" title="1.1 Tích hợp Gitlab Runner"></a><strong>1.1 Tích hợp Gitlab Runner</strong></h3><p>Chúng ta vào mục Runner (1) của dự án, sẽ thấy màn hình như hình phía dưới.</p>
+<img src="/2018/10/11/intergrated-cicd/cicd1.png">
+<p>&nbsp;&nbsp;&nbsp;&nbsp;Ở đây có hai phần, <strong><em>Specific Runners</em></strong> và <strong><em>Shared Runners</em></strong>. Như đã nói ở trên, chúng ta chỉ quan tâm tới Specific Runners. Nhìn vào (2), các bạn sẽ thấy một Runner mà mình đã cài đặt sẵn. Để tích hợp Runner vào dự án, chỉ cần nhấn vào nút <strong><em>Enable for this project</em></strong> như (3) là xong.</p>
+<h3 id="1-2-Them-bien-moi-truong-cho-du-an"><a href="#1-2-Them-bien-moi-truong-cho-du-an" class="headerlink" title="1.2 Thêm biến môi trường cho dự án"></a><strong>1.2 Thêm biến môi trường cho dự án</strong></h3><p>Để thêm biến môi trường, chúng ta vào mục Variables (1).<br><img src="/2018/10/11/intergrated-cicd/cicd2.png"></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;Đây chính là nơi các bạn khai báo biến môi trường với Gitlab và Runner sẽ sử dụng những biến môi trường này. Có một câu hỏi là: tại sao lại cần biến môi trường ?<br>&nbsp;&nbsp;&nbsp;&nbsp;Mình sẽ lấy ví dụ để trả lời câu hỏi này, các bạn nhìn vào (3). Ở đây mình khai báo một biến môi trường với tên là SSH_PRIVATE_KEY và giá trị của nó sẽ là tất cả các ký tự trong file key mà các bạn sử dụng để ssh lên server khi tiến hành Deploy ứng dụng. Nếu chúng ta không khai báo một key ở đây, thì Runner Server sẽ không thể tiến hành quá trình Deploy được.<br>&nbsp;&nbsp;&nbsp;&nbsp;Với một dự án mới, sẽ không có biến môi trường nào hiển thị ở đây cả. Các bạn sẽ phải tự thêm vào. Đối với team Best Solution, chỉ cần thêm biến SSH_PRIVATE_KEY là đủ. </p>
+<h3 id="2-Viet-script-trien-khai-ung-dung-len-server"><a href="#2-Viet-script-trien-khai-ung-dung-len-server" class="headerlink" title="2. Viết script triển khai ứng dụng lên server"></a><strong>2. Viết script triển khai ứng dụng lên server</strong></h3><p>&nbsp;&nbsp;&nbsp;&nbsp;Trên server, chúng ta tạo một thư mục để triển khai ứng dụng. Ở đây, mình lấy ví dụ với ứng dụng Gree-Blue, thư mục sẽ giống như hình bên dưới:<br><strong>green-blue-cicd/</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|__ <strong>config/</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|__ database.conf<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|__ <strong>log/</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|__ application.log<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|__ <strong>script/</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|__ deploy.sh<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|__ <strong>source/</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|__ green-blue-STAGING-20181005172440/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|__ …<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|__ <strong>version/</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|__ green-blue-STAGING-20181005172440.zip<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|__ …</p>
+<p>Mình sẽ giới thiệu qua mục đích của từng folder trong thư mục chính <strong>green-blue-cicd/.</strong></p>
+<ul>
+<li>Đầu tiên là folder <em><strong>config/</strong></em>, đây là nơi chứa config của ứng dụng. Hiện tại, mình chỉ để config của database trong đó. Chúng ta cần một file config database mẫu để dùng cho quá trình triển khai ứng dụng.</li>
+<li>Thứ hai là folder <em><strong>log/</strong></em>, đây là nơi chứa log của ứng dụng trong quá trình chạy.</li>
+<li>Thứ ba là folder <em><strong>script/</strong></em>, mình để script triển khai ứng dụng ở đây.</li>
+<li>Folder <em><strong>source/</strong></em> là nơi chứa mã nguồn được giải nén ra từ các phiên bản của ứng dụng nằm bên trong folder <em><strong>version/.</strong></em></li>
+</ul>
+<p>Điều quan tâm nhất là script <strong><em>deploy.sh</em></strong> sẽ được viết như thế nào …<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="comment"># define app name</span></span><br><span class="line">APP_NAME=<span class="string">"green-blue"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># unzip source-code</span></span><br><span class="line"><span class="built_in">cd</span> /root/web/green-blue-cicd/version</span><br><span class="line">unzip <span class="variable">$1</span>.zip -d ../<span class="built_in">source</span>/</span><br><span class="line"></span><br><span class="line"><span class="comment"># re-config application</span></span><br><span class="line"><span class="built_in">cd</span> /root/web/green-blue-cicd/<span class="built_in">source</span>/<span class="variable">$1</span>/conf</span><br><span class="line">mv mailer.conf.example mailer.conf</span><br><span class="line">mv silhouette.conf.example silhouette.conf</span><br><span class="line">cp /root/web/green-blue-cicd/config/database.conf ./</span><br><span class="line"></span><br><span class="line"><span class="comment"># kill process of prev-version</span></span><br><span class="line">pid=$(ps -p $(lsof -ti tcp:9000) o pid=)</span><br><span class="line"><span class="built_in">kill</span> -9 <span class="variable">$pid</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># run server &amp; write log file</span></span><br><span class="line"><span class="built_in">cd</span> /root/web/green-blue-cicd/<span class="built_in">source</span>/<span class="variable">$1</span>/bin/</span><br><span class="line">nohup ./<span class="variable">$APP_NAME</span> -Dplay.http.secret.key=123123123 -Dplay.evolutions.db.default.autoApply=<span class="literal">true</span> -Dhttp.port=9000 &gt; /root/web/green-blue-cicd/<span class="built_in">log</span>/application.log &amp;</span><br></pre></td></tr></table></figure></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;Hình ảnh phía trên là nội dung file deploy.sh dùng để triển khai Green-Blue. Trong đó, <strong><em>$1</em></strong> là tham số truyền vào khi chạy script deploy.sh, ở đây <strong><em>$1</em></strong> đại diện cho tên của version muốn triển khai. Chúng ta có thể thấy, nội dung file gồm 4 phần:<br>- (1) Giải nén source-code<br>- (2) Cấu hình cho ứng dụng, trong đó có bước lấy file database.conf từ file mẫu ban đầu.<br>- (3) Bỏ bản triển khai trước đó, nó đang chạy ở cổng 9000<br>- (4) Triển khai một version mới và ghi log vào application.log</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;Để triển khai CICD cho một dự án khác, các bạn chỉ cần giữ nguyên cấu trúc thư mục và thay đổi nội dung các file bên trong của nó. Chính xác là chỉ cần thay đổi nội dung file database.conf và file deploy.sh. Nội dung file database.conf sẽ được thay đổi tùy vào các dự án khác nhau. Đối với deploy.sh, chúng ta cần làm 2 việc:<br>- Thay tên của các đường dẫn<br>- Thay tên của ứng dụng trong bước (4).</p>
+<h3 id="3-Viet-file-gitlab-yml"><a href="#3-Viet-file-gitlab-yml" class="headerlink" title="3. Viết file .gitlab.yml"></a><strong>3. Viết file .gitlab.yml</strong></h3><p>&nbsp;&nbsp;&nbsp;&nbsp;Đầu tiên, chúng ta sẽ đi xem .gitlab-ci.yml của dự án Green-Blue <a href="http://git.ows.vn/linhnh/green-blue-system/blob/bf3c2a6e63d57ddd9d618421666cc95f3019b49b/.gitlab-ci.yml" target="_blank" rel="noopener">ở đây</a>.<br>Chúng ta sẽ thấy có các phần chính sau:</p>
+<ul>
+<li>image: docker image được dùng cho quá trình Build - Deploy</li>
+<li>stages: nơi liệt kê các quá trình được thực thi</li>
+<li>variables: nơi khai báo các biến  môi trường </li>
+<li>cache: nơi khai báo các thư mục mà bạn muốn cache lại sau mỗi lần Build - Deploy</li>
+<li>staging: quá trình triển khai ứng dụng lên STAGING</li>
+</ul>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;Khi viết .gitlab-ci.yml cho một dự án mới, chúng ta chỉ cần quan tâm tới staging, đây là nơi thực thi các câu lệnh tiến hành quá trình Build - Deploy ứng dụng. Các câu lệnh thực thi được chia làm hai phần:</p>
+<p><strong><em>a) before_script</em></strong>: các câu lệnh chuẩn bị cho quá trình Deploy, bao gồm các bước:<br>(1) Tạo tên version mới cho ứng dụng<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Create VERSION_NAME</span></span><br><span class="line"><span class="comment">## Set TIME ZONE</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">TZ=Asia/Ho_Chi_Minh</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">ln</span> <span class="bullet">-snf</span> <span class="string">/usr/share/zoneinfo/$TZ</span> <span class="string">/etc/localtime</span> <span class="string">&amp;&amp;</span> <span class="string">echo</span> <span class="string">$TZ</span> <span class="string">&gt; /etc/timezone</span></span><br><span class="line"><span class="string">## Set VERSION_NAME</span></span><br><span class="line"><span class="string">- export VERSION_NAME=$(date +'%Y%m%d%H%M%S')</span></span><br><span class="line"><span class="string">- echo "VERSION_NAME is green-blue-STAGING-$&#123;VERSION_NAME&#125;"</span></span><br><span class="line"><span class="string">- apt-get update -y</span></span><br></pre></td></tr></table></figure></p>
+<p>(2) Cài đặt sbt<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Install SBT</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">echo</span> <span class="string">"deb http://dl.bintray.com/sbt/debian /"</span> <span class="string">| tee -a /etc/apt/sources.list.d/sbt.list</span></span><br><span class="line"><span class="string">- apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 642AC823</span></span><br><span class="line"><span class="string">- apt-get update -y</span></span><br><span class="line"><span class="string">- apt-get install sbt -y</span></span><br></pre></td></tr></table></figure></p>
+<p>(3) Thay đổi tên version cho ứng dụng<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Change BUILD VERSION</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">sed</span> <span class="bullet">-i</span> <span class="string">'s/BUILD_VERSION/'</span><span class="string">"STAGING-$&#123;VERSION_NAME&#125;"</span><span class="string">'/g'</span> <span class="string">build.sbt</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">sed</span> <span class="bullet">-i</span> <span class="string">'s/BUILD_VERSION/'</span><span class="string">"green-blue-STAGING-$&#123;VERSION_NAME&#125;"</span><span class="string">'/g'</span> <span class="string">public/javascripts/zxcvbnShim.js</span></span><br></pre></td></tr></table></figure></p>
+<p>(4) Thực hiện quá trình Build<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="string">sbt</span> <span class="string">dist</span></span><br></pre></td></tr></table></figure></p>
+<p>(5) Cài đặt ssh<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Setup SSH</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">'which ssh-agent || ( apt-get update -y &amp;&amp; apt-get install openssh-client -y )'</span></span><br><span class="line"><span class="comment"># Run ssh-agent (inside the build environment)</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">eval</span> <span class="string">$(ssh-agent</span> <span class="bullet">-s)</span></span><br><span class="line"><span class="comment"># Add the SSH key stored in SSH_PRIVATE_KEY variable to the agent store</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">ssh-add</span> <span class="string">&lt;(echo</span> <span class="string">"$SSH_PRIVATE_KEY"</span><span class="string">)</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">mkdir</span> <span class="bullet">-p</span> <span class="string">~/.ssh</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">'[[ -f /.dockerenv ]] &amp;&amp; echo -e "Host *\n\tStrictHostKeyChecking no\n\n" &gt; ~/.ssh/config'</span></span><br></pre></td></tr></table></figure></p>
+<p>(6) Chuyển mã nguồn sau khi Build lên Staging server<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Send FILE to remote server</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">scp</span> <span class="string">target/universal/green-blue-STAGING-$&#123;VERSION_NAME&#125;.zip</span> <span class="string">root@133.18.199.250:/root/web/green-blue-cicd/version</span></span><br></pre></td></tr></table></figure></p>
+<p><strong><em>b) script</em></strong>: các câu lệnh của quá trình Deploy, đây là việc ssh lên Staging và thực thi deploy.sh<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="string">echo</span> <span class="string">"DEPLOY to STAGING server ..."</span></span><br><span class="line"><span class="comment"># Deploy</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">ssh</span> <span class="string">root@133.18.199.250</span> <span class="string">"sh /root/web/green-blue-cicd/script/deploy.sh green-blue-STAGING-$&#123;VERSION_NAME&#125;"</span></span><br></pre></td></tr></table></figure></p>
+<p>Chúng ta sẽ phải thay đổi một chút trong khi viết file .gitlab-ci.yml mới.<br>Đối với <strong><em>before_script</em></strong>, chúng ta chỉ cần thay đổi ở các bước (3) và (6):</p>
+<p>Với bước (3)</p>
+<ul>
+<li>Thay đổi version := “1.x.x” trong <strong><em>build.sbt</em></strong> thành version := “BUILD_VERSION”</li>
+<li>Thêm câu lệnh console.log(“Current version is “ + “BUILD_VERSION”) vào đầu file <strong><em>zxcvbnShim.js</em></strong></li>
+</ul>
+<p>Với bước (6)</p>
+<ul>
+<li>thay đổi cái tên green-blue trong đường dẫn target/universal/green-blue-STAGING-${VERSION_NAME}.zip thành tên dự án của bạn.</li>
+<li>thay đổi đường dẫn /root/web/green-blue-cicd/version cho đúng với đường dẫn với thư mục version/ trên server của bạn.</li>
+</ul>
+<p>Đối với <strong><em>script</em></strong>:</p>
+<ul>
+<li>Thay đổi đường dẫn /root/web/green-blue-cicd/script/deploy.sh cho đúng với đường dẫn tới file <strong>deploy.sh</strong> của bạn trên server.</li>
+<li>Thay đổi tên green-blue trong green-blue-STAGING-${VERSION_NAME} thành tên dự án của bạn.</li>
+</ul>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;Đến đây, chúng ta chỉ việc push những gì vừa làm lên branch <strong><em>dev</em></strong> là hoàn thành xong việc tích hợp Gitlab-CICD cho dự án mới.</p>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://scala-play.com/2018/10/11/intergrated-cicd/" data-id="cjn4euz0j00002klqua9mcoku" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://scala-play.com/2018/10/11/intergrated-cicd/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://scala-play.com/2018/10/11/intergrated-cicd/">Comments</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-HOF-in-scala" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2018/10/02/HOF-in-scala/">Higher Order Functions trong Scala</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fas fa-calendar-alt"></i>
+        <a href="/2018/10/02/HOF-in-scala/">
+            <time datetime="2018-10-02T13:08:24.000Z" itemprop="datePublished">2018-10-02</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fas fa-folder"></i>
+        <a class="article-category-link" href="/categories/scala/">scala</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/basic/">basic</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <h2 id="Dinh-nghia-Higher-Order-Function"><a href="#Dinh-nghia-Higher-Order-Function" class="headerlink" title="Định nghĩa Higher Order Function"></a>Định nghĩa Higher Order Function</h2><p><code>Higher Order Function</code> là function thỏa mãn ít nhất một trong hai điều kiện :</p>
+<ul>
+<li>Có ít nhất một tham số truyền vào là một function khác</li>
+<li>Kết quả trả về của <code>HOF</code> đó là một function khác.</li>
+</ul>
+<p>Với Higher Order Function, tính trừu tượng hóa, tái sử dụng chính là điểm mạnh.</p>
+<h2 id="Tinh-truu-tuong-hoa-Abstraction"><a href="#Tinh-truu-tuong-hoa-Abstraction" class="headerlink" title="Tính trừu tượng hóa (Abstraction)"></a>Tính trừu tượng hóa (Abstraction)</h2><p>Hãy nghĩ đến dây chuyền lắp ráp một chiếc xe. Dây chuyền gồm bốn bộ phận:</p>
+<ul>
+<li>Bộ phận tạo bánh xe</li>
+<li>Bộ phận tạo khung xe</li>
+<li>Bộ phận tạo động cơ</li>
+<li>Bộ phận lắp ráp</li>
+</ul>
+<p>Bộ phận tạo bánh xe sẽ tạo ra bánh xe và chuyển qua bộ phận lắp. Tương tự như vậy, bộ phận tạo khung xe và bộ phân tạo động cợ sẽ tạo ra khung và động cơ, sau đó chuyển sang cho bộ phân lắp ráp. Bộ phận lắp ráp không cần phải biết bánh xe, khung xe hay động cơ xe được tạo ra như thế nào. Chức năng của bộ phận lắp ráp chỉ là ghép các thành phần để tạo ra chiếc xe mà thôi. Bộ phận lắp ráp chính là một HOF, nó nhận output của ba bộ phận còn lại để tạo ra output cho riêng nó. Có thể diễn giải như thế này:</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">BanhXe</span></span>&#123;&#125; </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">KhungXe</span></span>&#123;&#125; </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DongCoXe</span></span>&#123;&#125; </span><br><span class="line"></span><br><span class="line"><span class="comment">// ham tao banh xe </span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">taoBanhXe</span></span>() = &#123; </span><br><span class="line">  <span class="keyword">val</span> banhXe = <span class="keyword">new</span> <span class="type">BanhXe</span> </span><br><span class="line">  banhXe </span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line"><span class="comment">// ham tao khung xe </span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">taoKhungXe</span></span>() = &#123; </span><br><span class="line">  <span class="keyword">val</span> khungXe = <span class="keyword">new</span> <span class="type">KhungXe</span> </span><br><span class="line">  khungXe </span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line"><span class="comment">// ham tao dong co xe </span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">taoDongCoXe</span></span>() = &#123; </span><br><span class="line">  <span class="keyword">val</span> dongCoXe = <span class="keyword">new</span> <span class="type">DongCoXe</span> </span><br><span class="line">  dongCoXe </span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line"><span class="comment">// HOF function </span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">lapRapXe</span></span>(taoBanhXe(), taoKhungXe(), taoDongCoXe())</span><br></pre></td></tr></table></figure>
+<p>Từ ví dụ trên, chúng ta có thể hiểu tính trừu tượng hóa của HOF giúp che giấu chi tiết bên trong một function, làm giảm sự phức tạp. Vấn đề sẽ được xử lý ở một tầng cao hơn, trừu tượng hơn.</p>
+<h2 id="Tinh-tai-su-dung-Reusable"><a href="#Tinh-tai-su-dung-Reusable" class="headerlink" title="Tính tái sử dụng (Reusable)"></a>Tính tái sử dụng (Reusable)</h2><p>Cũng sử dụng ví dụ về dây chuyền tạo ra một chiếc xe. Chúng ta xây dựng một dây chuyền sản xuất xe máy. Tuy nhiên, nếu phải tạo ra thêm một dây chuyền sản xuất xe hơi thêm vào thì sẽ như thế nào ? Tạo ra một dây chuyền mới là giải pháp đơn giản nhất nhưng lại tốn kém về chi phí. Chúng ta có thể bổ sung thêm cho bộ phận tạo bánh xe máy khả năng tạo ra bánh xe hơi. Tương tự như vậy, bộ phận tao khung xe và động cơ đều trang bị thiết bị tạo ra đồng thời linh kiện cho xe máy lẫn xe hơi. Như vậy, ba bộ phân trên đều được sử dụng tùy theo yêu cầu tạo ra sản phẩm. Đó chính là tính tái sử dụng.</p>
+<h2 id="Cach-su-dung-HOF-trong-Scala"><a href="#Cach-su-dung-HOF-trong-Scala" class="headerlink" title="Cách sử dụng HOF trong Scala"></a>Cách sử dụng HOF trong Scala</h2><p>Một bài toán đơn giản được đặt ra, hãy hình dung bạn đang là một ông chủ và muốn tăng lương cho nhân viên của mình. Tăng lương là việc bạn nhân số lương hiện tại của nhân viên với một hệ số nhất định. Bạn nghĩ rằng, việc tăng lương cần linh động do đó phải tạo ra nhiều cách tăng lương khác nhau. Với bài toán trên, chúng ta sẽ đi giải quyết như sau:</p>
+<ul>
+<li>Để tiện cho việc quản lý vấn đề tăng lương, bạn sử dụng một <strong>Object</strong> có tên là <strong>SalaryRaiser</strong>. </li>
+<li><p>Bạn có 3 mức tăng lương khác nhau, theo thứ tự tăng dần là: <strong>smallPromotion()</strong>, <strong>greatPromotion()</strong> và <strong>hugePromotion()</strong>.</p>
+</li>
+<li><p>Ở mức smallPromotion, hệ số là 1.1</p>
+</li>
+<li>Ở mức smallPromotion, hệ số là logarit cơ số 10 của số lương hiện tại ứng với nhân viên đó.</li>
+<li>Ở mức smallPromotion, hệ số là số lương hiện tại của nhân viên đó.</li>
+</ul>
+<p>Theo cách thông thường, chúng ta sẽ dùng một vòng for để cập nhật giá trị lương của từng nhân viên. Sau đó, trả về danh sách lương của nhân viên sau khi đã cập nhật. Các bạn xem code phía dưới.</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">SalaryRaiser</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">smallPromotion</span></span>(salaries: <span class="type">Array</span>[<span class="type">Double</span>]): <span class="type">Array</span>[<span class="type">Double</span>] = &#123;</span><br><span class="line">    <span class="keyword">for</span> (i &lt;- salaries.indices) &#123;</span><br><span class="line">      salaries(i) = salaries(i) * <span class="number">1.1</span></span><br><span class="line">    &#125;</span><br><span class="line">    salaries</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">greatPromotion</span></span>(salaries: <span class="type">Array</span>[<span class="type">Double</span>]): <span class="type">Array</span>[<span class="type">Double</span>] = &#123;</span><br><span class="line">    <span class="keyword">for</span> (i &lt;- salaries.indices) &#123;</span><br><span class="line">      salaries(i) = salaries(i) * math.log(salaries(i))</span><br><span class="line">    &#125;</span><br><span class="line">    salaries</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">hugePromotion</span></span>(salaries: <span class="type">Array</span>[<span class="type">Double</span>]): <span class="type">Array</span>[<span class="type">Double</span>] = &#123;</span><br><span class="line">    <span class="keyword">for</span> (i &lt;- salaries.indices) &#123;</span><br><span class="line">      salaries(i) = salaries(i) * salaries(i)</span><br><span class="line">    &#125;</span><br><span class="line">    salaries</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Với <code>HOF</code>, việc viết code trở nên dễ dàng và ngắn gọn hơn khá nhiều. Ở đây, chúng ta sẽ sử dụng một HOF đó là <code>map()</code>. Chúng ta truyền vào map() một function, chính function này sẽ giúp chúng ta thay đổi lương của mỗi nhân viên theo hệ số  mong muốn.  Hàm map() đã thể hiện tính linh hoạt thông qua việc định nghĩa cách xử lý từng phần tử trong Array.</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">SalaryRaiser</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">smallPromotion</span></span>(salaries: <span class="type">Array</span>[<span class="type">Double</span>]): <span class="type">Array</span>[<span class="type">Double</span>] = &#123;</span><br><span class="line">    salaries.map(salary =&gt; salary * <span class="number">1.1</span>)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">greatPromotion</span></span>(salaries: <span class="type">Array</span>[<span class="type">Double</span>]): <span class="type">Array</span>[<span class="type">Double</span>] = &#123;</span><br><span class="line">    salaries.map(salary =&gt; salary * math.log(salary))</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">hugePromotion</span></span>(salaries: <span class="type">Array</span>[<span class="type">Double</span>]): <span class="type">Array</span>[<span class="type">Double</span>] = &#123;</span><br><span class="line">    salaries.map(salary =&gt; salary * salary)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Hiện nay đối với <strong>Scala</strong>, <code>map()</code> là một trong những <code>HOF</code> được dùng nhiều nhất. Ngoài ra, các bạn có thể tìm hiểu thêm về các HOF khác như <code>filter()</code>, <code>flatMap()</code> …</p>
+<h2 id="Nguon-tham-khao"><a href="#Nguon-tham-khao" class="headerlink" title="Nguồn tham khảo"></a>Nguồn tham khảo</h2><ol>
+<li><p><a href="https://discuss.grokking.org/t/higher-order-functions-la-gi-va-d-c-s-d-ng-nh-th-nao/309" target="_blank" rel="noopener">https://discuss.grokking.org/t/higher-order-functions-la-gi-va-d-c-s-d-ng-nh-th-nao/309</a></p>
+</li>
+<li><p><a href="https://docs.scala-lang.org/tour/higher-order-functions.html" target="_blank" rel="noopener">https://docs.scala-lang.org/tour/higher-order-functions.html</a></p>
+</li>
+</ol>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://scala-play.com/2018/10/02/HOF-in-scala/" data-id="cjms0zgpm0001w1lqn5wp7fth" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://scala-play.com/2018/10/02/HOF-in-scala/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://scala-play.com/2018/10/02/HOF-in-scala/">Comments</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+</section>
+            
+                
+<aside id="sidebar">
+   
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">recent</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/10/11/intergrated-cicd/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/ci-cd/">ci/cd</a></p>
+                            <p class="item-title"><a href="/2018/10/11/intergrated-cicd/" class="title">Hướng dẫn tích hợp Gitlab-CICD vào dự án của team Best Solution</a></p>
+                            <p class="item-date"><time datetime="2018-10-11T07:27:20.000Z" itemprop="datePublished">2018-10-11</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/10/02/HOF-in-scala/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/scala/">scala</a></p>
+                            <p class="item-title"><a href="/2018/10/02/HOF-in-scala/" class="title">Higher Order Functions trong Scala</a></p>
+                            <p class="item-date"><time datetime="2018-10-02T13:08:24.000Z" itemprop="datePublished">2018-10-02</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ci-cd/">ci/cd</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/scala/">scala</a><span class="category-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">2</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">tags</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/basic/">basic</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tutorial/">tutorial</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/basic/" style="font-size: 10px;">basic</a> <a href="/tags/tutorial/" style="font-size: 10px;">tutorial</a>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+    
+    <div id="toTop" class="fas fa-angle-up"></div>
+</aside>
+
+            
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            &copy; 2018 scala-play.com<br>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_config = function () {
+        
+        this.page.identifier = '';
+    };
+    (function() { 
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'scala-play-com' + '.disqus.com/count.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
