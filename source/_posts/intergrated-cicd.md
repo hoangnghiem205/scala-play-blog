@@ -55,7 +55,7 @@ Mình sẽ giới thiệu qua mục đích của từng folder trong thư mục 
 - Folder _**source/**_ là nơi chứa mã nguồn được giải nén ra từ các phiên bản của ứng dụng nằm bên trong folder _**version/.**_
 
 Điều quan tâm nhất là script ___deploy.sh___ sẽ được viết như thế nào ...
-```cmd
+```bash
 #!/bin/bash
 # define app name
 APP_NAME="green-blue"
@@ -103,27 +103,27 @@ Chúng ta sẽ thấy có các phần chính sau:
 (1) Tạo tên version mới cho ứng dụng
 ```yml
 # Create VERSION_NAME
-    ## Set TIME ZONE
-    - TZ=Asia/Ho_Chi_Minh
-    - ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
-    ## Set VERSION_NAME
-    - export VERSION_NAME=$(date +'%Y%m%d%H%M%S')
-    - echo "VERSION_NAME is green-blue-STAGING-${VERSION_NAME}"
-    - apt-get update -y
+## Set TIME ZONE
+- TZ=Asia/Ho_Chi_Minh
+- ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+## Set VERSION_NAME
+- export VERSION_NAME=$(date +'%Y%m%d%H%M%S')
+- echo "VERSION_NAME is green-blue-STAGING-${VERSION_NAME}"
+- apt-get update -y
 ```
 (2) Cài đặt sbt
 ```yml
 # Install SBT
-    - echo "deb http://dl.bintray.com/sbt/debian /" | tee -a /etc/apt/sources.list.d/sbt.list
-    - apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 642AC823
-    - apt-get update -y
-    - apt-get install sbt -y
+- echo "deb http://dl.bintray.com/sbt/debian /" | tee -a /etc/apt/sources.list.d/sbt.list
+- apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 642AC823
+- apt-get update -y
+- apt-get install sbt -y
 ```
 (3) Thay đổi tên version cho ứng dụng
 ```yml
 # Change BUILD VERSION
-    - sed -i 's/BUILD_VERSION/'"STAGING-${VERSION_NAME}"'/g' build.sbt
-    - sed -i 's/BUILD_VERSION/'"green-blue-STAGING-${VERSION_NAME}"'/g' public/javascripts/zxcvbnShim.js
+- sed -i 's/BUILD_VERSION/'"STAGING-${VERSION_NAME}"'/g' build.sbt
+- sed -i 's/BUILD_VERSION/'"green-blue-STAGING-${VERSION_NAME}"'/g' public/javascripts/zxcvbnShim.js
 ```
 (4) Thực hiện quá trình Build
 ```yml
@@ -132,25 +132,25 @@ Chúng ta sẽ thấy có các phần chính sau:
 (5) Cài đặt ssh
 ```yml
 # Setup SSH
-    - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
-    # Run ssh-agent (inside the build environment)
-    - eval $(ssh-agent -s)
-    # Add the SSH key stored in SSH_PRIVATE_KEY variable to the agent store
-    - ssh-add <(echo "$SSH_PRIVATE_KEY")
-    - mkdir -p ~/.ssh
-    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+- 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+# Run ssh-agent (inside the build environment)
+- eval $(ssh-agent -s)
+# Add the SSH key stored in SSH_PRIVATE_KEY variable to the agent store
+- ssh-add <(echo "$SSH_PRIVATE_KEY")
+- mkdir -p ~/.ssh
+- '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
 ```
 (6) Chuyển mã nguồn sau khi Build lên Staging server
 ```yml
 # Send FILE to remote server
-    - scp target/universal/green-blue-STAGING-${VERSION_NAME}.zip root@133.18.199.250:/root/web/green-blue-cicd/version
+- scp target/universal/green-blue-STAGING-${VERSION_NAME}.zip root@133.18.199.250:/root/web/green-blue-cicd/version
 ```
 
 ___b) script___: các câu lệnh của quá trình Deploy, đây là việc ssh lên Staging và thực thi deploy.sh
 ```yml
 - echo "DEPLOY to STAGING server ..."
-    # Deploy
-    - ssh root@133.18.199.250 "sh /root/web/green-blue-cicd/script/deploy.sh green-blue-STAGING-${VERSION_NAME}"
+# Deploy
+- ssh root@133.18.199.250 "sh /root/web/green-blue-cicd/script/deploy.sh green-blue-STAGING-${VERSION_NAME}"
 ```
 
 Chúng ta sẽ phải thay đổi một chút trong khi viết file .gitlab-ci.yml mới.
@@ -165,7 +165,7 @@ Với bước (6)
 * thay đổi đường dẫn /root/web/green-blue-cicd/version cho đúng với đường dẫn với thư mục version/ trên server của bạn.
 
 Đối với ___script___:
-* Thay đổi đường dẫn /root/web/green-blue-cicd/script/deploy.sh cho đúng với đường dẫn tới file deploy.sh của bạn trên server.
+* Thay đổi đường dẫn /root/web/green-blue-cicd/script/deploy.sh cho đúng với đường dẫn tới file **deploy.sh** của bạn trên server.
 * Thay đổi tên green-blue trong green-blue-STAGING-${VERSION_NAME} thành tên dự án của bạn.
 
 &nbsp;&nbsp;&nbsp;&nbsp;Đến đây, chúng ta chỉ việc push những gì vừa làm lên branch ___dev___ là hoàn thành xong việc tích hợp Gitlab-CICD cho dự án mới.
