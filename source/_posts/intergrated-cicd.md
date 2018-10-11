@@ -1,5 +1,5 @@
 ---
-title: Hướng dẫn tích hợp Gitlab-CICD vào dự án của team Best Solution
+title: Tích hợp Gitlab-CICD vào dự án thực tế
 date: 2018-10-11 14:27:20
 categories: 
     - ci/cd

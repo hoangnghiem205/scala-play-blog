@@ -1,5 +1,5 @@
 ---
-title: Hướng dẫn sử dụng Gitlab-CI/CD cơ bản
+title: Sử dụng Gitlab-CI/CD cơ bản
 date: 2018-10-06 10:48:07
 categories: 
     - ci/cd
