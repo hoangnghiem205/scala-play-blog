@@ -89,7 +89,7 @@ nohup ./$APP_NAME -Dplay.http.secret.key=123123123 -Dplay.evolutions.db.default.
 \- Thay tên của ứng dụng trong bước (4).
 
 ### __3. Viết file .gitlab.yml__
-&nbsp;&nbsp;&nbsp;&nbsp;Đầu tiên, chúng ta sẽ đi xem .gitlab-ci.yml của dự án Green-Blue [ở đây](http://git.ows.vn/linhnh/green-blue-system/blob/bf3c2a6e63d57ddd9d618421666cc95f3019b49b/.gitlab-ci.yml).
+&nbsp;&nbsp;&nbsp;&nbsp;Đầu tiên, chúng ta sẽ đi xem .gitlab-ci.yml của dự án Green-Blue [ở đây](https://github.com/LongCaoBK/note-for-scala/blob/master/.gitlab-ci.yml).
 Chúng ta sẽ thấy có các phần chính sau:
 - image: docker image được dùng cho quá trình Build - Deploy
 - stages: nơi liệt kê các quá trình được thực thi
