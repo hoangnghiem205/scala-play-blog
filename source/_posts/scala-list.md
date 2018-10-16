@@ -1,14 +1,15 @@
 ---
 title: List trong Scala
-date: 2018-10-08 09:11:35
-tags:
+date: 2018-10-16 09:11:35
+categories: scala
+tags: basic
 ---
 
-&nbsp;&nbsp;&nbsp;&nbsp;List trong scala gần tương tự như mảng, vì mọi phần tử đều cùng kiểu dữ liệu nhưng lại có hai sự khác biệt quan trọng:
-- Đầu tiên, List không thể thay đổi, có nghĩa những phần tử trong một List không thể thay đổi được bằng phép gán.
-- Thứ hai, List đại diện cho một danh sách liên kết các phần tử, trong khi đó các phần tử của array(mảng) đước xếp cạnh, liên tiếp với nhau.
+&nbsp;&nbsp;&nbsp;&nbsp;`List` trong scala gần tương tự như mảng, vì mọi phần tử đều cùng kiểu dữ liệu nhưng lại có hai sự khác biệt quan trọng:
+- Đầu tiên, `List` không thể thay đổi, có nghĩa những phần tử trong một List không thể thay đổi được bằng phép gán.
+- Thứ hai, `List` đại diện cho một danh sách liên kết các phần tử, trong khi đó các phần tử của array(mảng) đước xếp cạnh, liên tiếp với nhau.
 
-Kiểu của một List được viết duới dạng : List[T]. 
+Kiểu của một List được viết duới dạng : `List[T]`. 
 
 Bạn hãy xem thử ví dụ dưới đây, một vài List được định nghĩa cho các kiểu dữ liệu khác nhau.
 
@@ -51,7 +52,7 @@ Vừa rồi là một số giới thiệu sơ lược của mình về List tron
 
 Tất cả thao tác trên List được thể hiện theo ba phương thức sau đây:
 
-|<p style="width:50px"> No </p> |                 <p style="text-align:center;height:50%"> Phương thức & Mô tả </p>                       |
+|<p style="width:50px"> No </p> |                 <p style="text-align:center;height:50%"> Phương thức và Mô tả </p>                       |
 |-----|-------------------------------------------------------------|
 |  1  |  __head:__ Phương thức này trả về phần tử đầu tiên của list. |
 |  2  |  __tail:__ Phương thức này trả về 1 danh sách gồm tất cả phần tử ngoại trừ phần tử đầu tiên.|
@@ -92,7 +93,7 @@ Check if nums is empty : true
 ```
 
 ## Ghép nối các List
-Bạn có thể dùng hoặc phép toán ::: hoặc phương thức __List.:::()__ hoặc __List.concat()__ để thêm hai hoặc nhiều List trở lên. Vui lòng khám phá ví dụ dưới đây
+Bạn có thể dùng hoặc phép toán __:::__ hoặc phương thức __List.:::()__ hoặc __List.concat()__ để thêm hai hoặc nhiều List trở lên. Vui lòng khám phá ví dụ dưới đây
 
 ### Ví dụ
 
@@ -197,7 +198,7 @@ mul : List(List(0, 0, 0, 0, 0), List(0, 1, 2, 3, 4),
   List(0, 2, 4, 6, 8), List(0, 3, 6, 9, 12))
 ```
 
-## Đảo ngược thứ tự List
+## Đảo ngược thứ tự phần tử trong List
 
 Bạn có thể dùng phương thức __List.reverse__ để đảo ngược tất cả phần tử trong danh sách. Ví dụ sau đây cho thấy cách dùng nó.
 
@@ -229,7 +230,7 @@ After reverse fruit : List(pears, oranges, apples)
 
 Sau đây là những phương thức quan trọng khi bạn dùng khi thao tác với các List. Đối với một danh sách hoàn chỉnh các phương thức có sẵn, hãy kiểm tra tài liệu chính thức của Scala.
 
-|Sr.No 		 |<p style="text-align:center">Phương thức với mô tả của nó</p>|
+|Sr.No 		 |<p style="text-align:center">Phương thức và mô tả</p>|
 |----------|-----------------------------------------------------|
 |1|<p>__scala def +(elem: A): List[A]__</p> Thêm một phần tử vào đầu list |
 |2|<p>__def :::(prefix: List[A]): List[A]__</p> Thêm những phần tử của list được truyền, vào trước list ban đầu |
