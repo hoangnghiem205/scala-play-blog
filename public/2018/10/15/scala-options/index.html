@@ -3,20 +3,20 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Giới thiệu về Tuples trong Scala | Scala-Play</title>
+    <title>Giới thiệu về Option trong Scala | Scala-Play</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Trong Scala, Tuple dùng để gộp một số lượng phần tử cố định cùng với nhau. Không như array (mảng) và list (danh sách), một tuple có thể chứa object (đối tượng) với các kiểu dữ">
+    <meta name="description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Option[T] là một vùng chứa 0 hoặc một phần tử của một kiểu đã cho. Một Option[T] có thể là đối tượng Some[ T ]  hoặc None, biểu thị giá trị bị thiếu. Ví dụ, phương thức get của">
 <meta name="keywords" content="basic">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Giới thiệu về Tuples trong Scala">
-<meta property="og:url" content="https://scala-play.com/2018/10/08/scala-tuples/index.html">
+<meta property="og:title" content="Giới thiệu về Option trong Scala">
+<meta property="og:url" content="https://scala-play.com/2018/10/15/scala-options/index.html">
 <meta property="og:site_name" content="Scala-Play">
-<meta property="og:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Trong Scala, Tuple dùng để gộp một số lượng phần tử cố định cùng với nhau. Không như array (mảng) và list (danh sách), một tuple có thể chứa object (đối tượng) với các kiểu dữ">
+<meta property="og:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Option[T] là một vùng chứa 0 hoặc một phần tử của một kiểu đã cho. Một Option[T] có thể là đối tượng Some[ T ]  hoặc None, biểu thị giá trị bị thiếu. Ví dụ, phương thức get của">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-10-16T08:38:50.641Z">
+<meta property="og:updated_time" content="2018-10-16T08:41:06.110Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Giới thiệu về Tuples trong Scala">
-<meta name="twitter:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Trong Scala, Tuple dùng để gộp một số lượng phần tử cố định cùng với nhau. Không như array (mảng) và list (danh sách), một tuple có thể chứa object (đối tượng) với các kiểu dữ">
+<meta name="twitter:title" content="Giới thiệu về Option trong Scala">
+<meta name="twitter:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Option[T] là một vùng chứa 0 hoặc một phần tử của một kiểu đã cho. Một Option[T] có thể là đối tượng Some[ T ]  hoặc None, biểu thị giá trị bị thiếu. Ví dụ, phương thức get của">
 <meta property="fb:app_id" content="228990624423914">
     
 
@@ -202,7 +202,7 @@
 </aside>
 
             
-            <section id="main"><article id="post-scala-tuples" class="article article-type-post" itemscope itemprop="blogPost">
+            <section id="main"><article id="post-scala-options" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -210,7 +210,7 @@
                 
     
         <h1 class="article-title" itemprop="name">
-            Giới thiệu về Tuples trong Scala
+            Giới thiệu về Option trong Scala
         </h1>
     
 
@@ -219,8 +219,8 @@
                         
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
-        <a href="/2018/10/08/scala-tuples/">
-            <time datetime="2018-10-08T10:37:14.000Z" itemprop="datePublished">2018-10-08</time>
+        <a href="/2018/10/15/scala-options/">
+            <time datetime="2018-10-15T10:07:20.000Z" itemprop="datePublished">2018-10-15</time>
         </a>
     </div>
 
@@ -245,38 +245,103 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <p>&nbsp;&nbsp;&nbsp;&nbsp; Trong Scala, Tuple dùng để gộp một số lượng phần tử cố định cùng với nhau. Không như array (mảng) và list (danh sách), một tuple có thể chứa object (đối tượng) với các kiểu dữ liệu khác nhau và chúng không thay đổi được giá trị.</p>
-<p>Sau đây là ví dụ về tuple lưu kiểu nguyên và kiểu chuỗi. Đây là một cách khai báo ngắn gọn:</p>
-<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> t = (<span class="number">1</span>, <span class="string">"hello"</span>)</span><br></pre></td></tr></table></figure>
-<p>Cách khai báo cụ thể sẽ giống như sau:<br><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> t = <span class="keyword">new</span> <span class="type">Tuple2</span>(<span class="number">1</span>, <span class="string">"hello"</span>)</span><br></pre></td></tr></table></figure></p>
-<p>Kiểu thực sự của tuple phụ thuộc vào số lượng và các phần tử và kiểu của các phần tử đó.<br>Do đó kiểu của (99, “Luftballons”) là Tuple2[Int, String]. Kiểu của (‘u’, ‘r’, “the”, 1, 4, “me”) là Tuple6[Char, Char, String, Int, Int, String]. </p>
-<p>Tuples có kiểu Tuple1 ,Tuple2, Tuple3… .Hiện tại tuples có thể chứa tối đa 22 phần tử ,nếu muốn nhiều hơn ,bạn có thể sử dụng Collection khác ngoài tuple. Đối với mỗi kiểu TupleN , trong đó 1&lt;= N &lt;= 22 Scala định nghĩa một số phương thức truy cập phần tử với đinh nghĩa sau-</p>
-<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> t = (<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
-<p>Để truy cập các phần tử của tuple t, bạn có thể dùng phương thức t._1 để truy cập phần tử đầu tiên , t._2 để truy cập phần tử thứ hai, và tương tự . Ví dụ, biểu thức sau đây tính tổng các phần tử của tuple t.</p>
-<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> sum = t._1 + t._2 + t._3 + t._4</span><br></pre></td></tr></table></figure>
-<p>Bạn có thể dùng Tuple để viết một phương thức lấy kiểu List[Double] làm tham số và trả về biến biến count , biến tổng sum , và tổng bình phương ,được trả về dưới kiểu Tuple 3 phần tử , kiểu Tuple3[Int, Double, Double] .Chúng cũng hữu ích khi truyền danh sách các giá trị dữ liệu dưới dạng thông điệp giữa các tác nhân trong lập trình đồng thời.</p>
-<p>Thử chương trình ví dụ sau:</p>
-<h3 id="Vi-du"><a href="#Vi-du" class="headerlink" title="Ví dụ:"></a>Ví dụ:</h3><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">def</span> <span class="title">main</span></span>(args: <span class="type">Array</span>[<span class="type">String</span>]) &#123;</span><br><span class="line">      <span class="keyword">val</span> t = (<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>)</span><br><span class="line">      <span class="keyword">val</span> sum = t._1 + t._2 + t._3 + t._4</span><br><span class="line">      println( <span class="string">"Sum of elements: "</span> + sum )</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<code>Option[T]</code> là một vùng chứa 0 hoặc một phần tử của một kiểu đã cho. Một <code>Option[T]</code> có thể là đối tượng <strong>Some[ T ]</strong>  hoặc <strong>None</strong>, biểu thị giá trị bị thiếu. Ví dụ, phương thức get của Map trong Scala tạo ra Some (value) nếu một giá trị tương ứng với một khóa đã cho đã được tìm thấy, hoặc <strong>None</strong> nếu khóa đã cho không được định nghĩa trong Map.</p>
+<p>Kiểu Option được dùng thường xuyên trong chương trình scala và bạn có thể so sánh nó với giá trị <strong>null</strong> có sẵn trong Java để chỉ không có giá trị. Ví dụ , phương thức get trong java.util.HashMap  trả về  giá trị được lưu trong HashMap ,hoặc null nếu giá trị không được  tìm thấy.</p>
+<p>Giả sử chúng ta có một phương thức lấy một bản ghi từ cơ sở dữ liệu dựa trên khóa chính.</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">findPerson</span></span>(key: <span class="type">Int</span>): <span class="type">Option</span>[<span class="type">Person</span>]</span><br></pre></td></tr></table></figure>
+<p>Phương thức này sẽ trả về Some[Person]  nếu bản ghi được tìm thấy hoặc None nếu bản ghi không được tìm thấy. Chúng ta cùng theo dõi chương trình sau đây.</p>
+<h3 id="Vi-du"><a href="#Vi-du" class="headerlink" title="Ví dụ"></a>Ví dụ</h3><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">main</span></span>(args: <span class="type">Array</span>[<span class="type">String</span>]) &#123;</span><br><span class="line">        <span class="keyword">val</span> capitals = <span class="type">Map</span>(<span class="string">"France"</span> -&gt; <span class="string">"Paris"</span>, <span class="string">"Japan"</span> -&gt; <span class="string">"Tokyo"</span>)</span><br><span class="line">        println(<span class="string">"capitals.get( \"France\" ) : "</span> +  capitals.get( <span class="string">"France"</span> ))</span><br><span class="line">        println(<span class="string">"capitals.get( \"India\" ) : "</span> +  capitals.get( <span class="string">"India"</span> ))</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>Lưu chương trình trên vào file <strong>Demo.scala.</strong> Lệnh sau đây được dùng để biên dịch và thực thi chương trình Demo.</p>
-<h3 id="Cai-dat"><a href="#Cai-dat" class="headerlink" title="Cài đặt:"></a>Cài đặt:</h3><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\&gt;scalac <span class="type">Demo</span>.scala</span><br><span class="line">\&gt;scala <span class="type">Demo</span></span><br></pre></td></tr></table></figure>
-<h3 id="Ket-qua"><a href="#Ket-qua" class="headerlink" title="Kết quả:"></a>Kết quả:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Sum of elements: 10</span><br></pre></td></tr></table></figure>
-<p>Phần trên là những giới thiệu qua của mình về Tuple trong Scala. Bây giờ chúng ta sẽ đi tìm hiểu một vài phương thức thường xuyên được sử dụng trong Tuple.</p>
-<h1 id="Phep-lap-tren-Tuple"><a href="#Phep-lap-tren-Tuple" class="headerlink" title=" Phép lặp trên Tuple "></a><p style="color:red"> Phép lặp trên Tuple </p></h1><p>Bạn có thể dùng phương thức <strong>Tuple.productIterator()</strong> để lặp qua hết tất cả các phần tử của Tuple.<br>Thử ví dụ sau để thực hiện phép lặp trên tuples.</p>
-<h3 id="Vi-du-1"><a href="#Vi-du-1" class="headerlink" title="Ví dụ:"></a>Ví dụ:</h3><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">def</span> <span class="title">main</span></span>(args: <span class="type">Array</span>[<span class="type">String</span>]) &#123;</span><br><span class="line">      <span class="keyword">val</span> t = (<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>)</span><br><span class="line">      t.productIterator.foreach&#123; i =&gt;println(<span class="string">"Value = "</span> + i )&#125;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Cai-dat"><a href="#Cai-dat" class="headerlink" title="Cài đặt"></a>Cài đặt</h3><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\&gt;scalac <span class="type">Demo</span>.scala</span><br><span class="line">\&gt;scala <span class="type">Demo</span></span><br></pre></td></tr></table></figure>
+<h3 id="Ket-qua"><a href="#Ket-qua" class="headerlink" title="Kết quả"></a>Kết quả</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">capitals.get( &quot;France&quot; ) : Some(Paris)</span><br><span class="line">capitals.get( &quot;India&quot; ) : None</span><br></pre></td></tr></table></figure>
+<p>Cách phổ biến nhất để lấy các giá trị tùy ý sang một bên là thông qua a pattern match. Ví dụ, hãy thử chương trình sau.</p>
+<h3 id="Vi-du-1"><a href="#Vi-du-1" class="headerlink" title="Ví dụ"></a>Ví dụ</h3><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">def</span> <span class="title">main</span></span>(args: <span class="type">Array</span>[<span class="type">String</span>]) &#123;</span><br><span class="line">      <span class="keyword">val</span> capitals = <span class="type">Map</span>(<span class="string">"France"</span> -&gt; <span class="string">"Paris"</span>, <span class="string">"Japan"</span> -&gt; <span class="string">"Tokyo"</span>)</span><br><span class="line">      println(<span class="string">"show(capitals.get( \"Japan\")) : "</span> + show(capitals.get( <span class="string">"Japan"</span>)) )</span><br><span class="line">      println(<span class="string">"show(capitals.get( \"India\")) : "</span> + show(capitals.get( <span class="string">"India"</span>)) )</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="function"><span class="keyword">def</span> <span class="title">show</span></span>(x: <span class="type">Option</span>[<span class="type">String</span>]) = x <span class="keyword">match</span> &#123;</span><br><span class="line">      <span class="keyword">case</span> <span class="type">Some</span>(s) =&gt; s</span><br><span class="line">      <span class="keyword">case</span> <span class="type">None</span> =&gt; <span class="string">"?"</span></span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>Lưu chương trình trên vào file <strong>Demo.scala.</strong> Lệnh sau đây được dùng để biên dịch và thực thi chương trình Demo.</p>
 <h3 id="Cai-dat-1"><a href="#Cai-dat-1" class="headerlink" title="Cài đặt"></a>Cài đặt</h3><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\&gt;scalac <span class="type">Demo</span>.scala</span><br><span class="line">\&gt;scala <span class="type">Demo</span></span><br></pre></td></tr></table></figure>
-<h3 id="Ket-qua-1"><a href="#Ket-qua-1" class="headerlink" title="Kết quả"></a>Kết quả</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Value = 4</span><br><span class="line">Value = 3</span><br><span class="line">Value = 2</span><br><span class="line">Value = 1</span><br></pre></td></tr></table></figure>
-<h1 id="Chuyen-doi-thanh-chuoi"><a href="#Chuyen-doi-thanh-chuoi" class="headerlink" title=" Chuyển đổi thành chuỗi "></a><p style="color:red"> Chuyển đổi thành chuỗi </p></h1><p>Bạn có thể sử dụng phương thức <strong>Tuple.toString ()</strong> để nối tất cả các phần tử của tuple sang kiểu chuỗi. Hãy thử chương trình ví dụ sau để chuyển đổi thành Chuỗi.</p>
-<h3 id="Vi-du-2"><a href="#Vi-du-2" class="headerlink" title="Ví dụ"></a>Ví dụ</h3><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">def</span> <span class="title">main</span></span>(args: <span class="type">Array</span>[<span class="type">String</span>]) &#123;</span><br><span class="line">      <span class="keyword">val</span> t = <span class="keyword">new</span> <span class="type">Tuple3</span>(<span class="number">1</span>, <span class="string">"hello"</span>, <span class="type">Console</span>)</span><br><span class="line">      println(<span class="string">"Concatenated String: "</span> + t.toString() )</span><br><span class="line">&#125;&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Ket-qua-1"><a href="#Ket-qua-1" class="headerlink" title="Kết quả"></a>Kết quả</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">show(capitals.get( &quot;Japan&quot;)) : Tokyo</span><br><span class="line">show(capitals.get( &quot;India&quot;)) : ?</span><br></pre></td></tr></table></figure>
+<p>Qua phần trên, mình đã giới thiệu qua và các bạn đã phần nào hiểu được sơ lược về cách sử dụng Option trong scala. Bây giờ chúng ta hãy cùng đi tìm hiểu sâu hơn về  các phương thức thường xuyên được sử dụng trong Option.</p>
+<h2 id="Dung-phuong-thuc-getOrElse"><a href="#Dung-phuong-thuc-getOrElse" class="headerlink" title="Dùng phương thức getOrElse() "></a>Dùng phương thức getOrElse() <p></p></h2><p>&nbsp;&nbsp;&nbsp;&nbsp; Sau đây là chương trình ví dụ để chỉ cách sử dụng phương thức getOrElse () để truy cập một giá trị hoặc một giá trị mặc định khi không có giá trị nào.</p>
+<h3 id="Vi-du-2"><a href="#Vi-du-2" class="headerlink" title="Ví dụ"></a>Ví dụ</h3><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">def</span> <span class="title">main</span></span>(args: <span class="type">Array</span>[<span class="type">String</span>]) &#123;</span><br><span class="line">      <span class="keyword">val</span> a:<span class="type">Option</span>[<span class="type">Int</span>] = <span class="type">Some</span>(<span class="number">5</span>)</span><br><span class="line">      <span class="keyword">val</span> b:<span class="type">Option</span>[<span class="type">Int</span>] = <span class="type">None</span> </span><br><span class="line">      println(<span class="string">"a.getOrElse(0): "</span> + a.getOrElse(<span class="number">0</span>) )</span><br><span class="line">      println(<span class="string">"b.getOrElse(10): "</span> + b.getOrElse(<span class="number">10</span>) )</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>Lưu chương trình trên vào file <strong>Demo.scala.</strong> Lệnh sau đây được dùng để biên dịch và thực thi chương trình Demo.</p>
 <h3 id="Cai-dat-2"><a href="#Cai-dat-2" class="headerlink" title="Cài đặt"></a>Cài đặt</h3><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\&gt;scalac <span class="type">Demo</span>.scala</span><br><span class="line">\&gt;scala <span class="type">Demo</span></span><br></pre></td></tr></table></figure>
-<h3 id="Ket-qua-2"><a href="#Ket-qua-2" class="headerlink" title="Kết quả"></a>Kết quả</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Concatenated String: (1,hello,scala.Console$@281acd47)</span><br></pre></td></tr></table></figure>
-<h1 id="Dao-cac-phan-tu-trong-Tuple"><a href="#Dao-cac-phan-tu-trong-Tuple" class="headerlink" title=" Đảo các phần tử  trong Tuple"></a><p style="color:red"> Đảo các phần tử  trong Tuple</p></h1><p>Bạn có thể sử dụng phương thức <strong>Tuple.swap</strong> để hoán đổi các phần tử của Tuple2.<br>Hãy thử chương trình ví dụ sau để hoán đổi các phần tử.</p>
-<h3 id="Vi-du-3"><a href="#Vi-du-3" class="headerlink" title="Ví dụ"></a>Ví dụ</h3><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">def</span> <span class="title">main</span></span>(args: <span class="type">Array</span>[<span class="type">String</span>]) &#123;</span><br><span class="line">      <span class="keyword">val</span> t = <span class="keyword">new</span> <span class="type">Tuple2</span>(<span class="string">"Scala"</span>, <span class="string">"hello"</span>)</span><br><span class="line">      println(<span class="string">"Swapped Tuple: "</span> + t.swap )</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Ket-qua-2"><a href="#Ket-qua-2" class="headerlink" title="Kết quả"></a>Kết quả</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a.getOrElse(0): 5</span><br><span class="line">b.getOrElse(10): 10</span><br></pre></td></tr></table></figure>
+<h2 id="Dung-phuong-thuc-isEmpty"><a href="#Dung-phuong-thuc-isEmpty" class="headerlink" title="Dùng phương thức isEmpty() "></a>Dùng phương thức isEmpty() <p></p></h2><p>&nbsp;&nbsp;&nbsp;&nbsp; Sau dây là chương trình ví dụ để chỉ cách dùng phương thức isEmpty() để kiểm tra Option  là None hay không</p>
+<h3 id="Vi-du-3"><a href="#Vi-du-3" class="headerlink" title="Ví dụ"></a>Ví dụ</h3><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">def</span> <span class="title">main</span></span>(args: <span class="type">Array</span>[<span class="type">String</span>]) &#123;</span><br><span class="line">      <span class="keyword">val</span> a:<span class="type">Option</span>[<span class="type">Int</span>] = <span class="type">Some</span>(<span class="number">5</span>)</span><br><span class="line">      <span class="keyword">val</span> b:<span class="type">Option</span>[<span class="type">Int</span>] = <span class="type">None</span> </span><br><span class="line">      println(<span class="string">"a.isEmpty: "</span> + a.isEmpty )</span><br><span class="line">      println(<span class="string">"b.isEmpty: "</span> + b.isEmpty )</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>Lưu chương trình trên vào file <strong>Demo.scala.</strong> Lệnh sau đây được dùng để biên dịch và thực thi chương trình Demo.</p>
 <h3 id="Cai-dat-3"><a href="#Cai-dat-3" class="headerlink" title="Cài đặt"></a>Cài đặt</h3><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\&gt;scalac <span class="type">Demo</span>.scala</span><br><span class="line">\&gt;scala <span class="type">Demo</span></span><br></pre></td></tr></table></figure>
-<h3 id="Ket-qua-3"><a href="#Ket-qua-3" class="headerlink" title="Kết quả"></a>Kết quả</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Swapped tuple: (hello,Scala)</span><br></pre></td></tr></table></figure>
-<h2 id="Nguon-tham-khao"><a href="#Nguon-tham-khao" class="headerlink" title="Nguồn tham khảo"></a>Nguồn tham khảo</h2><p><a href="https://www.tutorialspoint.com/scala/scala_tuples.htm" target="_blank" rel="noopener">https://www.tutorialspoint.com/scala/scala_tuples.htm</a></p>
+<h3 id="Ket-qua-3"><a href="#Ket-qua-3" class="headerlink" title="Kết quả"></a>Kết quả</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a.isEmpty: false</span><br><span class="line">b.isEmpty: true</span><br></pre></td></tr></table></figure>
+<h2 id="Nhung-phuong-thuc-Option-trong-Scala"><a href="#Nhung-phuong-thuc-Option-trong-Scala" class="headerlink" title="Những phương thức Option trong Scala "></a>Những phương thức Option trong Scala <p></p></h2><p>&nbsp;&nbsp;&nbsp;&nbsp; Sau đây là các phương thức quan trọng mà bạn có thể sử dụng khi lựa chọn Options. Để biết danh sách đầy đủ các phương pháp có sẵn, vui lòng kiểm tra tài liệu chính thức của Scala.</p>
+<table>
+<thead>
+<tr>
+<th>Sr.No</th>
+<th><p style="text-align:center"> Phương thức và mô tả </p></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><p> <strong>def get: A</strong></p> Trả về giá trị của option</td>
+</tr>
+<tr>
+<td>2</td>
+<td><p> <strong>def isEmpty: Boolean</strong></p> Trả về true nếu option là None, ngược lại thì false</td>
+</tr>
+<tr>
+<td>3</td>
+<td><p> <strong>def productArity: Int</strong></p> Kích thước của kết quả này. Đối với một kết quả A(x_1, …, x_k) trả về k.</td>
+</tr>
+<tr>
+<td>4</td>
+<td><p> <strong>def productElement(n: Int): Any</strong></p> Phần tử thứ n             của kết quả này , dựa trên 0. Nói cách khác, đối với             một kết quả   A(x_1, …, x_k), trả về x_(n + 1) trong đó 0 &lt; n &lt; k.</td>
+</tr>
+<tr>
+<td>5</td>
+<td><p> <strong>def exists(p: (A) =&gt; Boolean): Boolean</strong></p> Trả về true nếu option này khác rỗng và hàm p trả về true khi áp dụng cho giá trị của Option này. Nếu không, trả về false.</td>
+</tr>
+<tr>
+<td>6</td>
+<td><p> <strong>def filter(p: (A) =&gt; Boolean): Option[A]</strong></p> Trả             về Option này nếu nó khác rỗng, và áp dụng hàm p cho giá trị của Option này trả về true. Nếu không, trả về None.</td>
+</tr>
+<tr>
+<td>7</td>
+<td><p> <strong>def filterNot(p: (A) =&gt; Boolean): Option[A]</strong></p> Trả về Option này nếu nó khác rỗng, và áp dụng hàm p cho giá trị của Option này trả về false. Nếu không, trả về None.</td>
+</tr>
+<tr>
+<td>8</td>
+<td><p> <strong>def flatMap<a href="f: (A" target="_blank" rel="noopener">B</a> =&gt; Option[B]): Option[B]</strong></p> Trả về kết quả của áp dụng hàm f cho giá trị của Option nếu Option này khác rỗng. Trả về None nếu Option này rỗng.</td>
+</tr>
+<tr>
+<td>9</td>
+<td><p> <strong>def foreach<a href="f: (A" target="_blank" rel="noopener">U</a> =&gt; U): Unit</strong></p> Áp dụng hàm f cho giá trị của option ,nếu nó khác rỗng. Ngược lại, không làm gì cả</td>
+</tr>
+<tr>
+<td>10</td>
+<td><p> <strong>def getOrElse<a href="default: =&gt; B" target="_blank" rel="noopener">B &gt;: A</a>: B</strong></p> Trả về giá trị của option nếu option này khác rỗng, ngược lại trả về kết quả của đánh giá default mặc định.</td>
+</tr>
+<tr>
+<td>11</td>
+<td><p> <strong>def isDefined: Boolean</strong></p> Trả về true nếu option này là một thể hiện của kiểu Some , ngược lại false.</td>
+</tr>
+<tr>
+<td>12</td>
+<td><p> <strong>def iterator: Iterator[A]</strong></p> Trả về một trình lặp singleton trả về giá trị của Option nếu nó khác rỗng, hoặc một trình lặp rỗng nếu option rỗng.</td>
+</tr>
+<tr>
+<td>13</td>
+<td><p> <strong>def map<a href="f: (A" target="_blank" rel="noopener">B</a> =&gt; B): Option[B]</strong></p> Trả về một Some chứa kết quả của áp dụng hàm f cho giá trị của Option này nếu Option này khác rỗng. Nếu không, trả về None.</td>
+</tr>
+<tr>
+<td>14</td>
+<td><p> <strong>def orElse<a href="alternative: =&gt; Option[B]" target="_blank" rel="noopener">B &gt;: A</a>: Option[B]</strong></p> Trả về Option này nếu nó khác rỗng , không thì trả về  kết quả của đánh giá  thay thế alternative.</td>
+</tr>
+<tr>
+<td>15</td>
+<td><p> <strong>def orNull</strong></p> Trả về giá trị của option nếu nó khác rỗng, hoặc trả về null nếu nó rỗng.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Nguon-tham-khao"><a href="#Nguon-tham-khao" class="headerlink" title="Nguồn tham khảo"></a>Nguồn tham khảo</h2><p><a href="https://www.tutorialspoint.com/scala/scala_options.htm" target="_blank" rel="noopener">https://www.tutorialspoint.com/scala/scala_options.htm</a></p>
 
         
         </div>
@@ -287,7 +352,7 @@
 
 </div>
 
-    <a data-url="https://scala-play.com/2018/10/08/scala-tuples/" data-id="cjnbh78ld001xj4lqsujznmu1" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://scala-play.com/2018/10/15/scala-options/" data-id="cjnbh7ncd0020j4lqqz3oyczp" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -355,7 +420,7 @@
 
             
     
-        <a href="https://scala-play.com/2018/10/08/scala-tuples/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://scala-play.com/2018/10/08/scala-tuples/">Comments</a>
+        <a href="https://scala-play.com/2018/10/15/scala-options/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://scala-play.com/2018/10/15/scala-options/">Comments</a>
     
 
         </footer>
@@ -364,19 +429,19 @@
         
 <nav id="article-nav">
     
-        <a href="/2018/10/11/intergrated-cicd/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/2018/10/16/scala-lists/" id="article-nav-newer" class="article-nav-link-wrap">
             <strong class="article-nav-caption">Newer</strong>
             <div class="article-nav-title">
                 
-                    Tích hợp Gitlab-CICD vào dự án thực tế
+                    Giới thiệu về List trong Scala
                 
             </div>
         </a>
     
     
-        <a href="/2018/10/06/git-lab/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2018/10/11/intergrated-cicd/" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">Older</strong>
-            <div class="article-nav-title">Sử dụng Gitlab-CI/CD cơ bản</div>
+            <div class="article-nav-title">Tích hợp Gitlab-CICD vào dự án thực tế</div>
         </a>
     
 </nav>
@@ -575,9 +640,9 @@
     <script>
     var disqus_config = function () {
         
-            this.page.url = 'https://scala-play.com/2018/10/08/scala-tuples/';
+            this.page.url = 'https://scala-play.com/2018/10/15/scala-options/';
         
-        this.page.identifier = 'scala-tuples';
+        this.page.identifier = 'scala-options';
     };
     (function() { 
         var d = document, s = d.createElement('script');  
