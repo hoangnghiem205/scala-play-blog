@@ -13,6 +13,8 @@ tags:
 
 Với Higher Order Function, tính trừu tượng hóa, tái sử dụng chính là điểm mạnh.
 
+<!-- more -->
+
 ## Tính trừu tượng hóa (Abstraction) 
 Hãy nghĩ đến dây chuyền lắp ráp một chiếc xe. Dây chuyền gồm bốn bộ phận:
 - Bộ phận tạo bánh xe

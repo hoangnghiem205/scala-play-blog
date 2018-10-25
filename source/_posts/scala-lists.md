@@ -7,6 +7,9 @@ tags: basic
 
 &nbsp;&nbsp;&nbsp;&nbsp;`List` trong scala gần tương tự như mảng, vì mọi phần tử đều cùng kiểu dữ liệu nhưng lại có hai sự khác biệt quan trọng:
 - Đầu tiên, `List` không thể thay đổi, có nghĩa những phần tử trong một List không thể thay đổi được bằng phép gán.
+
+<!-- more -->
+
 - Thứ hai, `List` đại diện cho một danh sách liên kết các phần tử, trong khi đó các phần tử của array(mảng) đước xếp cạnh, liên tiếp với nhau.
 
 Kiểu của một List được viết duới dạng : `List[T]`. 

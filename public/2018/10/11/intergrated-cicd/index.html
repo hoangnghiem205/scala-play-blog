@@ -15,7 +15,7 @@
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://scala-play.com/2018/10/11/intergrated-cicd/cicd1.png">
 <meta property="og:image" content="https://scala-play.com/2018/10/11/intergrated-cicd/cicd2.png">
-<meta property="og:updated_time" content="2018-10-16T08:38:50.637Z">
+<meta property="og:updated_time" content="2018-10-25T10:07:18.203Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Tích hợp Gitlab-CICD vào dự án thực tế">
 <meta name="twitter:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Gần đây, team Best Solution đã tích hợp được Gitlab-CICD vào dự án Green-Blue để tự động hóa quá trình Build, Deploy ứng dụng lên Staging. Dưới đây là hướng dẫn về cách tích hợ">
@@ -153,7 +153,7 @@
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                6
+                7
                 <span>posts</span>
             </div>
             <div class="article-info-block">
@@ -249,6 +249,7 @@
         
             
             <p>&nbsp;&nbsp;&nbsp;&nbsp;Gần đây, team Best Solution đã tích hợp được Gitlab-CICD vào dự án <strong><em>Green-Blue</em></strong> để tự động hóa quá trình Build, Deploy ứng dụng lên Staging. Dưới đây là hướng dẫn về cách tích hợp Gitlab-CICD cho những dự án khác. Trong hướng dẫn này, mình sử dụng GitLab Community Edition 8.16.3 và Gitlab Runner 1.11.1</p>
+<a id="more"></a>
 <h3 id="1-Tich-hop-Gitlab-Runner-va-them-bien-moi-truong-cho-du-an-tren-Gitlab"><a href="#1-Tich-hop-Gitlab-Runner-va-them-bien-moi-truong-cho-du-an-tren-Gitlab" class="headerlink" title="1. Tích hợp Gitlab Runner và thêm biến môi trường cho dự án trên Gitlab"></a><strong>1. Tích hợp Gitlab Runner và thêm biến môi trường cho dự án trên Gitlab</strong></h3><p>&nbsp;&nbsp;&nbsp;&nbsp;Để có thể tiến hành quá trình Build-Deploy, Gitlab sử dụng một server có tên là Runner. Tại đây, ứng dụng của chúng ta sẽ được Build,Test, sau đó được Deploy lên server. </p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;Hiện tại, Gitlab cung cấp các Shared Runner miễn phí cho chúng ta. Nhưng vì yếu tố bảo mật và đảm bảo hiệu năng, chúng ta nên tự cài đặt một Runner Server riêng phục vụ cho các dự án của công ty.</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;Trong team Best Solution, mình đã cài đặt một Runner Server có tên là <strong><em>the runner</em></strong>. Chúng ta chỉ cần tích hợp Runner vào dự án là có thể sử dụng được.</p>
@@ -433,6 +434,25 @@
                     <li>
                         
                         <div class="item-thumbnail">
+                            <a href="/2018/10/25/twirl-template-engine/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/play/">play</a></p>
+                            <p class="item-title"><a href="/2018/10/25/twirl-template-engine/" class="title">Twirl template engine trong Play Framework</a></p>
+                            <p class="item-date"><time datetime="2018-10-25T10:00:00.000Z" itemprop="datePublished">2018-10-25</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
                             <a href="/2018/10/16/scala-lists/" class="thumbnail">
     
     
@@ -506,25 +526,6 @@
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2018/10/06/git-lab/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/ci-cd/">ci/cd</a></p>
-                            <p class="item-title"><a href="/2018/10/06/git-lab/" class="title">Sử dụng Gitlab-CI/CD cơ bản</a></p>
-                            <p class="item-date"><time datetime="2018-10-06T03:48:07.000Z" itemprop="datePublished">2018-10-06</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -534,7 +535,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ci-cd/">ci/cd</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/scala/">scala</a><span class="category-list-count">4</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ci-cd/">ci/cd</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/play/">play</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/scala/">scala</a><span class="category-list-count">4</span></li></ul>
         </div>
     </div>
 
@@ -543,7 +544,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">6</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">7</span></li></ul>
         </div>
     </div>
 
@@ -552,7 +553,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/basic/">basic</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tutorial/">tutorial</a><span class="tag-list-count">2</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/basic/">basic</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tutorial/">tutorial</a><span class="tag-list-count">2</span></li></ul>
         </div>
     </div>
 

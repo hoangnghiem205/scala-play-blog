@@ -9,6 +9,8 @@ tags:
 
 &nbsp;&nbsp;&nbsp;&nbsp;Gần đây, team Best Solution đã tích hợp được Gitlab-CICD vào dự án ___Green-Blue___ để tự động hóa quá trình Build, Deploy ứng dụng lên Staging. Dưới đây là hướng dẫn về cách tích hợp Gitlab-CICD cho những dự án khác. Trong hướng dẫn này, mình sử dụng GitLab Community Edition 8.16.3 và Gitlab Runner 1.11.1
 
+<!-- more -->
+
 ### __1. Tích hợp Gitlab Runner và thêm biến môi trường cho dự án trên Gitlab__
 &nbsp;&nbsp;&nbsp;&nbsp;Để có thể tiến hành quá trình Build-Deploy, Gitlab sử dụng một server có tên là Runner. Tại đây, ứng dụng của chúng ta sẽ được Build,Test, sau đó được Deploy lên server. 
 

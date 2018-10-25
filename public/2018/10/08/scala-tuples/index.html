@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="Scala-Play">
 <meta property="og:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Trong Scala, Tuple dùng để gộp một số lượng phần tử cố định cùng với nhau. Không như array (mảng) và list (danh sách), một tuple có thể chứa object (đối tượng) với các kiểu dữ">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-10-16T08:38:50.641Z">
+<meta property="og:updated_time" content="2018-10-25T10:10:41.085Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Giới thiệu về Tuples trong Scala">
 <meta name="twitter:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Trong Scala, Tuple dùng để gộp một số lượng phần tử cố định cùng với nhau. Không như array (mảng) và list (danh sách), một tuple có thể chứa object (đối tượng) với các kiểu dữ">
@@ -150,7 +150,7 @@
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                6
+                7
                 <span>posts</span>
             </div>
             <div class="article-info-block">
@@ -248,6 +248,7 @@
             <p>&nbsp;&nbsp;&nbsp;&nbsp; Trong Scala, Tuple dùng để gộp một số lượng phần tử cố định cùng với nhau. Không như array (mảng) và list (danh sách), một tuple có thể chứa object (đối tượng) với các kiểu dữ liệu khác nhau và chúng không thay đổi được giá trị.</p>
 <p>Sau đây là ví dụ về tuple lưu kiểu nguyên và kiểu chuỗi. Đây là một cách khai báo ngắn gọn:</p>
 <figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> t = (<span class="number">1</span>, <span class="string">"hello"</span>)</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <p>Cách khai báo cụ thể sẽ giống như sau:<br><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> t = <span class="keyword">new</span> <span class="type">Tuple2</span>(<span class="number">1</span>, <span class="string">"hello"</span>)</span><br></pre></td></tr></table></figure></p>
 <p>Kiểu thực sự của tuple phụ thuộc vào số lượng và các phần tử và kiểu của các phần tử đó.<br>Do đó kiểu của (99, “Luftballons”) là Tuple2[Int, String]. Kiểu của (‘u’, ‘r’, “the”, 1, 4, “me”) là Tuple6[Char, Char, String, Int, Int, String]. </p>
 <p>Tuples có kiểu Tuple1 ,Tuple2, Tuple3… .Hiện tại tuples có thể chứa tối đa 22 phần tử ,nếu muốn nhiều hơn ,bạn có thể sử dụng Collection khác ngoài tuple. Đối với mỗi kiểu TupleN , trong đó 1&lt;= N &lt;= 22 Scala định nghĩa một số phương thức truy cập phần tử với đinh nghĩa sau-</p>
@@ -409,6 +410,25 @@
                     <li>
                         
                         <div class="item-thumbnail">
+                            <a href="/2018/10/25/twirl-template-engine/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/play/">play</a></p>
+                            <p class="item-title"><a href="/2018/10/25/twirl-template-engine/" class="title">Twirl template engine trong Play Framework</a></p>
+                            <p class="item-date"><time datetime="2018-10-25T10:00:00.000Z" itemprop="datePublished">2018-10-25</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
                             <a href="/2018/10/16/scala-lists/" class="thumbnail">
     
     
@@ -482,25 +502,6 @@
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2018/10/06/git-lab/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/ci-cd/">ci/cd</a></p>
-                            <p class="item-title"><a href="/2018/10/06/git-lab/" class="title">Sử dụng Gitlab-CI/CD cơ bản</a></p>
-                            <p class="item-date"><time datetime="2018-10-06T03:48:07.000Z" itemprop="datePublished">2018-10-06</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -510,7 +511,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ci-cd/">ci/cd</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/scala/">scala</a><span class="category-list-count">4</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ci-cd/">ci/cd</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/play/">play</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/scala/">scala</a><span class="category-list-count">4</span></li></ul>
         </div>
     </div>
 
@@ -519,7 +520,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">6</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">7</span></li></ul>
         </div>
     </div>
 
@@ -528,7 +529,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/basic/">basic</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tutorial/">tutorial</a><span class="tag-list-count">2</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/basic/">basic</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tutorial/">tutorial</a><span class="tag-list-count">2</span></li></ul>
         </div>
     </div>
 

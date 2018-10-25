@@ -13,6 +13,9 @@ tags:
  - Cho phép xử lí nghiệp vụ logic ở tầng view , giúp luồng code làm việc dễ dàng và linh hoạt hơn 
  - Giúp xử lí ,truy xuất , tính toán ,hiển thị hiệu quả dữ liệu ở trong phần giao diện .
  - Ở runtime, template engine thay thế những biến trong template với giá trị thực và chuyển đổi template thành file HTML gửi tới client.
+
+<!-- more -->
+
 ### Ví dụ :
 - Javascript thì có một số template engine như Mustache, EJS .
 - PHP thì có Twig, Smarty ,Mustache.

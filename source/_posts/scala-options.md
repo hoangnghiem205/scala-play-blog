@@ -7,6 +7,8 @@ tags: basic
 
 &nbsp;&nbsp;&nbsp;&nbsp;`Option[T]` là một vùng chứa 0 hoặc một phần tử của một kiểu đã cho. Một `Option[T]` có thể là đối tượng __Some[ T ]__  hoặc __None__, biểu thị giá trị bị thiếu. Ví dụ, phương thức get của Map trong Scala tạo ra Some (value) nếu một giá trị tương ứng với một khóa đã cho đã được tìm thấy, hoặc __None__ nếu khóa đã cho không được định nghĩa trong Map.
 
+<!-- more -->
+
 Kiểu Option được dùng thường xuyên trong chương trình scala và bạn có thể so sánh nó với giá trị __null__ có sẵn trong Java để chỉ không có giá trị. Ví dụ , phương thức get trong java.util.HashMap  trả về  giá trị được lưu trong HashMap ,hoặc null nếu giá trị không được  tìm thấy.
 
 Giả sử chúng ta có một phương thức lấy một bản ghi từ cơ sở dữ liệu dựa trên khóa chính.

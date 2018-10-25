@@ -15,6 +15,8 @@ Sau đây là ví dụ về tuple lưu kiểu nguyên và kiểu chuỗi. Đây 
 val t = (1, "hello")
 ```
 
+<!-- more -->
+
 Cách khai báo cụ thể sẽ giống như sau:
 ```scala
 val t = new Tuple2(1, "hello")

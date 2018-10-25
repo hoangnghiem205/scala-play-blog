@@ -13,9 +13,10 @@ tags:
 \- Chức năng tự động Build và Deploy lên Staging sẽ được kích hoạt khi merge code vào
 branch "dev" hoặc push code lên branch "dev".
 
+<!-- more -->
+
 \- Chức năng tự động Build và Deploy lên Production sẽ được kích hoạt khi merge code vào
 branch "master" hoặc push code lên branch "master".
-
 
 ## 2. Cách sử dụng
 **Bước 1: merge code vào branch "dev" hoặc push code lên branch "dev"**
