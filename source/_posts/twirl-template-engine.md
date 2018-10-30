@@ -173,3 +173,6 @@ Twirl giúp tiết kiệm thời gian khi viết đi viết lại cấu trúc co
 https://www.playframework.com/documentation/2.5.x/ScalaTemplates
 https://alvinalexander.com/scala/create-play-framework-template-functions-examples
 https://www.slideshare.net/knoldus/knolx-pte
+
+
+#### Tác giả: Nguyễn Đình Cường

@@ -279,3 +279,5 @@ Sau đây là những phương thức quan trọng khi bạn dùng khi thao tác
 
 ## Nguồn tham khảo
 https://www.tutorialspoint.com/scala/scala_lists.htm
+
+#### Biên dịch: Nguyễn Đình Cường

@@ -146,7 +146,7 @@
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                7
+                8
                 <span>posts</span>
             </div>
             <div class="article-info-block">
@@ -199,6 +199,140 @@
 
             
             <section id="main">
+    <article id="post-slick" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2018/10/30/slick/">Làm việc với Slick trong Play Framework</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fas fa-calendar-alt"></i>
+        <a href="/2018/10/30/slick/">
+            <time datetime="2018-10-30T03:00:00.000Z" itemprop="datePublished">2018-10-30</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fas fa-folder"></i>
+        <a class="article-category-link" href="/categories/play/">play</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/basic/">basic</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            <p><h2 id="I-ORM"><a href="#I-ORM" class="headerlink" title="I. ORM"></a>I. ORM</h2><p>ORM (Object Relational Mapping) là một kỹ thuật lập trình ánh xạ từ cơ sở dữ liệu sang đối tượng trong các ngôn ngữ lập trình hướng đối tượng như Java,Scala … (các table tương ứng với các class, quan hệ giữa các table tương ứng với quan hệ giữa các class).</p>
+<p>Sử dụng ORM cho phép người lập trình thao tác với database một cách dễ dàng thông qua các đối tượng mà không cần trực tiếp quan tâm tới database.<br>Một số framework sử dụng kỹ thuật ORM: Play Scala sử dụng Slick, Sping Java sử dụng Hibernate…</p></p>
+            <p class="article-more-link">
+                <a href="/2018/10/30/slick/#more">Read More</a>
+            </p>
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://scala-play.com/2018/10/30/slick/" data-id="cjnvmciux000gmplqkzk0zmqo" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://scala-play.com/2018/10/30/slick/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://scala-play.com/2018/10/30/slick/">Comments</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
     <article id="post-twirl-template-engine" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -259,7 +393,7 @@
 
 </div>
 
-    <a data-url="https://scala-play.com/2018/10/25/twirl-template-engine/" data-id="cjnoeydde000009lq0lorpjc0" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://scala-play.com/2018/10/25/twirl-template-engine/" data-id="cjnvmciut000cmplqp16gz4xq" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -395,7 +529,7 @@
 
 </div>
 
-    <a data-url="https://scala-play.com/2018/10/16/scala-lists/" data-id="cjnbh7tsp0021j4lqpsutdtxg" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://scala-play.com/2018/10/16/scala-lists/" data-id="cjnvmciul0006mplqgck6bw7e" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -528,7 +662,7 @@
 
 </div>
 
-    <a data-url="https://scala-play.com/2018/10/15/scala-options/" data-id="cjnbh7ncd0020j4lqqz3oyczp" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://scala-play.com/2018/10/15/scala-options/" data-id="cjnvmciuj0004mplqre143tlw" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -661,7 +795,7 @@
 
 </div>
 
-    <a data-url="https://scala-play.com/2018/10/11/intergrated-cicd/" data-id="cjnbh78kg001rj4lqt0zo8xc7" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://scala-play.com/2018/10/11/intergrated-cicd/" data-id="cjnvmciuf0003mplqyyd5s9c5" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -796,7 +930,7 @@
 
 </div>
 
-    <a data-url="https://scala-play.com/2018/10/08/scala-tuples/" data-id="cjnbh78ld001xj4lqsujznmu1" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://scala-play.com/2018/10/08/scala-tuples/" data-id="cjnvmciuq000amplq8o1wbhey" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -933,7 +1067,7 @@
 
 </div>
 
-    <a data-url="https://scala-play.com/2018/10/06/git-lab/" data-id="cjnbh78kd001pj4lqlavp7z1f" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://scala-play.com/2018/10/06/git-lab/" data-id="cjnvmcitr0000mplqe5ak1qmd" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1071,7 +1205,7 @@
 
 </div>
 
-    <a data-url="https://scala-play.com/2018/10/02/HOF-in-scala/" data-id="cjnbh78k9001oj4lqolqgz6n3" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://scala-play.com/2018/10/02/HOF-in-scala/" data-id="cjnvmciu60001mplqn8wm8m5c" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1162,6 +1296,25 @@
                     <li>
                         
                         <div class="item-thumbnail">
+                            <a href="/2018/10/30/slick/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/play/">play</a></p>
+                            <p class="item-title"><a href="/2018/10/30/slick/" class="title">Làm việc với Slick trong Play Framework</a></p>
+                            <p class="item-date"><time datetime="2018-10-30T03:00:00.000Z" itemprop="datePublished">2018-10-30</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
                             <a href="/2018/10/25/twirl-template-engine/" class="thumbnail">
     
     
@@ -1235,25 +1388,6 @@
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2018/10/08/scala-tuples/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/scala/">scala</a></p>
-                            <p class="item-title"><a href="/2018/10/08/scala-tuples/" class="title">Giới thiệu về Tuples trong Scala</a></p>
-                            <p class="item-date"><time datetime="2018-10-08T10:37:14.000Z" itemprop="datePublished">2018-10-08</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -1263,7 +1397,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ci-cd/">ci/cd</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/play/">play</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/scala/">scala</a><span class="category-list-count">4</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ci-cd/">ci/cd</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/play/">play</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/scala/">scala</a><span class="category-list-count">4</span></li></ul>
         </div>
     </div>
 
@@ -1272,7 +1406,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">7</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">8</span></li></ul>
         </div>
     </div>
 
@@ -1281,7 +1415,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/basic/">basic</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tutorial/">tutorial</a><span class="tag-list-count">2</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/basic/">basic</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tutorial/">tutorial</a><span class="tag-list-count">2</span></li></ul>
         </div>
     </div>
 
