@@ -140,4 +140,4 @@ https://www.tutorialspoint.com/scala/scala_tuples.htm
  
 
 
-#### Biên dịch: Nguyễn Đình Cường
+#### Biên tập bài viết: Nguyễn Đình Cường

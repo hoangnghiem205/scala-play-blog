@@ -163,6 +163,6 @@ https://www.tutorialspoint.com/scala/scala_options.htm
 
 
 
-#### Biên dịch: Nguyễn Đình Cường
+#### Biên tập bài viết: Nguyễn Đình Cường
 
 

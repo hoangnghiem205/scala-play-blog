@@ -175,4 +175,4 @@ https://alvinalexander.com/scala/create-play-framework-template-functions-exampl
 https://www.slideshare.net/knoldus/knolx-pte
 
 
-#### Tác giả: Nguyễn Đình Cường
+#### Tác giả bài viết: Nguyễn Đình Cường

@@ -134,4 +134,4 @@ val result = res1 match {
 ## Nguồn tham khảo:
 https://twitter.github.io/scala_school/collections.html
 
-#### Biên dịch: Nguyễn Văn Linh
+#### Biên tập bài viết: Nguyễn Văn Linh

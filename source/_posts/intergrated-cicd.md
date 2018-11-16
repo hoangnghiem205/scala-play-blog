@@ -172,7 +172,7 @@ Với bước (6)
 
 &nbsp;&nbsp;&nbsp;&nbsp;Đến đây, chúng ta chỉ việc push những gì vừa làm lên branch ___dev___ là hoàn thành xong việc tích hợp Gitlab-CICD cho dự án mới.
 
-#### Tác giả: Cao Văn Long
+#### Tác giả bài viết: Cao Văn Long
 
 
 

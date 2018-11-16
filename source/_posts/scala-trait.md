@@ -1,11 +1,6 @@
 ---
 title: Trait trong Scala
 date: 2018-11-08 10:00:00
-profile:
-    enabled: true
-    author: PPOffice
-    author_title: Web Developer & Designer
-    location: Hanoi, Vietnam
 categories: 
     - scala
 tags: 
@@ -119,3 +114,6 @@ Không có một quy luật chắc chắn, nhưng đây là một ít hướng d
 https://www.tutorialspoint.com/scala/scala_traits.htm
 
 https://docs.scala-lang.org/overviews/collections/trait-iterable.html
+
+
+#### Biên tập bài viết: Nguyễn Văn Linh
