@@ -146,7 +146,7 @@
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                8
+                9
                 <span>posts</span>
             </div>
             <div class="article-info-block">
@@ -199,6 +199,174 @@
 
             
             <section id="main">
+    <article id="post-trying-cala-basic" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2018/11/23/trying-cala-basic/">trying_cala_basic</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fas fa-calendar-alt"></i>
+        <a href="/2018/11/23/trying-cala-basic/">
+            <time datetime="2018-11-22T18:25:20.000Z" itemprop="datePublished">2018-11-23</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fas fa-folder"></i>
+        <a class="article-category-link" href="/categories/play/">play</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/basic/">basic</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <h2 id="CAC-KHAI-NIEM-CO-BAN"><a href="#CAC-KHAI-NIEM-CO-BAN" class="headerlink" title="CÁC KHÁI NIỆM CƠ BẢN"></a>CÁC KHÁI NIỆM CƠ BẢN</h2><h3 id="Dung-thu-scala-tren-trinh-duyet"><a href="#Dung-thu-scala-tren-trinh-duyet" class="headerlink" title="Dùng thử scala trên trình duyệt"></a>Dùng thử scala trên trình duyệt</h3><p>Bạn có thể chạy Scala trên trình duyệt với ScalaFiddle.</p>
+<ol>
+<li>Đi tới <a href="https://scalafiddle.io" target="_blank" rel="noopener">https://scalafiddle.io</a>.</li>
+<li>Paste cái này println(“Hello, world!”) vào phần bên trái màn hình.</li>
+<li>Ấn vào nút  “Run”. Đầu ra xuất hiện ở phần màn hình bên phải.<br>Đây là một cách dễ dàng, cách thiết lập về zero để thử với các đoạn code Scala.<br>Nhiều ví dụ về code trong tài liệu này cũng được tích hợp với ScalaFiddle, để bạn có thể thử trực tiếp với nó chỉ đơn giản bằng cách click vào nut “Run”.</li>
+</ol>
+<h3 id="Bieu-thuc-Expressions"><a href="#Bieu-thuc-Expressions" class="headerlink" title="Biểu thức (Expressions)"></a>Biểu thức (Expressions)</h3><p>Biếu thức là câu lệnh tính toán được.<br><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span> + <span class="number">1</span></span><br></pre></td></tr></table></figure></p>
+<p>Bạn có thể xuất kết quả của biểu thức bằng cách sử dụng <strong>println</strong>.<br><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">println(<span class="number">1</span>) <span class="comment">// 1</span></span><br><span class="line">println(<span class="number">1</span> + <span class="number">1</span>) <span class="comment">// 2</span></span><br><span class="line">println(<span class="string">"Hello!"</span>) <span class="comment">// Hello!</span></span><br><span class="line">println(<span class="string">"Hello,"</span> + <span class="string">" world!"</span>) <span class="comment">// Hello, world!</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="Cac-gia-tri-Values"><a href="#Cac-gia-tri-Values" class="headerlink" title="Các giá trị (Values)"></a>Các giá trị (Values)</h3><p>Bạn có thể đặt tên cho kết quả của biểu thức bằng từ khóa <strong>val</strong>.<br><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> x = <span class="number">1</span> + <span class="number">1</span></span><br><span class="line">println(x) <span class="comment">// 2</span></span><br></pre></td></tr></table></figure></p>
+<p>Kết quả được đặt tên, giống như <strong>x</strong> ở đây, được gọi là giá trị. Tham chiếu một giá trị không tính nó.<br>Không thể gán lại giá trị.<br><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">3</span> <span class="comment">// This does not compile.</span></span><br></pre></td></tr></table></figure></p>
+<p>kiểu của giá trị có thể được suy luận ra, nhưng bạn cũng có thể khai báo rõ kiểu của nó như thế này:<br><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> x: <span class="type">Int</span> = <span class="number">1</span> + <span class="number">1</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="Cac-khoi-code-Blocks"><a href="#Cac-khoi-code-Blocks" class="headerlink" title="Các khối code (Blocks)"></a>Các khối code (Blocks)</h3><p>Bạn có thể kết hợp các biểu thức và đoạn code bằng cách bao ngoài chúng bằng {}. Chúng ta gọi nó là block.<br>Kết quả của biểu thức cuối cùng trong khối chính là kết quả của khối bao ngoài đó , giống như dưới đây.<br><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">println(&#123;</span><br><span class="line">  <span class="keyword">val</span> x = <span class="number">1</span> + <span class="number">1</span></span><br><span class="line">  x + <span class="number">1</span></span><br><span class="line">&#125;) <span class="comment">// 3</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="Cac-ham"><a href="#Cac-ham" class="headerlink" title="Các hàm"></a>Các hàm</h3><p>Hàm là biểu thức có tham số.<br>Bạn có thể định nghĩa một hàm ẩn danh (i.e. no name) trả về một số nguyên nhất định cộng thêm một:<br><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(x: <span class="type">Int</span>) =&gt; x + <span class="number">1</span></span><br></pre></td></tr></table></figure></p>
+<p>Ở bên trái của dấu <strong>=&gt;</strong> là một danh sách các tham số. bên phải là biểu thức liên quan đến các tham số đó.<br>Bạn cũng có thể đặt tên cho các hàm.</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> addOne = (x: <span class="type">Int</span>) =&gt; x + <span class="number">1</span></span><br><span class="line">println(addOne(<span class="number">1</span>)) <span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
+<p>Hàm có thể lấy nhiều tham số.<br><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> add = (x: <span class="type">Int</span>, y: <span class="type">Int</span>) =&gt; x + y</span><br><span class="line">println(add(<span class="number">1</span>, <span class="number">2</span>)) <span class="comment">// 3</span></span><br></pre></td></tr></table></figure></p>
+<p>Hoặc nó có thể không có tham số.<br><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> getTheAnswer = () =&gt; <span class="number">42</span></span><br><span class="line">println(getTheAnswer()) <span class="comment">// 42</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="Cac-phuong-thuc-Methods"><a href="#Cac-phuong-thuc-Methods" class="headerlink" title="Các phương thức (Methods):"></a>Các phương thức (Methods):</h3><p>Khi nhìn vào phương thức sẽ rất giống các hàm, đặc biệt là các hành động của nó, Nhưng thật ra có một số khác biệt giữa chúng .<br>Các phương thức được định nghĩa với từ khóa <strong>def</strong>. Sau <strong>def</strong> là tên của phương thức , rồi đến danh sách tham số, một kiểu trả về, và phần thân của nó.<br><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span></span>(x: <span class="type">Int</span>, y: <span class="type">Int</span>): <span class="type">Int</span> = x + y</span><br><span class="line">println(add(<span class="number">1</span>, <span class="number">2</span>)) <span class="comment">// 3</span></span><br></pre></td></tr></table></figure></p>
+<p>Lưu ý kiểu trả về được khai báo sau danh sách tham số và dấu hai chấm <strong>: Int</strong>.<br>Methods can take multiple parameter lists.<br><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">addThenMultiply</span></span>(x: <span class="type">Int</span>, y: <span class="type">Int</span>)(multiplier: <span class="type">Int</span>): <span class="type">Int</span> = (x + y) * multiplier</span><br><span class="line">println(addThenMultiply(<span class="number">1</span>, <span class="number">2</span>)(<span class="number">3</span>)) <span class="comment">// 9</span></span><br></pre></td></tr></table></figure></p>
+<p>Hoặc không có tham số nào cả.<br><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">name</span></span>: <span class="type">String</span> = <span class="type">System</span>.getProperty(<span class="string">"user.name"</span>)</span><br><span class="line">println(<span class="string">"Hello, "</span> + name + <span class="string">"!"</span>)</span><br></pre></td></tr></table></figure></p>
+<p>Có một số khác biệt nữa, nhưng bây giờ, bạn có thể nghĩ chúng là cái gì đó giống như các hàm.<br>Các phương thức cũng có thể có nhiều dòng biểu thức.<br><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getSquareString</span></span>(input: <span class="type">Double</span>): <span class="type">String</span> = &#123;</span><br><span class="line">  <span class="keyword">val</span> square = input * input</span><br><span class="line">  square.toString</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Biểu thức cuối cùng trong phần thân là giá trị trả về của phương thức. (Scala không có từ khóa <strong>return</strong>, nhưng nó hiếm khi được sử dụng.)</p>
+<h3 id="Cac-lop"><a href="#Cac-lop" class="headerlink" title="Các lớp"></a>Các lớp</h3><p>Bạn có thể định nghĩa các lớp với từ khóa <strong>class</strong>, đứng sau nó là tên và các tham số của hàm khởi tạo.<br><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Greeter</span>(<span class="params">prefix: <span class="type">String</span>, suffix: <span class="type">String</span></span>) </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">greet</span></span>(name: <span class="type">String</span>): <span class="type">Unit</span> =</span><br><span class="line">    println(prefix + name + suffix)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Kiểu trả về của phương thức <strong>greet</strong> là <strong>Unit</strong>, nghĩa là không có gì để trả về. Nó được sử dụng tương tự như <strong>void</strong> trong Java và C. (Điểm khác biệt là mọi biểu thức của Scala phải có một số giá trị, đó là một giá trị singleton của kiểu <strong>Unit</strong>, written (). Nó không chứa thông tin.)<br>Bạn có thể tạo thể hiện của một lớp với từ khóa <strong> new</strong>.<br><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> greeter = <span class="keyword">new</span> <span class="type">Greeter</span>(<span class="string">"Hello, "</span>, <span class="string">"!"</span>)</span><br><span class="line">greeter.greet(<span class="string">"Scala developer"</span>) <span class="comment">// Hello, Scala developer!</span></span><br></pre></td></tr></table></figure></p>
+<p>Chúng ta sẽ tìm hiểu sâu hơn về  các Class sau.</p>
+<h3 id="Cac-Case-Class"><a href="#Cac-Case-Class" class="headerlink" title="Các Case Class"></a>Các Case Class</h3><p>Scala có một kiểu đặc biệt của class gọi là một “case” class. Theo mặc định, case classes không thay đổi và được so sánh theo giá trị. Bạn có thể định nghĩa case classes với từ khóa <strong>case class</strong>.<br><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">case</span> <span class="class"><span class="keyword">class</span> <span class="title">Point</span>(<span class="params">x: <span class="type">Int</span>, y: <span class="type">Int</span></span>)</span></span><br></pre></td></tr></table></figure></p>
+<p>Bạn có thể khởi tạo các class không có từ khóa <strong>new</strong>.<br><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> point = <span class="type">Point</span>(<span class="number">1</span>, <span class="number">2</span>)</span><br><span class="line"><span class="keyword">val</span> anotherPoint = <span class="type">Point</span>(<span class="number">1</span>, <span class="number">2</span>)</span><br><span class="line"><span class="keyword">val</span> yetAnotherPoint = <span class="type">Point</span>(<span class="number">2</span>, <span class="number">2</span>)</span><br></pre></td></tr></table></figure></p>
+<p>Và chúng được so sánh theo giá trị.<br><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (point == anotherPoint) &#123;</span><br><span class="line">  println(point + <span class="string">" and "</span> + anotherPoint + <span class="string">" are the same."</span>)</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  println(point + <span class="string">" and "</span> + anotherPoint + <span class="string">" are different."</span>)</span><br><span class="line">&#125; <span class="comment">// Point(1,2) and Point(1,2) are the same.</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (point == yetAnotherPoint) &#123;</span><br><span class="line">  println(point + <span class="string">" and "</span> + yetAnotherPoint + <span class="string">" are the same."</span>)</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  println(point + <span class="string">" and "</span> + yetAnotherPoint + <span class="string">" are different."</span>)</span><br><span class="line">&#125; <span class="comment">// Point(1,2) and Point(2,2) are different.</span></span><br></pre></td></tr></table></figure></p>
+<p>Có rất nhiều trường hợp khác mà chúng tôi muốn giới thiệu và chúng tôi tin rằng bạn sẽ thích nó! Chúng ta sẽ tìm hiểu sâu hơn về chúng ở các phần sau.</p>
+<h3 id="Cac-doi-tuong-Objects"><a href="#Cac-doi-tuong-Objects" class="headerlink" title="Các đối tượng (Objects)"></a>Các đối tượng (Objects)</h3><p>Các đối tượng là các thực thể đơn lẻ được định nghĩa riêng bởi chính nó. Bạn có thể nghĩ nó là singletons trong các lớp của riêng nó.<br>Bạn có thể định nghĩa các đối tượng bằng từ khóa <strong>object</strong>.<br><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">IdFactory</span> </span>&#123;</span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">var</span> counter = <span class="number">0</span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">create</span></span>(): <span class="type">Int</span> = &#123;</span><br><span class="line">    counter += <span class="number">1</span></span><br><span class="line">    counter</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Bạn có thể truy cập bằng cách tham chiếu tên của nó.<br><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> newId: <span class="type">Int</span> = <span class="type">IdFactory</span>.create()</span><br><span class="line">println(newId) <span class="comment">// 1</span></span><br><span class="line"><span class="keyword">val</span> newerId: <span class="type">Int</span> = <span class="type">IdFactory</span>.create()</span><br><span class="line">println(newerId) <span class="comment">// 2</span></span><br></pre></td></tr></table></figure></p>
+<p>Chúng tôi sẽ giúp bạn hiểu rõ hơn về đối tượng trong các bài sau.</p>
+<h3 id="Cac-Trait"><a href="#Cac-Trait" class="headerlink" title="Các Trait"></a>Các Trait</h3><p>Trait là các kiểu chứa các trường và phương thức nhất định. Có thế kết hợp nhiều trait.<br>Bạn có thể định nghĩa các trait với từ khóa <strong>trait</strong>.<br><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">trait</span> <span class="title">Greeter</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">greet</span></span>(name: <span class="type">String</span>): <span class="type">Unit</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Trait cũng có thể triển khai mặc định.<br><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">trait</span> <span class="title">Greeter</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">greet</span></span>(name: <span class="type">String</span>): <span class="type">Unit</span> =</span><br><span class="line">    println(<span class="string">"Hello, "</span> + name + <span class="string">"!"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Bạn có thể mở rộng các trait với từ khóa <strong>extends</strong> và ghi đè với từ khóa <strong>override</strong>.<br><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DefaultGreeter</span> <span class="keyword">extends</span> <span class="title">Greeter</span></span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class"><span class="title">class</span> <span class="title">CustomizableGreeter</span>(<span class="params">prefix: <span class="type">String</span>, postfix: <span class="type">String</span></span>) <span class="keyword">extends</span> <span class="title">Greeter</span> </span>&#123;</span><br><span class="line">  <span class="keyword">override</span> <span class="function"><span class="keyword">def</span> <span class="title">greet</span></span>(name: <span class="type">String</span>): <span class="type">Unit</span> = &#123;</span><br><span class="line">    println(prefix + name + postfix)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">val</span> greeter = <span class="keyword">new</span> <span class="type">DefaultGreeter</span>()</span><br><span class="line">greeter.greet(<span class="string">"Scala developer"</span>) <span class="comment">// Hello, Scala developer!</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">val</span> customGreeter = <span class="keyword">new</span> <span class="type">CustomizableGreeter</span>(<span class="string">"How are you, "</span>, <span class="string">"?"</span>)</span><br><span class="line">customGreeter.greet(<span class="string">"Scala developer"</span>) <span class="comment">// How are you, Scala developer?</span></span><br></pre></td></tr></table></figure></p>
+<p>Ở đây, <strong>DefaultGreeter</strong> chỉ mở rộng một trait duy nhất, nhưng nó có thể mở rộng nhiều trait.<br>Chúng tôi sẽ đề cập đến các trait ở các bài sau.</p>
+<h3 id="Phuong-thuc-Main"><a href="#Phuong-thuc-Main" class="headerlink" title="Phương thức Main"></a>Phương thức Main</h3><p>Phương thức main là điểm vào của một chương trình. Máy ảo Java yêu cầu phương thức main được đặt tên là <strong>main</strong> và lấy một đối số, một chuỗi của các chuỗi.<br>Sử dụng một đối tượng, bạn có thể định nghĩa một phương thức main như sau:<br><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">main</span></span>(args: <span class="type">Array</span>[<span class="type">String</span>]): <span class="type">Unit</span> =</span><br><span class="line">    println(<span class="string">"Hello, Scala developer!"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://scala-play.com/2018/11/23/trying-cala-basic/" data-id="cjosxhrcn000hynxpkh9qxalz" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://scala-play.com/2018/11/23/trying-cala-basic/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://scala-play.com/2018/11/23/trying-cala-basic/">Comments</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
     <article id="post-slick" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -255,7 +423,7 @@
 
 </div>
 
-    <a data-url="https://scala-play.com/2018/10/30/slick/" data-id="cjnvmciux000gmplqkzk0zmqo" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://scala-play.com/2018/10/30/slick/" data-id="cjosxhrcj000cynxp241rq3n0" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -393,7 +561,7 @@
 
 </div>
 
-    <a data-url="https://scala-play.com/2018/10/25/twirl-template-engine/" data-id="cjnvmciut000cmplqp16gz4xq" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://scala-play.com/2018/10/25/twirl-template-engine/" data-id="cjosxhrco000kynxp1h0uzvkm" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -529,7 +697,7 @@
 
 </div>
 
-    <a data-url="https://scala-play.com/2018/10/16/scala-lists/" data-id="cjnvmciul0006mplqgck6bw7e" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://scala-play.com/2018/10/16/scala-lists/" data-id="cjosxhrcd0005ynxpnwnc8kpm" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -662,7 +830,7 @@
 
 </div>
 
-    <a data-url="https://scala-play.com/2018/10/15/scala-options/" data-id="cjnvmciuj0004mplqre143tlw" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://scala-play.com/2018/10/15/scala-options/" data-id="cjosxhrce0006ynxpt3j0iovp" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -795,7 +963,7 @@
 
 </div>
 
-    <a data-url="https://scala-play.com/2018/10/11/intergrated-cicd/" data-id="cjnvmciuf0003mplqyyd5s9c5" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://scala-play.com/2018/10/11/intergrated-cicd/" data-id="cjosxhrcb0004ynxp6qrlsaeg" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -930,7 +1098,7 @@
 
 </div>
 
-    <a data-url="https://scala-play.com/2018/10/08/scala-tuples/" data-id="cjnvmciuq000amplq8o1wbhey" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://scala-play.com/2018/10/08/scala-tuples/" data-id="cjosxhrcg000aynxpt74j7eov" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1067,7 +1235,7 @@
 
 </div>
 
-    <a data-url="https://scala-play.com/2018/10/06/git-lab/" data-id="cjnvmcitr0000mplqe5ak1qmd" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://scala-play.com/2018/10/06/git-lab/" data-id="cjosxhrc50001ynxphmz230q8" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1205,7 +1373,7 @@
 
 </div>
 
-    <a data-url="https://scala-play.com/2018/10/02/HOF-in-scala/" data-id="cjnvmciu60001mplqn8wm8m5c" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://scala-play.com/2018/10/02/HOF-in-scala/" data-id="cjosxhrbx0000ynxpyklduplx" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1296,6 +1464,25 @@
                     <li>
                         
                         <div class="item-thumbnail">
+                            <a href="/2018/11/23/trying-cala-basic/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/play/">play</a></p>
+                            <p class="item-title"><a href="/2018/11/23/trying-cala-basic/" class="title">trying_cala_basic</a></p>
+                            <p class="item-date"><time datetime="2018-11-22T18:25:20.000Z" itemprop="datePublished">2018-11-23</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
                             <a href="/2018/10/30/slick/" class="thumbnail">
     
     
@@ -1369,25 +1556,6 @@
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2018/10/11/intergrated-cicd/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/ci-cd/">ci/cd</a></p>
-                            <p class="item-title"><a href="/2018/10/11/intergrated-cicd/" class="title">Tích hợp Gitlab-CICD vào dự án thực tế</a></p>
-                            <p class="item-date"><time datetime="2018-10-11T07:27:20.000Z" itemprop="datePublished">2018-10-11</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -1397,7 +1565,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ci-cd/">ci/cd</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/play/">play</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/scala/">scala</a><span class="category-list-count">4</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ci-cd/">ci/cd</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/play/">play</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/scala/">scala</a><span class="category-list-count">4</span></li></ul>
         </div>
     </div>
 
@@ -1406,7 +1574,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">8</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">8</span></li></ul>
         </div>
     </div>
 
@@ -1415,7 +1583,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/basic/">basic</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tutorial/">tutorial</a><span class="tag-list-count">2</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/basic/">basic</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tutorial/">tutorial</a><span class="tag-list-count">2</span></li></ul>
         </div>
     </div>
 
