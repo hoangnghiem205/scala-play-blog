@@ -146,11 +146,11 @@
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                12
+                18
                 <span>posts</span>
             </div>
             <div class="article-info-block">
-                2
+                3
                 <span>tags</span>
             </div>
         </div>
@@ -199,6 +199,854 @@
 
             
             <section id="main">
+    <article id="post-collection-discovery-p6" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2018/12/13/collection-discovery-p6/">Scala Collections Tips &amp; Tricks (Phần VI)</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fas fa-calendar-alt"></i>
+        <a href="/2018/12/13/collection-discovery-p6/">
+            <time datetime="2018-12-13T03:00:00.000Z" itemprop="datePublished">2018-12-13</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fas fa-folder"></i>
+        <a class="article-category-link" href="/categories/scala/">scala</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/discovery/">discovery</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            <p><ul>
+<li>Phần I: Sequences (Creation &amp; Length &amp; Equality)</li>
+<li>Phần II: Sequences (Indexing &amp; Existence &amp; Filtering)</li>
+<li>Phần III: Sequences (Sorting &amp; Reduction &amp; Matching &amp; Rewriting)</li>
+<li>Phần IV: Sets</li>
+<li>Phần V: Options</li>
+<li><strong>Phần VI: Maps</strong></li>
+</ul>
+<h2 id="4-Map"><a href="#4-Map" class="headerlink" title="4 Map"></a>4 Map</h2><h3 id="Khong-tim-kiem-gia-tri-theo-cach-thu-cong"><a href="#Khong-tim-kiem-gia-tri-theo-cach-thu-cong" class="headerlink" title="Không tìm kiếm giá trị theo cách thủ công"></a>Không tìm kiếm giá trị theo cách thủ công</h3><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Before</span></span><br><span class="line">map.find(_._1 == k).map(_._2)</span><br><span class="line"></span><br><span class="line"><span class="comment">// After</span></span><br><span class="line">map.get(k)</span><br></pre></td></tr></table></figure></p>
+            <p class="article-more-link">
+                <a href="/2018/12/13/collection-discovery-p6/#more">Read More</a>
+            </p>
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://scala-play.com/2018/12/13/collection-discovery-p6/" data-id="cjpmhewi0000akz8zs5pnuo2i" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://scala-play.com/2018/12/13/collection-discovery-p6/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://scala-play.com/2018/12/13/collection-discovery-p6/">Comments</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-collection-discovery-p5" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2018/12/10/collection-discovery-p5/">Scala Collections Tips &amp; Tricks (Phần V)</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fas fa-calendar-alt"></i>
+        <a href="/2018/12/10/collection-discovery-p5/">
+            <time datetime="2018-12-10T03:00:00.000Z" itemprop="datePublished">2018-12-10</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fas fa-folder"></i>
+        <a class="article-category-link" href="/categories/scala/">scala</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/discovery/">discovery</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            <p><ul>
+<li>Phần I: Sequences (Creation &amp; Length &amp; Equality)</li>
+<li>Phần II: Sequences (Indexing &amp; Existence &amp; Filtering)</li>
+<li>Phần III: Sequences (Sorting &amp; Reduction &amp; Matching &amp; Rewriting)</li>
+<li>Phần IV: Sets</li>
+<li><strong>Phần V: Options</strong></li>
+<li>Phần VI: Maps</li>
+</ul>
+<h2 id="3-Options"><a href="#3-Options" class="headerlink" title="3. Options"></a>3. Options</h2><h3 id="3-1-Value"><a href="#3-1-Value" class="headerlink" title="3.1 Value"></a>3.1 Value</h3><h4 id="Khong-so-sanh-gia-tri-cua-option-voi-None"><a href="#Khong-so-sanh-gia-tri-cua-option-voi-None" class="headerlink" title="Không so sánh giá trị của option với None"></a>Không so sánh giá trị của option với <code>None</code></h4><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Before</span></span><br><span class="line">option == <span class="type">None</span></span><br><span class="line">option != <span class="type">None</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// After</span></span><br><span class="line">option.isEmpty</span><br><span class="line">option.isDefined</span><br></pre></td></tr></table></figure></p>
+            <p class="article-more-link">
+                <a href="/2018/12/10/collection-discovery-p5/#more">Read More</a>
+            </p>
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://scala-play.com/2018/12/10/collection-discovery-p5/" data-id="cjpmhewhx0006kz8zydof3y48" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://scala-play.com/2018/12/10/collection-discovery-p5/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://scala-play.com/2018/12/10/collection-discovery-p5/">Comments</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-collection-discovery-p4" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2018/12/06/collection-discovery-p4/">Scala Collections Tips &amp; Tricks (Phần IV)</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fas fa-calendar-alt"></i>
+        <a href="/2018/12/06/collection-discovery-p4/">
+            <time datetime="2018-12-06T03:00:00.000Z" itemprop="datePublished">2018-12-06</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fas fa-folder"></i>
+        <a class="article-category-link" href="/categories/scala/">scala</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/discovery/">discovery</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            <p><ul>
+<li>Phần I: Sequences (Creation &amp; Length &amp; Equality)</li>
+<li>Phần II: Sequences (Indexing &amp; Existence &amp; Filtering)</li>
+<li>Phần III: Sequences (Sorting &amp; Reduction &amp; Matching &amp; Rewriting)</li>
+<li><strong>Phần IV: Sets</strong></li>
+<li>Phần V: Options</li>
+<li>Phần VI: Maps</li>
+</ul>
+<h2 id="2-Sets"><a href="#2-Sets" class="headerlink" title="2.Sets"></a>2.Sets</h2><h4 id="Khong-su-dung-sameElements-de-so-sanh-cac-collection-khong-co-thu-tu"><a href="#Khong-su-dung-sameElements-de-so-sanh-cac-collection-khong-co-thu-tu" class="headerlink" title="Không sử dụng sameElements để so sánh các collection không có thứ tự"></a>Không sử dụng <code>sameElements</code> để so sánh các collection không có thứ tự</h4><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Before</span></span><br><span class="line">set1.sameElements(set2)</span><br><span class="line"></span><br><span class="line"><span class="comment">// After</span></span><br><span class="line">set1 == set2</span><br></pre></td></tr></table></figure></p>
+            <p class="article-more-link">
+                <a href="/2018/12/06/collection-discovery-p4/#more">Read More</a>
+            </p>
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://scala-play.com/2018/12/06/collection-discovery-p4/" data-id="cjpmhewhu0004kz8zhp1m7a38" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://scala-play.com/2018/12/06/collection-discovery-p4/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://scala-play.com/2018/12/06/collection-discovery-p4/">Comments</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-collection-discovery-p3" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2018/12/03/collection-discovery-p3/">Scala Collections Tips &amp; Tricks (Phần III)</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fas fa-calendar-alt"></i>
+        <a href="/2018/12/03/collection-discovery-p3/">
+            <time datetime="2018-12-03T03:00:00.000Z" itemprop="datePublished">2018-12-03</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fas fa-folder"></i>
+        <a class="article-category-link" href="/categories/scala/">scala</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/discovery/">discovery</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            <p><ul>
+<li>Phần I: Sequences (Creation &amp; Length &amp; Equality)</li>
+<li>Phần II: Sequences (Indexing &amp; Existence &amp; Filtering)</li>
+<li><strong>Phần III: Sequences (Sorting &amp; Reduction &amp; Matching &amp; Rewriting)</strong></li>
+<li>Phần IV: Sets</li>
+<li>Phần V: Options</li>
+<li>Phần VI: Maps</li>
+</ul>
+<h2 id="1-Sequences"><a href="#1-Sequences" class="headerlink" title="1. Sequences"></a>1. Sequences</h2><h3 id="1-7-Sorting"><a href="#1-7-Sorting" class="headerlink" title="1.7 Sorting"></a>1.7 Sorting</h3><h4 id="Khong-sap-xep-thuoc-tinh-theo-cach-thu-cong"><a href="#Khong-sap-xep-thuoc-tinh-theo-cach-thu-cong" class="headerlink" title="Không sắp xếp thuộc tính theo cách thủ công"></a>Không sắp xếp thuộc tính theo cách thủ công</h4><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Before</span></span><br><span class="line">seq.sortWith(_.property &lt;  _.property)</span><br><span class="line"></span><br><span class="line"><span class="comment">// After</span></span><br><span class="line">seq.sortBy(_.property)</span><br></pre></td></tr></table></figure></p>
+            <p class="article-more-link">
+                <a href="/2018/12/03/collection-discovery-p3/#more">Read More</a>
+            </p>
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://scala-play.com/2018/12/03/collection-discovery-p3/" data-id="cjpmhewhr0003kz8zdts2ei95" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://scala-play.com/2018/12/03/collection-discovery-p3/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://scala-play.com/2018/12/03/collection-discovery-p3/">Comments</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-collection-discovery-p2" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2018/11/29/collection-discovery-p2/">Scala Collections Tips &amp; Tricks (Phần II)</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fas fa-calendar-alt"></i>
+        <a href="/2018/11/29/collection-discovery-p2/">
+            <time datetime="2018-11-29T03:00:00.000Z" itemprop="datePublished">2018-11-29</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fas fa-folder"></i>
+        <a class="article-category-link" href="/categories/scala/">scala</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/discovery/">discovery</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            <p><ul>
+<li>Phần I: Sequences (Creation &amp; Length &amp; Equality)</li>
+<li><strong>Phần II: Sequences (Indexing &amp; Existence &amp; Filtering)</strong></li>
+<li>Phần III: Sequences (Sorting &amp; Reduction &amp; Matching &amp; Rewriting)</li>
+<li>Phần IV: Sets</li>
+<li>Phần V: Options</li>
+<li>Phần VI: Maps</li>
+</ul>
+<h2 id="1-Sequences"><a href="#1-Sequences" class="headerlink" title="1. Sequences"></a>1. Sequences</h2><h3 id="1-4-Indexing"><a href="#1-4-Indexing" class="headerlink" title="1.4 Indexing"></a>1.4 Indexing</h3><h4 id="Khong-su-dung-chi-so-de-lay-phan-tu-dau-tien"><a href="#Khong-su-dung-chi-so-de-lay-phan-tu-dau-tien" class="headerlink" title="Không sử dụng chỉ số để lấy phần tử đầu tiên"></a>Không sử dụng chỉ số để lấy phần tử đầu tiên</h4><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Before</span></span><br><span class="line">seq(<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// After</span></span><br><span class="line">seq.head</span><br></pre></td></tr></table></figure></p>
+            <p class="article-more-link">
+                <a href="/2018/11/29/collection-discovery-p2/#more">Read More</a>
+            </p>
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://scala-play.com/2018/11/29/collection-discovery-p2/" data-id="cjpmhewh40001kz8zywml8peo" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://scala-play.com/2018/11/29/collection-discovery-p2/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://scala-play.com/2018/11/29/collection-discovery-p2/">Comments</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-collection-discovery-p1" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2018/11/22/collection-discovery-p1/">Scala Collections Tips &amp; Tricks (Phần I)</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fas fa-calendar-alt"></i>
+        <a href="/2018/11/22/collection-discovery-p1/">
+            <time datetime="2018-11-22T03:00:00.000Z" itemprop="datePublished">2018-11-22</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fas fa-folder"></i>
+        <a class="article-category-link" href="/categories/scala/">scala</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/discovery/">discovery</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            <p><p>Bài blog này sẽ giới thiệu tới các bạn một danh sách những cách <code>hay ho</code> để tối ưu việc sử dụng <code>Scala Collections</code>. Vì bài viết khá dài nên mình sẽ chia thành 6 phần để các bạn tiện theo dõi. Và dưới đây là mục lục các bài viết:</p>
+<p>Bài blog này sẽ giới thiệu tới các bạn một danh sách những cách <code>hay ho</code> để tối ưu việc sử dụng <code>Scala Collections</code>. Vì bài viết khá dài nên mình sẽ chia thành 6 phần để các bạn tiện theo dõi. Và dưới đây là mục lục các bài viết:</p>
+<ul>
+<li><strong>Phần I: Sequences (Creation &amp; Length &amp; Equality)</strong></li>
+<li>Phần II: Sequences (Indexing &amp; Existence &amp; Filtering)</li>
+<li>Phần III: Sequences (Sorting &amp; Reduction &amp; Matching &amp; Rewriting)</li>
+<li>Phần IV: Sets</li>
+<li>Phần V: Options</li>
+<li>Phần VI: Maps</li>
+</ul>
+<h2 id="1-Sequences"><a href="#1-Sequences" class="headerlink" title="1. Sequences"></a>1. Sequences</h2><h3 id="1-1-Creation"><a href="#1-1-Creation" class="headerlink" title="1.1 Creation"></a>1.1 Creation</h3><p>Tạo <code>collection</code> rỗng một cách rõ ràng.<br><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Before</span></span><br><span class="line"><span class="type">Seq</span>[<span class="type">T</span>]()</span><br><span class="line"></span><br><span class="line"><span class="comment">// After</span></span><br><span class="line"><span class="type">Seq</span>.empty[<span class="type">T</span>]</span><br></pre></td></tr></table></figure></p></p>
+            <p class="article-more-link">
+                <a href="/2018/11/22/collection-discovery-p1/#more">Read More</a>
+            </p>
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://scala-play.com/2018/11/22/collection-discovery-p1/" data-id="cjpmhewgy0000kz8z2em40srz" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://scala-play.com/2018/11/22/collection-discovery-p1/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://scala-play.com/2018/11/22/collection-discovery-p1/">Comments</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
     <article id="post-collection-p2" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -739,815 +1587,6 @@
 
 
 
-    <article id="post-slick" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2018/10/30/slick/">Làm việc với Slick trong Play Framework</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fas fa-calendar-alt"></i>
-        <a href="/2018/10/30/slick/">
-            <time datetime="2018-10-30T03:00:00.000Z" itemprop="datePublished">2018-10-30</time>
-        </a>
-    </div>
-
-
-                        
-    <div class="article-category">
-    	<i class="fas fa-folder"></i>
-        <a class="article-category-link" href="/categories/play/">play</a>
-    </div>
-
-                        
-    <div class="article-tag">
-        <i class="fas fa-tag"></i>
-        <a class="tag-link" href="/tags/basic/">basic</a>
-    </div>
-
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            <p><h2 id="I-ORM"><a href="#I-ORM" class="headerlink" title="I. ORM"></a>I. ORM</h2><p>ORM (Object Relational Mapping) là một kỹ thuật lập trình ánh xạ từ cơ sở dữ liệu sang đối tượng trong các ngôn ngữ lập trình hướng đối tượng như Java,Scala … (các table tương ứng với các class, quan hệ giữa các table tương ứng với quan hệ giữa các class).</p>
-<p>Sử dụng ORM cho phép người lập trình thao tác với database một cách dễ dàng thông qua các đối tượng mà không cần trực tiếp quan tâm tới database.<br>Một số framework sử dụng kỹ thuật ORM: Play Scala sử dụng Slick, Sping Java sử dụng Hibernate…</p></p>
-            <p class="article-more-link">
-                <a href="/2018/10/30/slick/#more">Read More</a>
-            </p>
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="https://scala-play.com/2018/10/30/slick/" data-id="cjnvmciux000gmplqkzk0zmqo" class="article-share-link"><i class="fas fa-share"></i>Share</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-        <a href="https://scala-play.com/2018/10/30/slick/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://scala-play.com/2018/10/30/slick/">Comments</a>
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-twirl-template-engine" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2018/10/25/twirl-template-engine/">Twirl template engine trong Play Framework</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fas fa-calendar-alt"></i>
-        <a href="/2018/10/25/twirl-template-engine/">
-            <time datetime="2018-10-25T10:00:00.000Z" itemprop="datePublished">2018-10-25</time>
-        </a>
-    </div>
-
-
-                        
-    <div class="article-category">
-    	<i class="fas fa-folder"></i>
-        <a class="article-category-link" href="/categories/play/">play</a>
-    </div>
-
-                        
-    <div class="article-tag">
-        <i class="fas fa-tag"></i>
-        <a class="tag-link" href="/tags/basic/">basic</a>
-    </div>
-
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            <p><h2 id="Template-engine-la-gi"><a href="#Template-engine-la-gi" class="headerlink" title="Template engine là gì ?"></a>Template engine là gì ?</h2><p><strong>Template engine</strong> là một bộ xử lí template thường được viết bằng ngôn ngữ back-end .</p>
-<ul>
-<li>Cho phép xử lí nghiệp vụ logic ở tầng view , giúp luồng code làm việc dễ dàng và linh hoạt hơn </li>
-<li>Giúp xử lí ,truy xuất , tính toán ,hiển thị hiệu quả dữ liệu ở trong phần giao diện .</li>
-<li>Ở runtime, template engine thay thế những biến trong template với giá trị thực và chuyển đổi template thành file HTML gửi tới client.</li>
-</ul></p>
-            <p class="article-more-link">
-                <a href="/2018/10/25/twirl-template-engine/#more">Read More</a>
-            </p>
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="https://scala-play.com/2018/10/25/twirl-template-engine/" data-id="cjnvmciut000cmplqp16gz4xq" class="article-share-link"><i class="fas fa-share"></i>Share</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-        <a href="https://scala-play.com/2018/10/25/twirl-template-engine/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://scala-play.com/2018/10/25/twirl-template-engine/">Comments</a>
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-scala-lists" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2018/10/16/scala-lists/">Giới thiệu về List trong Scala</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fas fa-calendar-alt"></i>
-        <a href="/2018/10/16/scala-lists/">
-            <time datetime="2018-10-16T02:11:35.000Z" itemprop="datePublished">2018-10-16</time>
-        </a>
-    </div>
-
-
-                        
-    <div class="article-category">
-    	<i class="fas fa-folder"></i>
-        <a class="article-category-link" href="/categories/scala/">scala</a>
-    </div>
-
-                        
-    <div class="article-tag">
-        <i class="fas fa-tag"></i>
-        <a class="tag-link" href="/tags/basic/">basic</a>
-    </div>
-
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            <p><p>&nbsp;&nbsp;&nbsp;&nbsp;<code>List</code> trong scala gần tương tự như mảng, vì mọi phần tử đều cùng kiểu dữ liệu nhưng lại có hai sự khác biệt quan trọng:</p>
-<ul>
-<li>Đầu tiên, <code>List</code> không thể thay đổi, có nghĩa những phần tử trong một List không thể thay đổi được bằng phép gán.</li>
-</ul></p>
-            <p class="article-more-link">
-                <a href="/2018/10/16/scala-lists/#more">Read More</a>
-            </p>
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="https://scala-play.com/2018/10/16/scala-lists/" data-id="cjnvmciul0006mplqgck6bw7e" class="article-share-link"><i class="fas fa-share"></i>Share</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-        <a href="https://scala-play.com/2018/10/16/scala-lists/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://scala-play.com/2018/10/16/scala-lists/">Comments</a>
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-scala-options" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2018/10/15/scala-options/">Giới thiệu về Option trong Scala</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fas fa-calendar-alt"></i>
-        <a href="/2018/10/15/scala-options/">
-            <time datetime="2018-10-15T10:07:20.000Z" itemprop="datePublished">2018-10-15</time>
-        </a>
-    </div>
-
-
-                        
-    <div class="article-category">
-    	<i class="fas fa-folder"></i>
-        <a class="article-category-link" href="/categories/scala/">scala</a>
-    </div>
-
-                        
-    <div class="article-tag">
-        <i class="fas fa-tag"></i>
-        <a class="tag-link" href="/tags/basic/">basic</a>
-    </div>
-
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            <p><p>&nbsp;&nbsp;&nbsp;&nbsp;<code>Option[T]</code> là một vùng chứa 0 hoặc một phần tử của một kiểu đã cho. Một <code>Option[T]</code> có thể là đối tượng <strong>Some[ T ]</strong>  hoặc <strong>None</strong>, biểu thị giá trị bị thiếu. Ví dụ, phương thức get của Map trong Scala tạo ra Some (value) nếu một giá trị tương ứng với một khóa đã cho đã được tìm thấy, hoặc <strong>None</strong> nếu khóa đã cho không được định nghĩa trong Map.</p></p>
-            <p class="article-more-link">
-                <a href="/2018/10/15/scala-options/#more">Read More</a>
-            </p>
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="https://scala-play.com/2018/10/15/scala-options/" data-id="cjnvmciuj0004mplqre143tlw" class="article-share-link"><i class="fas fa-share"></i>Share</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-        <a href="https://scala-play.com/2018/10/15/scala-options/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://scala-play.com/2018/10/15/scala-options/">Comments</a>
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-intergrated-cicd" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2018/10/11/intergrated-cicd/">Tích hợp Gitlab-CICD vào dự án thực tế</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fas fa-calendar-alt"></i>
-        <a href="/2018/10/11/intergrated-cicd/">
-            <time datetime="2018-10-11T07:27:20.000Z" itemprop="datePublished">2018-10-11</time>
-        </a>
-    </div>
-
-
-                        
-    <div class="article-category">
-    	<i class="fas fa-folder"></i>
-        <a class="article-category-link" href="/categories/ci-cd/">ci/cd</a>
-    </div>
-
-                        
-    <div class="article-tag">
-        <i class="fas fa-tag"></i>
-        <a class="tag-link" href="/tags/tutorial/">tutorial</a>
-    </div>
-
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            <p><p>&nbsp;&nbsp;&nbsp;&nbsp;Gần đây, team Best Solution đã tích hợp được Gitlab-CICD vào dự án <strong><em>Green-Blue</em></strong> để tự động hóa quá trình Build, Deploy ứng dụng lên Staging. Dưới đây là hướng dẫn về cách tích hợp Gitlab-CICD cho những dự án khác. Trong hướng dẫn này, mình sử dụng GitLab Community Edition 8.16.3 và Gitlab Runner 1.11.1</p></p>
-            <p class="article-more-link">
-                <a href="/2018/10/11/intergrated-cicd/#more">Read More</a>
-            </p>
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="https://scala-play.com/2018/10/11/intergrated-cicd/" data-id="cjnvmciuf0003mplqyyd5s9c5" class="article-share-link"><i class="fas fa-share"></i>Share</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-        <a href="https://scala-play.com/2018/10/11/intergrated-cicd/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://scala-play.com/2018/10/11/intergrated-cicd/">Comments</a>
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-scala-tuples" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2018/10/08/scala-tuples/">Giới thiệu về Tuples trong Scala</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fas fa-calendar-alt"></i>
-        <a href="/2018/10/08/scala-tuples/">
-            <time datetime="2018-10-08T10:37:14.000Z" itemprop="datePublished">2018-10-08</time>
-        </a>
-    </div>
-
-
-                        
-    <div class="article-category">
-    	<i class="fas fa-folder"></i>
-        <a class="article-category-link" href="/categories/scala/">scala</a>
-    </div>
-
-                        
-    <div class="article-tag">
-        <i class="fas fa-tag"></i>
-        <a class="tag-link" href="/tags/basic/">basic</a>
-    </div>
-
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            <p><p>&nbsp;&nbsp;&nbsp;&nbsp; Trong Scala, Tuple dùng để gộp một số lượng phần tử cố định cùng với nhau. Không như array (mảng) và list (danh sách), một tuple có thể chứa object (đối tượng) với các kiểu dữ liệu khác nhau và chúng không thay đổi được giá trị.</p>
-<p>Sau đây là ví dụ về tuple lưu kiểu nguyên và kiểu chuỗi. Đây là một cách khai báo ngắn gọn:</p>
-<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> t = (<span class="number">1</span>, <span class="string">"hello"</span>)</span><br></pre></td></tr></table></figure></p>
-            <p class="article-more-link">
-                <a href="/2018/10/08/scala-tuples/#more">Read More</a>
-            </p>
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="https://scala-play.com/2018/10/08/scala-tuples/" data-id="cjnvmciuq000amplq8o1wbhey" class="article-share-link"><i class="fas fa-share"></i>Share</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-        <a href="https://scala-play.com/2018/10/08/scala-tuples/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://scala-play.com/2018/10/08/scala-tuples/">Comments</a>
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
     <nav id="page-nav">
         <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
@@ -1565,7 +1604,7 @@
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2018/11/15/collection-p2/" class="thumbnail">
+                            <a href="/2018/12/13/collection-discovery-p6/" class="thumbnail">
     
     
         <span class="thumbnail-image thumbnail-none"></span>
@@ -1576,15 +1615,15 @@
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/scala/">scala</a></p>
-                            <p class="item-title"><a href="/2018/11/15/collection-p2/" class="title">Collection trong Scala (phần II - phần cuối)</a></p>
-                            <p class="item-date"><time datetime="2018-11-15T03:00:00.000Z" itemprop="datePublished">2018-11-15</time></p>
+                            <p class="item-title"><a href="/2018/12/13/collection-discovery-p6/" class="title">Scala Collections Tips &amp; Tricks (Phần VI)</a></p>
+                            <p class="item-date"><time datetime="2018-12-13T03:00:00.000Z" itemprop="datePublished">2018-12-13</time></p>
                         </div>
                     </li>
                 
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2018/11/12/collection-p1/" class="thumbnail">
+                            <a href="/2018/12/10/collection-discovery-p5/" class="thumbnail">
     
     
         <span class="thumbnail-image thumbnail-none"></span>
@@ -1595,15 +1634,15 @@
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/scala/">scala</a></p>
-                            <p class="item-title"><a href="/2018/11/12/collection-p1/" class="title">Collection trong Scala (phần I)</a></p>
-                            <p class="item-date"><time datetime="2018-11-12T03:00:00.000Z" itemprop="datePublished">2018-11-12</time></p>
+                            <p class="item-title"><a href="/2018/12/10/collection-discovery-p5/" class="title">Scala Collections Tips &amp; Tricks (Phần V)</a></p>
+                            <p class="item-date"><time datetime="2018-12-10T03:00:00.000Z" itemprop="datePublished">2018-12-10</time></p>
                         </div>
                     </li>
                 
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2018/11/08/scala-trait/" class="thumbnail">
+                            <a href="/2018/12/06/collection-discovery-p4/" class="thumbnail">
     
     
         <span class="thumbnail-image thumbnail-none"></span>
@@ -1614,15 +1653,15 @@
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/scala/">scala</a></p>
-                            <p class="item-title"><a href="/2018/11/08/scala-trait/" class="title">Trait trong Scala</a></p>
-                            <p class="item-date"><time datetime="2018-11-08T03:00:00.000Z" itemprop="datePublished">2018-11-08</time></p>
+                            <p class="item-title"><a href="/2018/12/06/collection-discovery-p4/" class="title">Scala Collections Tips &amp; Tricks (Phần IV)</a></p>
+                            <p class="item-date"><time datetime="2018-12-06T03:00:00.000Z" itemprop="datePublished">2018-12-06</time></p>
                         </div>
                     </li>
                 
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2018/11/05/case-class/" class="thumbnail">
+                            <a href="/2018/12/03/collection-discovery-p3/" class="thumbnail">
     
     
         <span class="thumbnail-image thumbnail-none"></span>
@@ -1633,15 +1672,15 @@
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/scala/">scala</a></p>
-                            <p class="item-title"><a href="/2018/11/05/case-class/" class="title">Case Class trong Scala</a></p>
-                            <p class="item-date"><time datetime="2018-11-05T03:00:00.000Z" itemprop="datePublished">2018-11-05</time></p>
+                            <p class="item-title"><a href="/2018/12/03/collection-discovery-p3/" class="title">Scala Collections Tips &amp; Tricks (Phần III)</a></p>
+                            <p class="item-date"><time datetime="2018-12-03T03:00:00.000Z" itemprop="datePublished">2018-12-03</time></p>
                         </div>
                     </li>
                 
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2018/10/30/slick/" class="thumbnail">
+                            <a href="/2018/11/29/collection-discovery-p2/" class="thumbnail">
     
     
         <span class="thumbnail-image thumbnail-none"></span>
@@ -1651,9 +1690,9 @@
                         </div>
                         
                         <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/play/">play</a></p>
-                            <p class="item-title"><a href="/2018/10/30/slick/" class="title">Làm việc với Slick trong Play Framework</a></p>
-                            <p class="item-date"><time datetime="2018-10-30T03:00:00.000Z" itemprop="datePublished">2018-10-30</time></p>
+                            <p class="item-category"><a class="article-category-link" href="/categories/scala/">scala</a></p>
+                            <p class="item-title"><a href="/2018/11/29/collection-discovery-p2/" class="title">Scala Collections Tips &amp; Tricks (Phần II)</a></p>
+                            <p class="item-date"><time datetime="2018-11-29T03:00:00.000Z" itemprop="datePublished">2018-11-29</time></p>
                         </div>
                     </li>
                 
@@ -1666,7 +1705,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ci-cd/">ci/cd</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/play/">play</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/scala/">scala</a><span class="category-list-count">8</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ci-cd/">ci/cd</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/play/">play</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/scala/">scala</a><span class="category-list-count">14</span></li></ul>
         </div>
     </div>
 
@@ -1675,7 +1714,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">8</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">8</span></li></ul>
         </div>
     </div>
 
@@ -1684,7 +1723,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/basic/">basic</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tutorial/">tutorial</a><span class="tag-list-count">2</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/basic/">basic</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/discovery/">discovery</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tutorial/">tutorial</a><span class="tag-list-count">2</span></li></ul>
         </div>
     </div>
 
@@ -1693,7 +1732,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/basic/" style="font-size: 20px;">basic</a> <a href="/tags/tutorial/" style="font-size: 10px;">tutorial</a>
+            <a href="/tags/basic/" style="font-size: 20px;">basic</a> <a href="/tags/discovery/" style="font-size: 15px;">discovery</a> <a href="/tags/tutorial/" style="font-size: 10px;">tutorial</a>
         </div>
     </div>
 
