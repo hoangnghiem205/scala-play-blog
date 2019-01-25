@@ -21,13 +21,13 @@ tags:
 ### __1.1 Tích hợp Gitlab Runner__
 Chúng ta vào mục Runner (1) của dự án, sẽ thấy màn hình như hình phía dưới.
 
-{% asset_img cicd1.png %}
+{% asset_img cicd_01.png %}
 
 &nbsp;&nbsp;&nbsp;&nbsp;Ở đây có hai phần, ___Specific Runners___ và ___Shared Runners___. Như đã nói ở trên, chúng ta chỉ quan tâm tới Specific Runners. Nhìn vào (2), các bạn sẽ thấy một Runner mà mình đã cài đặt sẵn. Để tích hợp Runner vào dự án, chỉ cần nhấn vào nút ___Enable for this project___ như (3) là xong.
 
 ### __1.2 Thêm biến môi trường cho dự án__
 Để thêm biến môi trường, chúng ta vào mục Variables (1).
-{% asset_img cicd2.png %}
+{% asset_img cicd_02.png %}
 
 &nbsp;&nbsp;&nbsp;&nbsp;Đây chính là nơi các bạn khai báo biến môi trường với Gitlab và Runner sẽ sử dụng những biến môi trường này. Có một câu hỏi là: tại sao lại cần biến môi trường ?
 &nbsp;&nbsp;&nbsp;&nbsp;Mình sẽ lấy ví dụ để trả lời câu hỏi này, các bạn nhìn vào (3). Ở đây mình khai báo một biến môi trường với tên là SSH_PRIVATE_KEY và giá trị của nó sẽ là tất cả các ký tự trong file key mà các bạn sử dụng để ssh lên server khi tiến hành Deploy ứng dụng. Nếu chúng ta không khai báo một key ở đây, thì Runner Server sẽ không thể tiến hành quá trình Deploy được.
@@ -78,7 +78,7 @@ kill -9 $pid
 
 # run server & write log file
 cd /root/web/green-blue-cicd/source/$1/bin/
-nohup ./$APP_NAME -Dplay.http.secret.key=123123123 -Dplay.evolutions.db.default.autoApply=true -Dhttp.port=9000 > /root/web/green-blue-cicd/log/application.log &
+nohup ./$APP_NAME -Dplay.http.secret.key=xxxxxxxxx -Dplay.evolutions.db.default.autoApply=true -Dhttp.port=9000 > /root/web/green-blue-cicd/log/application.log &
 ```
 &nbsp;&nbsp;&nbsp;&nbsp;Hình ảnh phía trên là nội dung file deploy.sh dùng để triển khai Green-Blue. Trong đó, ***$1*** là tham số truyền vào khi chạy script deploy.sh, ở đây ***$1*** đại diện cho tên của version muốn triển khai. Chúng ta có thể thấy, nội dung file gồm 4 phần:
 \- (1) Giải nén source-code
@@ -145,14 +145,14 @@ Chúng ta sẽ thấy có các phần chính sau:
 (6) Chuyển mã nguồn sau khi Build lên Staging server
 ```yml
 # Send FILE to remote server
-- scp target/universal/green-blue-STAGING-${VERSION_NAME}.zip root@133.18.199.250:/root/web/green-blue-cicd/version
+- scp target/universal/green-blue-STAGING-${VERSION_NAME}.zip root@133.xx.xxx.xxx:/root/web/green-blue-cicd/version
 ```
 
 ___b) script___: các câu lệnh của quá trình Deploy, đây là việc ssh lên Staging và thực thi deploy.sh
 ```yml
 - echo "DEPLOY to STAGING server ..."
 # Deploy
-- ssh root@133.18.199.250 "sh /root/web/green-blue-cicd/script/deploy.sh green-blue-STAGING-${VERSION_NAME}"
+- ssh root@133.xx.xxx.xxx "sh /root/web/green-blue-cicd/script/deploy.sh green-blue-STAGING-${VERSION_NAME}"
 ```
 
 Chúng ta sẽ phải thay đổi một chút trong khi viết file .gitlab-ci.yml mới.
@@ -172,8 +172,4 @@ Với bước (6)
 
 &nbsp;&nbsp;&nbsp;&nbsp;Đến đây, chúng ta chỉ việc push những gì vừa làm lên branch ___dev___ là hoàn thành xong việc tích hợp Gitlab-CICD cho dự án mới.
 
-#### Tác giả bài viết: Cao Văn Long
-
-
-
-
+#### Tác giả: Cao Văn Long

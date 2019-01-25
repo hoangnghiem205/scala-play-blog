@@ -53,4 +53,4 @@ set1.diff(set2) // or set1 &~ set2
 ## Nguồn tham khảo
 https://pavelfatin.com/scala-collections-tips-and-tricks/
 
-#### Biên tập bài viết: Nguyễn Văn Linh
+#### Biên tập: Nguyễn Văn Linh

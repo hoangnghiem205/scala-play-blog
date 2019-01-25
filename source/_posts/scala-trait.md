@@ -116,4 +116,4 @@ https://www.tutorialspoint.com/scala/scala_traits.htm
 https://docs.scala-lang.org/overviews/collections/trait-iterable.html
 
 
-#### Biên tập bài viết: Nguyễn Văn Linh
+#### Biên tập: Nguyễn Văn Linh

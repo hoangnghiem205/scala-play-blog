@@ -63,4 +63,4 @@ https://docs.scala-lang.org/tour/case-classes.html
 
 https://www.tutorialspoint.com/scala
 
-#### Biên tập bài viết: Nguyễn Văn Linh
+#### Biên tập: Nguyễn Văn Linh

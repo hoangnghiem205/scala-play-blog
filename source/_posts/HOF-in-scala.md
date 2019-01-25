@@ -122,4 +122,4 @@ Hiện nay đối với **Scala**, `map()` là một trong những `HOF` đượ
 
 2. https://docs.scala-lang.org/tour/higher-order-functions.html
 
-#### Tác giả bài viết: Cao Văn Long
+#### Tác giả: Cao Văn Long

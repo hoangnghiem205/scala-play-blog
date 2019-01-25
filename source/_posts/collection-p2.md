@@ -168,4 +168,4 @@ res0: scala.collection.immutable.Map[String,Int] = Map((steve,100), (bob,101))
 ## Nguồn tham khảo:
 https://twitter.github.io/scala_school/collections.html
 
-#### Biên tập bài viết: Nguyễn Văn Linh
+#### Biên tập: Nguyễn Văn Linh

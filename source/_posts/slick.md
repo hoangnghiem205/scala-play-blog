@@ -143,4 +143,4 @@ def searchStudentClassTeacherWhereSql(id: Int): Future[Vector[(Student, Stsudent
 ## Nguồn tham khảo:
 http://slick.lightbend.com/doc/3.0.0/introduction.html
 
-#### Tác giả bài viết: Nguyễn Văn Linh
+#### Tác giả: Nguyễn Văn Linh

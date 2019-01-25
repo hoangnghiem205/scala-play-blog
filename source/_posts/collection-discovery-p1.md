@@ -130,4 +130,4 @@ seq1 == seq2
 ## Nguồn tham khảo
 https://pavelfatin.com/scala-collections-tips-and-tricks/
 
-#### Biên tập bài viết: Nguyễn Văn Linh
+#### Biên tập: Nguyễn Văn Linh
